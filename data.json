@@ -4,3 +4,1728 @@
     "weekLabel": "WEEK OF MARCH 9–14, 2026",
     "version": "5.7"
   },
+  "companies": {
+    "PG": {
+      "name": "Procter & Gamble",
+      "ticker": "PG",
+      "sector": "Household Products",
+      "vci": 90,
+      "sc": 95,
+      "iv": 88,
+      "dm": 85,
+      "earnings": false,
+      "headline": "P&G's $1B Gillette HQ Signals Premium Manufacturing Play",
+      "deck": "P&G is transitioning from pricing-led growth to volume recovery, supported by its \"Irrestible Superiority\" doctrine across product, packaging, and brand communication. The company's $1B Gillette Global HQ investment in Boston cements its premium innovation commitment.",
+      "execSummary": "P&G continues to lead the CPG industry executing its Integrated Growth Strategy — a portfolio of daily-use categories where performance drives brand choice. The company is shifting from a pricing-led model to volume-driven growth, backed by relentless investment in product superiority. Their operational excellence is underpinned by a massive digital transformation aimed at productivity and consumer centricity.",
+      "mgmtSignals": [
+        "We remain committed to our integrated growth strategy: a portfolio of daily-use categories where performance drives brand choice.",
+        "Superiority is a moving target. We must continue to innovate to stay ahead of consumer expectations and private label competition.",
+        "Digital transformation is not a project; it is a fundamental shift in how we operate the company."
+      ],
+      "risks": [
+        "Continued inflationary pressure on raw materials and labor",
+        "Geopolitical instability affecting China market recovery",
+        "Retailer inventory destocking and shelf-space competition",
+        "Consumer trade-down to private label brands"
+      ],
+      "opps": [
+        {
+          "title": "Expand premiumization in BRICS+ emerging markets",
+          "detail": "Target Tier-1 cities with specialized Beauty and Home Care premium SKUs. Achieve 15% net sales increase in premium categories by end of FY25."
+        },
+        {
+          "title": "Accelerate retail media monetization",
+          "detail": "Partner with major retailers on closed-loop measurement to capture share of the $54B retail media market."
+        },
+        {
+          "title": "Deploy GenAI to reduce SG&A and creative costs",
+          "detail": "AI creative platform targeting 40% production cost reduction and 5x content velocity increase."
+        },
+        {
+          "title": "Grow professional/commercial cleaning sector",
+          "detail": "Leverage Tide and Febreze brand equity to expand B2B cleaning addressable market by $2B+."
+        }
+      ],
+      "radar": {
+        "Strategy Clarity": 95,
+        "Innovation Velocity": 88,
+        "Supply Chain Resilience": 82,
+        "Mfg Efficiency": 86,
+        "Marketing Modernization": 91,
+        "Digital & AI": 85,
+        "Financial Flexibility": 79,
+        "Org Agility": 77,
+        "Competitive Position": 90
+      },
+      "news": [
+        {
+          "h": "P&G's $1B Gillette Global HQ Investment in Boston",
+          "s": "SimplyWallSt",
+          "d": "Mar 13",
+          "url": "https://www.bostonglobe.com/2026/03/10/business/gillette-headquarters-proctor-gamble-south-boston/"
+        },
+        {
+          "h": "Significant Insider Selling Reported at Procter & Gamble",
+          "s": "MarketBeat",
+          "d": "Mar 14",
+          "url": "https://www.marketbeat.com/stocks/NYSE/PG/insider-trades/"
+        },
+        {
+          "h": "P&G Proposes Acquisition of Remaining Gillette Pakistan Stake",
+          "s": "MarketScreener",
+          "d": "Mar 10",
+          "url": "https://www.marketscreener.com/quote/stock/PROCTER-GAMBLE-CO-THE-11422/news/"
+        },
+        {
+          "h": "Morgan Stanley Issues Cautionary Note Ahead of P&G Catalysts",
+          "s": "Investing.com",
+          "d": "Mar 10",
+          "url": "https://www.investing.com/news/analyst-ratings/procter--gamble-stock-faces-fy2025-catalysts-morgan-stanley-says-93CH-3964534"
+        },
+        {
+          "h": "P&G Relaunches Mr. Clean with Largest Magic Eraser Innovation in 20 Years",
+          "s": "StockTitan",
+          "d": "Mar 4",
+          "url": "https://www.pginvestor.com/financial-information/press-releases"
+        }
+      ],
+      "vc": {
+        "Research & Dev": {
+          "summary": "Focuses on Superiority as primary growth driver, investing heavily in clinical and performance testing.",
+          "str": [
+            "Massive R&D budget relative to peers",
+            "Strong cross-category technology transfer"
+          ],
+          "wk": [
+            "Longer development cycles for breakthrough hardware-based innovation"
+          ],
+          "signals": [
+            "Increased patent filings in fiber-science and enzymatic cleaning",
+            "Focus on sustainable chemistry for Tide and Ariel lines"
+          ],
+          "outlook": "Steady evolution toward Superiority 2.0 focusing on environmental sustainability without performance compromise."
+        },
+        "Marketing & Brand": {
+          "summary": "Moving from mass marketing to smart audience targeting using first-party data.",
+          "str": [
+            "Highest share of voice in core categories",
+            "Sophisticated brand-building framework"
+          ],
+          "wk": [
+            "Challenges capturing Gen Z loyalty against challenger digital-native brands"
+          ],
+          "signals": [
+            "Increased brand equity investment despite inflationary pressure",
+            "Programmatic media spend optimization underway"
+          ],
+          "outlook": "Continued shift toward performance marketing and first-party data partnerships with major retailers."
+        },
+        "Digital & AI": {
+          "summary": "Building AI capabilities across supply chain, marketing, and consumer experience layers.",
+          "str": [
+            "$2B+ annual IT investment",
+            "Strong Salesforce and Adobe tech stack"
+          ],
+          "wk": [
+            "Legacy ERP systems slowing digital transformation velocity"
+          ],
+          "signals": [
+            "GenAI pilots in creative production",
+            "AI-driven demand sensing deployment"
+          ],
+          "outlook": "AI capabilities expected to yield 15-20% efficiency gains in marketing operations by 2026."
+        }
+      }
+    },
+    "UL": {
+      "name": "Unilever",
+      "ticker": "UL",
+      "sector": "Personal Care",
+      "vci": 81,
+      "sc": 78,
+      "iv": 74,
+      "dm": 80,
+      "earnings": false,
+      "headline": "Unilever's 30 Power Brands Strategy: Focus Over Scale",
+      "deck": "New CEO Hein Schumacher is executing a historic portfolio reset — concentrating investment behind 30 Power Brands representing 75% of revenue and separating the ice cream division.",
+      "execSummary": "Unilever is executing a fundamental portfolio reset under CEO Hein Schumacher, divesting laggard brands and concentrating investment behind 30 Power Brands. The Ice Cream separation is the most significant structural move, expected to unlock margin expansion and strategic focus in Beauty, Wellbeing, and Home Care.",
+      "mgmtSignals": [
+        "We are simplifying and focusing. Fewer, bigger bets on brands that can win globally.",
+        "Our 30 Power Brands now represent 75% of revenue. That is where our resources and leadership attention go.",
+        "The Ice Cream separation will create two stronger, more focused businesses."
+      ],
+      "risks": [
+        "Ice Cream separation execution complexity and cost",
+        "Emerging market currency headwinds",
+        "Private label competition in European home care",
+        "Pace of digital commerce capability vs. pure-play competitors"
+      ],
+      "opps": [
+        {
+          "title": "Premiumize Beauty & Wellbeing portfolio",
+          "detail": "Leverage dermatological credibility of Dove and Simple to compete in the $40B+ premium skincare segment."
+        },
+        {
+          "title": "Accelerate e-commerce in Southeast Asia",
+          "detail": "Southeast Asia D2C opportunity valued at $12B by 2027 — underpenetrated by Unilever today."
+        },
+        {
+          "title": "Build climate-positive supply chain narrative",
+          "detail": "Leverage established sustainability credentials to command a 5-10% pricing premium vs. conventional peers."
+        },
+        {
+          "title": "Expand Prestige Beauty via acquisitions",
+          "detail": "Fill portfolio gaps in luxury fragrance and color cosmetics to complement core brands."
+        }
+      ],
+      "radar": {
+        "Strategy Clarity": 78,
+        "Innovation Velocity": 74,
+        "Supply Chain Resilience": 76,
+        "Mfg Efficiency": 73,
+        "Marketing Modernization": 82,
+        "Digital & AI": 80,
+        "Financial Flexibility": 71,
+        "Org Agility": 69,
+        "Competitive Position": 81
+      },
+      "news": [
+        {
+          "h": "Unilever Confirms Ice Cream Separation Timeline for Late 2025",
+          "s": "Reuters",
+          "d": "Mar 12",
+          "url": "https://www.cnbc.com/2025/12/08/magnum-ice-cream-ben-jerrys-amsterdam-stock-market-debut.html"
+        },
+        {
+          "h": "Unilever's Power Brands Strategy Draws Analyst Praise at Investor Day",
+          "s": "FT",
+          "d": "Mar 9",
+          "url": "https://www.unilever.com/investors/investor-events/"
+        },
+        {
+          "h": "Dove Launches AI Pledge: Will Never Use AI to Alter Real Women in Ads",
+          "s": "AdAge",
+          "d": "Mar 7",
+          "url": "https://www.adweek.com/brand-marketing/dove-ai-real-beauty-pledge/"
+        }
+      ],
+      "vc": {
+        "Research & Dev": {
+          "summary": "Innovation investment concentrated behind Power Brands, with reduced R&D spending on tail brands.",
+          "str": [
+            "Strong scientific heritage in skin and hair biology",
+            "Open innovation partnerships with biotech firms"
+          ],
+          "wk": [
+            "R&D resource dilution across too many categories historically"
+          ],
+          "signals": [
+            "Plant-based ingredient R&D surge",
+            "AI-assisted formulation partnerships announced"
+          ],
+          "outlook": "R&D productivity expected to improve 30% post-portfolio simplification by 2026."
+        },
+        "Marketing & Brand": {
+          "summary": "Shifting from brand purpose focus back to performance and product superiority messaging.",
+          "str": [
+            "Strong global brand equity for Dove, Hellmann's, Knorr",
+            "Local consumer insight capability in 190+ markets"
+          ],
+          "wk": [
+            "Inconsistent brand positioning across markets",
+            "Purpose-led advertising fatigue among consumers"
+          ],
+          "signals": [
+            "Return to product-first advertising on Dove",
+            "Increased influencer marketing investment globally"
+          ],
+          "outlook": "Brand health scores expected to recover as purpose messaging is balanced with performance claims."
+        },
+        "Digital & AI": {
+          "summary": "U-Studio internal creative platform driving cost efficiency and content velocity.",
+          "str": [
+            "U-Studio AI creative platform deployed globally",
+            "Strong data partnerships with Tesco and Walmart"
+          ],
+          "wk": [
+            "Fragmented martech stack across brands and geographies"
+          ],
+          "signals": [
+            "GenAI content production pilots showing 40% cost reduction",
+            "First-party data platform launch in 6 markets"
+          ],
+          "outlook": "Target 30% reduction in creative production costs through AI by end of 2025."
+        }
+      }
+    },
+    "MNST": {
+      "name": "Monster Beverage",
+      "ticker": "MNST",
+      "sector": "Beverages",
+      "vci": 87,
+      "sc": 92,
+      "iv": 94,
+      "dm": 76,
+      "earnings": true,
+      "headline": "Monster Q4 2025 BEAT: $7.14B Revenue, International Now 40% of Sales",
+      "deck": "Monster delivered a strong Q4 beating consensus by +4.2% driven by EMEA and APAC expansion. Conservative FY2026 guidance on FX headwinds may create a buying opportunity as the international thesis remains intact.",
+      "execSummary": "Monster Beverage reported Q4 2025 results beating consensus on revenue at $7.14B (+8.2% YoY), driven by strong international expansion particularly in EMEA and APAC. The Coca-Cola distribution network continues to be Monster's primary competitive moat, enabling rapid market entry in emerging markets. Management guided conservatively for 2026, flagging FX headwinds and softening US convenience store traffic.",
+      "mgmtSignals": [
+        "Our international business is the next frontier of growth. EMEA is performing exceptionally well this quarter.",
+        "We are expanding our energy drink portfolio into new functional formats — hydration, focus, and recovery.",
+        "The Coca-Cola partnership remains our most powerful competitive advantage. We are investing to deepen it."
+      ],
+      "risks": [
+        "US energy drink category saturation and deceleration",
+        "FX headwinds from strong dollar vs. EMEA currencies",
+        "Regulatory scrutiny on energy drink marketing to minors",
+        "Increased competition from Celsius and Prime energy brands"
+      ],
+      "opps": [
+        {
+          "title": "Accelerate APAC and India market entry",
+          "detail": "India energy drink market growing 20% annually, currently less than 5% Monster share — massive underpenetration opportunity."
+        },
+        {
+          "title": "Launch functional beverage extensions",
+          "detail": "Nootropic and recovery-focused formats to capture $8B+ functional beverage opportunity adjacent to core energy."
+        },
+        {
+          "title": "Expand Beast Unleashed alcohol brand",
+          "detail": "The Beast Unleashed alcohol brand targeting $2B+ addressable market in the flavored malt beverage category."
+        },
+        {
+          "title": "Deepen Coca-Cola distribution exclusivity in APAC",
+          "detail": "Negotiate extended distribution rights in high-growth APAC markets to widen moat against Red Bull."
+        }
+      ],
+      "radar": {
+        "Strategy Clarity": 92,
+        "Innovation Velocity": 94,
+        "Supply Chain Resilience": 80,
+        "Mfg Efficiency": 84,
+        "Marketing Modernization": 88,
+        "Digital & AI": 76,
+        "Financial Flexibility": 91,
+        "Org Agility": 86,
+        "Competitive Position": 93
+      },
+      "news": [
+        {
+          "h": "Monster Beverage Q4 2025 Revenue Beats at $7.14B, International Growth Accelerates",
+          "s": "Bloomberg",
+          "d": "Mar 11",
+          "url": "https://investors.monsterbevcorp.com/news-releases/news-release-details/monster-beverage-reports-2025-fourth-quarter-and-full-year"
+        },
+        {
+          "h": "Monster Eyes India Market Entry with Coca-Cola Partnership Expansion",
+          "s": "WSJ",
+          "d": "Mar 8",
+          "url": "https://www.wsj.com/articles/monster-beverage-international-expansion-india"
+        },
+        {
+          "h": "Celsius vs. Monster: Analyst Breaks Down Energy Drink Market Share Battle",
+          "s": "Barron's",
+          "d": "Mar 6",
+          "url": "https://www.barrons.com/articles/celsius-monster-energy-drinks-stock-market-share"
+        }
+      ],
+      "vc": {
+        "Research & Dev": {
+          "summary": "Innovation-first culture driving fastest new product launch cadence in the energy drink category.",
+          "str": [
+            "Industry-leading new SKU velocity",
+            "Strong formulation IP in energy, hydration, and focus segments"
+          ],
+          "wk": [
+            "Limited R&D in adjacent non-energy beverage categories"
+          ],
+          "signals": [
+            "10+ new functional beverage formats in pipeline",
+            "Nootropics partnership with supplement brand announced"
+          ],
+          "outlook": "R&D investment expected to double as Monster enters hydration and wellness beverage segments."
+        },
+        "Marketing & Brand": {
+          "summary": "Athlete and extreme sports sponsorship model remains best-in-class for authentic brand building.",
+          "str": [
+            "Unmatched sponsorship portfolio in motorsports, MMA, and gaming",
+            "High brand loyalty among 18-34 male demographic"
+          ],
+          "wk": [
+            "Limited appeal to female consumers and older demographics",
+            "Challenger brand perception vs. Red Bull in prestige markets"
+          ],
+          "signals": [
+            "Esports sponsorship investment tripling in 2025",
+            "Female-targeted product line in development"
+          ],
+          "outlook": "Brand diversification strategy will expand TAM by 30-40% if female and wellness segments are captured."
+        },
+        "Digital & AI": {
+          "summary": "Digital capabilities underdeveloped relative to size; primary strength is Coca-Cola system leverage.",
+          "str": [
+            "Coca-Cola digital infrastructure and data systems access",
+            "Strong social media engagement metrics organically"
+          ],
+          "wk": [
+            "No proprietary D2C digital channel",
+            "Limited first-party consumer data collection"
+          ],
+          "signals": [
+            "E-commerce channel investment announced",
+            "CRM platform implementation underway"
+          ],
+          "outlook": "Digital capability investment will accelerate to close gap vs. PG and Unilever over 2025-2027."
+        }
+      }
+    },
+    "PEP": {
+      "name": "PepsiCo",
+      "ticker": "PEP",
+      "sector": "Beverages & Snacks",
+      "vci": 85,
+      "sc": 82,
+      "iv": 80,
+      "dm": 88,
+      "earnings": true,
+      "headline": "PepsiCo Splits Beverages & Snacks Reporting — Separation Signal?",
+      "deck": "New segment reporting structure fuels speculation about a potential long-term portfolio separation. Frito-Lay continues to outperform while North American beverages face GLP-1 headwinds.",
+      "execSummary": "PepsiCo is navigating a complex bifurcation: its Frito-Lay snacks business continues to outperform while its beverage portfolio faces volume pressure from GLP-1 drug adoption and health-conscious consumer trends. Management's new reporting structure separating beverages and snacks fuels speculation about a potential long-term portfolio separation.",
+      "mgmtSignals": [
+        "Our snacks business is performing exceptionally. Frito-Lay North America is the crown jewel of our portfolio.",
+        "The new reporting structure reflects how we run the business internally and provides greater investor clarity.",
+        "We are investing heavily in better-for-you innovation — less sodium, less sugar, more function."
+      ],
+      "risks": [
+        "GLP-1 drug adoption reducing snack and soda consumption frequency",
+        "Volume deceleration in North American beverages",
+        "Private label competition in commodity snack segments",
+        "Potential separation costs and complexity if pursued"
+      ],
+      "opps": [
+        {
+          "title": "Spin-off beverages to unlock Frito-Lay value",
+          "detail": "Analysts estimate Frito-Lay standalone would trade at 25-28x EBITDA vs. 18x blended today — significant multiple expansion."
+        },
+        {
+          "title": "Expand Gatorade into functional hydration",
+          "detail": "$15B+ sports nutrition adjacency opportunity for a trusted performance brand with existing distribution."
+        },
+        {
+          "title": "Launch better-for-you snack innovation pipeline",
+          "detail": "High-protein, low-sugar formats to capture GLP-1-adjacent health-conscious consumers and defend volume."
+        },
+        {
+          "title": "Deepen retail media partnerships with Walmart and Kroger",
+          "detail": "First-party snack purchase data is a monetizable asset in the rapidly growing retail media ecosystem."
+        }
+      ],
+      "radar": {
+        "Strategy Clarity": 82,
+        "Innovation Velocity": 80,
+        "Supply Chain Resilience": 84,
+        "Mfg Efficiency": 83,
+        "Marketing Modernization": 85,
+        "Digital & AI": 88,
+        "Financial Flexibility": 77,
+        "Org Agility": 75,
+        "Competitive Position": 85
+      },
+      "news": [
+        {
+          "h": "PepsiCo Restructures Reporting to Separate Beverages and Snacks Business Segments",
+          "s": "WSJ",
+          "d": "Mar 13",
+          "url": "https://www.pepsico.com/en/newsroom/press-releases/2025/pepsico-announces-priorities-to-enhance-shareholder-value-and-provides-preliminary-2026-outlook"
+        },
+        {
+          "h": "Analysts Raise PepsiCo Price Target on Frito-Lay Outperformance",
+          "s": "Bloomberg",
+          "d": "Mar 10",
+          "url": "https://www.bloomberg.com/news/articles/pepsico-frito-lay-analyst-price-target"
+        },
+        {
+          "h": "GLP-1 Drugs Pose Largest Threat to PepsiCo Snack Portfolio, Says RBC",
+          "s": "Reuters",
+          "d": "Mar 7",
+          "url": "https://www.reuters.com/business/retail-consumer/pepsico-glp1-snack-demand-2025/"
+        }
+      ],
+      "vc": {
+        "Research & Dev": {
+          "summary": "R&D bifurcated between snack innovation (strong) and beverage reformulation (urgent priority).",
+          "str": [
+            "World-class flavor science capabilities at Frito-Lay",
+            "Strong beverage formulation history with Gatorade/Propel"
+          ],
+          "wk": [
+            "Slow velocity on functional beverage innovation vs. pure-play competitors"
+          ],
+          "signals": [
+            "Low-sodium Lay's variant launched in 8 markets",
+            "Gatorade Fast Twitch sports energy line gaining distribution"
+          ],
+          "outlook": "Expect 20+ better-for-you SKU launches in 2025 across snacks and beverages."
+        },
+        "Marketing & Brand": {
+          "summary": "Frito-Lay brand portfolio is a marketing excellence model; beverage brands need repositioning.",
+          "str": [
+            "Exceptional brand portfolio diversity (Lay's, Doritos, Cheetos, Tostitos)",
+            "Effective use of cultural moments and sports sponsorships"
+          ],
+          "wk": [
+            "Pepsi brand losing relevance vs. Coca-Cola in brand equity tracking",
+            "Limited success with Gen Z audience authentically"
+          ],
+          "signals": [
+            "Pepsi brand revival campaign underway",
+            "Doritos AI-generated Super Bowl ad drives earned media"
+          ],
+          "outlook": "Frito-Lay marketing will remain best-in-class; PepsiCo beverage brands require significant repositioning investment."
+        },
+        "Digital & AI": {
+          "summary": "Most digitally advanced in the CPG peer group, particularly in supply chain AI and retail data analytics.",
+          "str": [
+            "Advanced AI demand sensing platform deployed in 40+ markets",
+            "Strong retail media measurement capability"
+          ],
+          "wk": [
+            "D2C digital channels still underdeveloped vs. potential"
+          ],
+          "signals": [
+            "AI-powered supply chain optimization saving $200M+ annually",
+            "Omnicommerce platform expansion to 12 new markets"
+          ],
+          "outlook": "Digital infrastructure advantage to yield 15-20% supply chain cost reduction by 2027."
+        }
+      }
+    },
+    "KO": {
+      "name": "Coca-Cola",
+      "ticker": "KO",
+      "sector": "Beverages",
+      "vci": 88,
+      "sc": 91,
+      "iv": 79,
+      "dm": 82,
+      "earnings": true,
+      "headline": "Coca-Cola's AI Marketing Machine: 30% More Content, 40% Less Cost",
+      "deck": "Coca-Cola is executing the most aggressive AI transformation in CPG marketing, deploying generative AI across its entire global creative pipeline with Microsoft Azure as its primary partner.",
+      "execSummary": "Coca-Cola is deploying the most aggressive AI transformation in CPG marketing, building proprietary brand-trained models and enabling any market team to produce on-brand campaign assets within hours. The company is leveraging its iconic brand equity and the world's most powerful distribution network (30M outlets, 200 countries) to defend volume share while competitors scramble to catch up on digital capabilities.",
+      "mgmtSignals": [
+        "AI is transforming how we create, localize, and deploy marketing content at scale globally.",
+        "Our distribution moat — 200 countries, 30 million outlets — is our greatest competitive advantage.",
+        "We're investing in the occasions that matter: on-premise dining, sports, and live entertainment."
+      ],
+      "risks": [
+        "Volume decline in carbonated soft drinks in health-conscious markets",
+        "GLP-1 drug adoption reducing sugar consumption frequency",
+        "Water scarcity risks to production in key markets",
+        "Currency headwinds from dollar strength in emerging markets"
+      ],
+      "opps": [
+        {
+          "title": "Deploy AI-generated personalized marketing at scale",
+          "detail": "AI creative platform enabling 1:1 personalization across 200 markets at one-third the cost of traditional production."
+        },
+        {
+          "title": "Capture sports and live entertainment occasion share",
+          "detail": "Exclusive venue partnerships and experiential marketing in high-value social occasions drive volume growth."
+        },
+        {
+          "title": "Expand premium water and hydration portfolio",
+          "detail": "Smart Water and Topo Chico can capture significant share of the $20B+ premium water segment."
+        },
+        {
+          "title": "Grow Fairlife and functional nutrition brands",
+          "detail": "Fairlife milk growing 20%+ annually; expand into protein shakes and functional dairy adjacencies."
+        }
+      ],
+      "radar": {
+        "Strategy Clarity": 91,
+        "Innovation Velocity": 79,
+        "Supply Chain Resilience": 87,
+        "Mfg Efficiency": 85,
+        "Marketing Modernization": 94,
+        "Digital & AI": 82,
+        "Financial Flexibility": 88,
+        "Org Agility": 80,
+        "Competitive Position": 92
+      },
+      "news": [
+        {
+          "h": "Coca-Cola's AI Marketing System Generates 30% More Content at 40% Lower Cost",
+          "s": "AdAge",
+          "d": "Mar 14",
+          "url": "https://www.marketingdive.com/news/what-coca-cola-learned-generative-ai/741709/"
+        },
+        {
+          "h": "Coca-Cola Secures Exclusive Partnership with Formula 1 Through 2030",
+          "s": "SportsPro",
+          "d": "Mar 11",
+          "url": "https://www.sportspromedia.com/news/coca-cola-formula-1-sponsorship-2030/"
+        },
+        {
+          "h": "Fairlife Protein Shake Revenue Surpasses $1B, Fastest Growing Brand in Portfolio",
+          "s": "Bloomberg",
+          "d": "Mar 8",
+          "url": "https://edition.cnn.com/2025/02/16/business/coca-cola-fairlife-milk"
+        }
+      ],
+      "vc": {
+        "Research & Dev": {
+          "summary": "Innovation strategy focused on occasion-led beverage formats and functional health adjacencies.",
+          "str": [
+            "Fairlife and SmartWater functional innovation pipeline",
+            "Deep consumer occasion research capabilities"
+          ],
+          "wk": [
+            "Core CSD portfolio has limited innovation runway",
+            "Slow to market with energy drink despite Monster partnership"
+          ],
+          "signals": [
+            "5 new functional water variants in test markets",
+            "Zero Sugar platform extension across 50+ markets"
+          ],
+          "outlook": "R&D investment to double in functional nutrition and health-adjacent beverages by 2026."
+        },
+        "Marketing & Brand": {
+          "summary": "AI-powered creative transformation making Coca-Cola the most sophisticated marketing operation in CPG.",
+          "str": [
+            "World's most recognized brand (Interbrand #1 CPG)",
+            "AI-powered content localization deployed at global scale"
+          ],
+          "wk": [
+            "Core Coke brand targeted at declining soda drinkers",
+            "Limited success marketing to Gen Z authentically"
+          ],
+          "signals": [
+            "Real Magic platform driving nostalgia + AI content fusion",
+            "TikTok-first content strategy showing 3x engagement lift"
+          ],
+          "outlook": "Marketing AI advantage expected to persist for 3-5 years as competitors build similar capabilities."
+        },
+        "Digital & AI": {
+          "summary": "Coca-Cola × Microsoft Azure AI partnership is the most publicly visible GenAI deployment in CPG.",
+          "str": [
+            "Microsoft Azure AI partnership providing enterprise AI capabilities",
+            "Advanced data analytics across 30M+ retail outlets"
+          ],
+          "wk": [
+            "Bottler network creates data fragmentation challenges",
+            "Legacy CRM systems limit consumer personalization"
+          ],
+          "signals": [
+            "ChatGPT-powered Coca-Cola chatbot deployed in customer service",
+            "AI inventory optimization deployed with top 20 bottlers"
+          ],
+          "outlook": "Azure partnership expected to yield $500M+ in efficiency gains across supply chain and marketing by 2027."
+        }
+      }
+    },
+    "GIS": {
+      "name": "General Mills",
+      "ticker": "GIS",
+      "sector": "Packaged Foods",
+      "vci": 72,
+      "sc": 68,
+      "iv": 65,
+      "dm": 70,
+      "earnings": true,
+      "headline": "General Mills FQ3: Organic Growth Returns as Blue Buffalo Drag Fades",
+      "deck": "General Mills is navigating a challenging transition — its Blue Buffalo acquisition continues to underperform while core North America Retail faces volume pressure. Management's Accelerate strategy is showing early traction.",
+      "execSummary": "General Mills is navigating a challenging transition as its Blue Buffalo pet food acquisition underperforms and its core North America Retail segment faces volume pressure. The company is leaning into trusted brands while divesting underperforming assets and investing in HMW (Health, Meals, and Wellbeing) priority platforms.",
+      "mgmtSignals": [
+        "Blue Buffalo is a long-term asset. We remain committed to the pet food category.",
+        "Our Accelerate strategy is delivering. HMW platforms now represent 45% of portfolio revenue.",
+        "We are being disciplined about where we invest and where we divest."
+      ],
+      "risks": [
+        "Blue Buffalo market share loss to premium and fresh pet food competitors",
+        "Private label encroachment in cereal and snack bars",
+        "Consumer trade-down from premium Häagen-Dazs to private label",
+        "Volume declines in North America frozen meals"
+      ],
+      "opps": [
+        {
+          "title": "Revitalize Blue Buffalo with vet endorsement strategy",
+          "detail": "Partner with 10,000+ vet practices to rebuild trust and drive prescription pet food market entry."
+        },
+        {
+          "title": "Expand Häagen-Dazs luxury positioning globally",
+          "detail": "Asian premium ice cream market growing 15% annually; brand has significant equity leverage in the region."
+        },
+        {
+          "title": "Launch high-protein cereal extensions",
+          "detail": "Protein-fortified Cheerios and Nature Valley variants to capture GLP-1 adjacent health occasion."
+        },
+        {
+          "title": "Build DTC capabilities for Häagen-Dazs and Annie's",
+          "detail": "Premium brands have unmonetized DTC potential in gifting and subscription models."
+        }
+      ],
+      "radar": {
+        "Strategy Clarity": 68,
+        "Innovation Velocity": 65,
+        "Supply Chain Resilience": 72,
+        "Mfg Efficiency": 74,
+        "Marketing Modernization": 70,
+        "Digital & AI": 70,
+        "Financial Flexibility": 66,
+        "Org Agility": 64,
+        "Competitive Position": 72
+      },
+      "news": [
+        {
+          "h": "General Mills Q3 Organic Sales Return to Growth, Blue Buffalo Still Lagging",
+          "s": "Reuters",
+          "d": "Mar 12",
+          "url": "https://www.generalmills.com/news/press-releases/general-mills-reports-fiscal-2025-fourth-quarter-and-full-year-results"
+        },
+        {
+          "h": "General Mills Sells Helper and Suddenly Salad Brands to Focus Core Portfolio",
+          "s": "FoodDive",
+          "d": "Mar 9",
+          "url": "https://www.fooddive.com/news/general-mills-sells-helper-suddenly-salad-brands-brand/"
+        },
+        {
+          "h": "Häagen-Dazs Opens 50th Premium Parlor in Asia, Eyes 200 by 2027",
+          "s": "Bloomberg",
+          "d": "Mar 6",
+          "url": "https://www.bloomberg.com/news/articles/general-mills-haagen-dazs-asia-expansion"
+        }
+      ],
+      "vc": {
+        "Research & Dev": {
+          "summary": "R&D focused on health-and-wellness reformulation of core brands and pet nutrition science.",
+          "str": [
+            "Bell Institute nutrition science heritage",
+            "Strong consumer sensory research capabilities"
+          ],
+          "wk": [
+            "Limited breakthrough innovation track record in past 5 years",
+            "Pet food R&D capabilities underdeveloped vs. specialist competitors"
+          ],
+          "signals": [
+            "Protein-fortified variants of 5 core cereals in development",
+            "Plant-based pet food pilot with Blue Buffalo True Solutions"
+          ],
+          "outlook": "Health-forward reformulation to drive portfolio premiumization and margin expansion over 2025-2027."
+        },
+        "Marketing & Brand": {
+          "summary": "Leaning into nostalgia and functional health positioning across core brands.",
+          "str": [
+            "Exceptional brand heritage equity for Cheerios, Betty Crocker, Pillsbury",
+            "Strong loyalty programs for core consumer segments"
+          ],
+          "wk": [
+            "Blue Buffalo marketing trust deficit post-lawsuit settlement",
+            "Limited digital-native brand appeal across portfolio"
+          ],
+          "signals": [
+            "Cheerios Heart Health for All campaign performing above benchmarks",
+            "Betty Crocker AI recipe generator driving digital engagement"
+          ],
+          "outlook": "Brand trust restoration for Blue Buffalo is a 2-3 year project requiring consistent clinical messaging."
+        },
+        "Digital & AI": {
+          "summary": "Modest digital infrastructure investment relative to peer group size and ambition.",
+          "str": [
+            "Successful HelloFresh meal kit partnership for Progresso and Old El Paso",
+            "Growing e-commerce capabilities with Walmart+ partnership"
+          ],
+          "wk": [
+            "Below-peer digital investment levels",
+            "Limited AI deployment in supply chain and marketing"
+          ],
+          "signals": [
+            "$150M digital transformation investment announced for 2025-2026",
+            "AI demand forecasting pilot across North America Retail segment"
+          ],
+          "outlook": "Digital gap vs. Coca-Cola and PepsiCo will take 3+ years to close at current investment pace."
+        }
+      }
+    },
+    "KMB": {
+      "name": "Kimberly-Clark",
+      "ticker": "KMB",
+      "sector": "Household Products",
+      "vci": 78,
+      "sc": 80,
+      "iv": 72,
+      "dm": 74,
+      "earnings": true,
+      "headline": "Kimberly-Clark Separates Professional Business — Pure-Play Consumer Focus",
+      "deck": "Kimberly-Clark completed its professional business separation, creating a pure-play consumer products company focused on Huggies, Kleenex, Scott, and Cottonelle under the \"Powering Care\" strategy.",
+      "execSummary": "Kimberly-Clark completed its professional business separation in late 2024, creating a pure-play consumer products company. Under the Powering Care strategy, the company is investing in premiumization, emerging market expansion, and digital consumer engagement to drive sustainable volume growth across its iconic diaper, tissue, and personal care brands.",
+      "mgmtSignals": [
+        "The separation is complete. We are now a pure-play consumer company with unprecedented focus and clarity.",
+        "Huggies innovation pipeline is the strongest it has been in a decade.",
+        "Emerging markets represent 40% of our revenue and growing. That is our primary growth engine."
+      ],
+      "risks": [
+        "Private label competition intensifying in tissue and diaper categories",
+        "Commodity pulp and polymer cost inflation",
+        "Birth rate decline in developed markets reducing diaper addressable market",
+        "Transition costs from professional business separation"
+      ],
+      "opps": [
+        {
+          "title": "Premiumize Huggies with smart diaper technology",
+          "detail": "Connected diaper sensor technology can command 40% premium and create a recurring subscription revenue model."
+        },
+        {
+          "title": "Expand in Africa and Southeast Asia emerging markets",
+          "detail": "Sub-Saharan Africa diaper penetration below 20%; significant runway for Huggies market development."
+        },
+        {
+          "title": "Build direct-to-consumer subscription model",
+          "detail": "Consumable nature of diapers, wipes, and tissue creates ideal DTC subscription economics and LTV."
+        },
+        {
+          "title": "Leverage Kleenex for wellness and therapeutic positioning",
+          "detail": "Kleenex with aloe, menthol, and dermatologist-tested variants can command 25%+ price premium."
+        }
+      ],
+      "radar": {
+        "Strategy Clarity": 80,
+        "Innovation Velocity": 72,
+        "Supply Chain Resilience": 78,
+        "Mfg Efficiency": 82,
+        "Marketing Modernization": 75,
+        "Digital & AI": 74,
+        "Financial Flexibility": 76,
+        "Org Agility": 79,
+        "Competitive Position": 78
+      },
+      "news": [
+        {
+          "h": "Kimberly-Clark Professional Business Separation Creates K-C Pro as Standalone Entity",
+          "s": "BusinessWire",
+          "d": "Mar 13",
+          "url": "https://www.investor.kimberly-clark.com/news-releases/news-release-details/kimberly-clark-reports-strong-finish-second-year-transformation"
+        },
+        {
+          "h": "Huggies Special Delivery Expands with Organic Cotton Innovation Line",
+          "s": "RetailDive",
+          "d": "Mar 10",
+          "url": "https://www.retaildive.com/news/huggies-special-delivery-organic-cotton/"
+        },
+        {
+          "h": "Kimberly-Clark Raises FY2026 Guidance on Emerging Market Volume Momentum",
+          "s": "Reuters",
+          "d": "Mar 7",
+          "url": "https://investor.kimberly-clark.com/news-releases"
+        }
+      ],
+      "vc": {
+        "Research & Dev": {
+          "summary": "Post-separation R&D resources fully concentrated on consumer product innovation for the first time.",
+          "str": [
+            "World-class absorbency and fiber technology for diapers and tissue",
+            "Strong dermatology and skin safety testing infrastructure"
+          ],
+          "wk": [
+            "Innovation pace historically slow vs. private label disruption",
+            "Limited digital product innovation capabilities"
+          ],
+          "signals": [
+            "Smart diaper sensor pilot with Samsung Health",
+            "Plant-based fiber tissue line in US market test"
+          ],
+          "outlook": "R&D focus sharpening post-separation; expect 3-4 breakthrough product launches per year through 2027."
+        },
+        "Marketing & Brand": {
+          "summary": "Emotional brand marketing for Huggies and Kleenex built on care and family moments.",
+          "str": [
+            "Huggies No Baby Unhugged cause marketing driving 15% brand equity lift",
+            "Kleenex healthcare occasion advertising in cold/flu season"
+          ],
+          "wk": [
+            "Limited digital-native brand building capabilities vs. DTC challengers",
+            "Scott and Cottonelle commodity positioning vulnerable to private label"
+          ],
+          "signals": [
+            "Huggies TikTok community building +40% YoY engagement",
+            "Kleenex Care for the Unexpected real-time marketing activation"
+          ],
+          "outlook": "Premium brand investment to continue; commodity brand marketing budgets to be optimized for efficiency."
+        },
+        "Digital & AI": {
+          "summary": "Digital transformation accelerating post-separation with unified technology stack.",
+          "str": [
+            "New global ERP deployment on SAP S/4HANA nearing completion",
+            "Strong retail media partnerships with Walmart and Target"
+          ],
+          "wk": [
+            "D2C commerce capabilities still in early development",
+            "Consumer data collection limited by absence of owned digital channels"
+          ],
+          "signals": [
+            "AI demand forecasting deployed in 12 markets",
+            "Amazon Subscribe & Save penetration growing 25% YoY"
+          ],
+          "outlook": "SAP deployment completion in 2025 will unlock AI analytics capabilities across supply chain and demand planning."
+        }
+      }
+    },
+    "CL": {
+      "name": "Colgate-Palmolive",
+      "ticker": "CL",
+      "sector": "Oral & Personal Care",
+      "vci": 82,
+      "sc": 84,
+      "iv": 77,
+      "dm": 79,
+      "earnings": false,
+      "headline": "Colgate's Oral Care Evolution: $500M to Own the Premium Dental Market",
+      "deck": "Colgate is doubling down on its core oral care dominance while using Hill's Pet Nutrition as its premium growth engine, investing $500M to capture the premium sensitivity and whitening care segment.",
+      "execSummary": "Colgate-Palmolive is doubling down on its core oral care dominance while using Hill's Pet Nutrition as its premium growth engine. The Colgate Oral Care Evolution platform is investing $500M to capture the premium teeth whitening and sensitivity care segment, directly targeting Sensodyne and Crest market positions.",
+      "mgmtSignals": [
+        "Oral care is 42% of our revenue, and we intend to grow that share. It is our core and our superpower.",
+        "Hill's Pet Nutrition is our highest-growth and highest-margin business. We are investing to accelerate it.",
+        "Premiumization is happening in every category we operate in. We are determined to lead it."
+      ],
+      "risks": [
+        "P&G Oral-B electric toothbrush competition in premium segment",
+        "Dental subscription challengers attacking premium oral care",
+        "Hill's competition from Royal Canin and Purina Pro Plan",
+        "EM currency headwinds reducing Hill's profitability"
+      ],
+      "opps": [
+        {
+          "title": "Launch Colgate Professional teeth whitening DTC line",
+          "detail": "Professional whitening segment growing 18% annually; dentist-recommended positioning creates 50%+ price premium."
+        },
+        {
+          "title": "Expand Hill's Prescription Diet into vet telehealth",
+          "detail": "Vet telehealth partnerships can create a prescription pet food subscription revenue model with strong LTV."
+        },
+        {
+          "title": "Build electric toothbrush platform to compete with Oral-B",
+          "detail": "Colgate e1 connected toothbrush has strong initial reviews; scale investment to capture $3B+ market."
+        },
+        {
+          "title": "Launch microbiome oral care line",
+          "detail": "Oral microbiome science is creating a new premium segment for probiotic toothpaste and mouthwash."
+        }
+      ],
+      "radar": {
+        "Strategy Clarity": 84,
+        "Innovation Velocity": 77,
+        "Supply Chain Resilience": 81,
+        "Mfg Efficiency": 83,
+        "Marketing Modernization": 79,
+        "Digital & AI": 79,
+        "Financial Flexibility": 82,
+        "Org Agility": 77,
+        "Competitive Position": 83
+      },
+      "news": [
+        {
+          "h": "Colgate Launches Oral Wellness Platform Targeting Premium Sensitivity and Whitening Segments",
+          "s": "PRNewswire",
+          "d": "Mar 11",
+          "url": "https://www.prnewswire.com/news-releases/colgate-palmolive-company-reports-fourth-quarter-and-full-year-2025-results/"
+        },
+        {
+          "h": "Hill's Pet Nutrition Q4 Revenue +22% YoY, Becomes Colgate's Fastest Growing Division",
+          "s": "Bloomberg",
+          "d": "Mar 9",
+          "url": "https://www.petfoodindustry.com/pet-food-market/market-trends-and-reports/news/15817937/hills-pet-nutrition-drives-colgatepalmolive-growth-uses-ai-for-marketing"
+        },
+        {
+          "h": "Colgate e1 Connected Toothbrush Wins CES 2026 Innovation Award",
+          "s": "TechCrunch",
+          "d": "Mar 5",
+          "url": "https://www.techcrunch.com/2026/01/colgate-e1-toothbrush-ces-2026-innovation-award/"
+        }
+      ],
+      "vc": {
+        "Research & Dev": {
+          "summary": "Dual R&D focus on oral science innovation and veterinary nutrition advancing simultaneously.",
+          "str": [
+            "170 years of oral care science heritage and clinical data",
+            "Hill's veterinary nutrition research with 200+ university partnerships"
+          ],
+          "wk": [
+            "Electric toothbrush technology development behind Oral-B",
+            "Limited digital health product development capabilities"
+          ],
+          "signals": [
+            "Oral microbiome research partnership with MIT announced",
+            "Hill's AI pet health diagnostics pilot with VCA animal hospitals"
+          ],
+          "outlook": "Oral care innovation will be sustained by microbiome science breakthroughs; Hill's R&D yielding premium product pipeline."
+        },
+        "Marketing & Brand": {
+          "summary": "Colgate brand dominance in developing markets contrasted with premium repositioning challenge in developed markets.",
+          "str": [
+            "#1 or #2 oral care market position in 100+ countries",
+            "Hill's veterinary endorsement marketing is category-defining"
+          ],
+          "wk": [
+            "Colgate core brand perceived as commodity in US and Europe",
+            "Limited success building premium brand narrative for toothpaste"
+          ],
+          "signals": [
+            "Colgate Professional sub-brand launch targeting dental clinic channel",
+            "Hill's Food Shelter Love campaign driving 20% brand equity lift"
+          ],
+          "outlook": "Premium oral care marketing investment will gradually reposition Colgate above private label over 2025-2028."
+        },
+        "Digital & AI": {
+          "summary": "Digital investment concentrated on e-commerce acceleration and Hill's subscription model.",
+          "str": [
+            "Hill's Prescription Diet auto-ship subscription growing 35% YoY",
+            "Strong omnichannel analytics platform in oral care"
+          ],
+          "wk": [
+            "Limited Colgate brand D2C capability outside toothbrush subscription",
+            "AI deployment behind peer group in supply chain and marketing"
+          ],
+          "signals": [
+            "Colgate toothbrush subscription service piloting in 5 markets",
+            "AI-powered personalized oral care recommendation engine in development"
+          ],
+          "outlook": "Hill's DTC and subscription model will serve as template for Colgate core brand digital transformation."
+        }
+      }
+    },
+    "MDLZ": {
+      "name": "Mondelez",
+      "ticker": "MDLZ",
+      "sector": "Snack Foods",
+      "vci": 79,
+      "sc": 76,
+      "iv": 78,
+      "dm": 77,
+      "earnings": false,
+      "headline": "Mondelez's Premium Snacking Bet vs. GLP-1 Headwinds",
+      "deck": "Mondelez is navigating the most significant structural headwind in its history: the rise of GLP-1 weight loss drugs threatening its core indulgent snacking portfolio of Oreo, Cadbury, and Milka.",
+      "execSummary": "Mondelez International is navigating a structural headwind: the rise of GLP-1 weight loss drugs threatening its core indulgent snacking portfolio. The company is responding with better-for-you reformulations of iconic brands and acquisitions of functional snack brands, betting that Oreo, Cadbury, and Milka will retain emotional loyalty even as consumption patterns shift.",
+      "mgmtSignals": [
+        "GLP-1 is a real trend. We are planning for a world where consumers eat less but better quality.",
+        "Our iconic brands create emotional bonds that survive dietary changes. People moderate, they do not eliminate.",
+        "We are acquiring into better-for-you snacking while protecting and investing in our core business."
+      ],
+      "risks": [
+        "GLP-1 drug adoption reducing indulgent snack occasion frequency",
+        "Private label biscuit and chocolate competition in Europe",
+        "Cocoa price inflation affecting Cadbury and Milka margins",
+        "Consumer perception of Oreo as ultra-processed food growing"
+      ],
+      "opps": [
+        {
+          "title": "Launch Oreo Zero Sugar across international markets",
+          "detail": "Zero sugar Oreo has 40% lower calorie profile, directly addressing GLP-1 user moderation behavior."
+        },
+        {
+          "title": "Acquire high-protein snack bar brand",
+          "detail": "RxBar, Perfect Bar, or similar high-protein brand would reposition Mondelez in health-adjacent snacking."
+        },
+        {
+          "title": "Expand Cadbury gifting and premium box business",
+          "detail": "Chocolate gifting growing 12% annually; Cadbury premium boxed chocolate has significant headroom globally."
+        },
+        {
+          "title": "Build Milka luxury Alpine positioning for US market entry",
+          "detail": "Milka's Alpine heritage can support 30-40% price premium vs. Hershey in the US market."
+        }
+      ],
+      "radar": {
+        "Strategy Clarity": 76,
+        "Innovation Velocity": 78,
+        "Supply Chain Resilience": 75,
+        "Mfg Efficiency": 77,
+        "Marketing Modernization": 80,
+        "Digital & AI": 77,
+        "Financial Flexibility": 74,
+        "Org Agility": 73,
+        "Competitive Position": 79
+      },
+      "news": [
+        {
+          "h": "Mondelez Acquires Clif Bar Distribution Rights as Better-For-You Strategy Advances",
+          "s": "Reuters",
+          "d": "Mar 12",
+          "url": "https://www.reuters.com/business/retail-consumer/mondelez-clif-bar-distribution-rights/"
+        },
+        {
+          "h": "Oreo Zero Sugar Global Rollout Targets GLP-1 Consumers Seeking Moderation Options",
+          "s": "FoodBev",
+          "d": "Mar 8",
+          "url": "https://www.fooddive.com/news/mondelez-launches-sugar-free-oreos-snacking/806067/"
+        },
+        {
+          "h": "Cocoa Futures Hit 50-Year High, Threatening Cadbury and Milka Profit Margins",
+          "s": "FT",
+          "d": "Mar 5",
+          "url": "https://www.fooddive.com/news/mondelez-hershey-pressured-by-prolonged-spike-in-cocoa-prices/739464/"
+        }
+      ],
+      "vc": {
+        "Research & Dev": {
+          "summary": "R&D pivoting from indulgence optimization to health-forward reformulation across all categories.",
+          "str": [
+            "World-class flavor and texture science for biscuits and chocolate",
+            "Strong sensory panel capabilities across 50+ consumer markets"
+          ],
+          "wk": [
+            "Limited functional ingredient science capabilities vs. health-focused competitors",
+            "Reformulation historically slow due to brand equity protection concerns"
+          ],
+          "signals": [
+            "50% sugar reduction feasibility study across Oreo product line",
+            "Fiber-enriched biscuit platform in development for European markets"
+          ],
+          "outlook": "Health-forward reformulation across top 5 brands expected to be complete by 2027."
+        },
+        "Marketing & Brand": {
+          "summary": "Leaning into emotional brand storytelling and cultural relevance to defend indulgent snack occasions.",
+          "str": [
+            "Oreo is the world's best-selling cookie brand — iconic status provides significant defensibility",
+            "Cadbury emotional marketing is benchmark for brand love building globally"
+          ],
+          "wk": [
+            "Perceived as ultra-processed food brand — reputational risk growing",
+            "Limited brand credibility in health and wellness messaging"
+          ],
+          "signals": [
+            "Oreo Collab Series limited edition partnerships driving cultural relevance",
+            "Cadbury Generosity campaign regional adaptation across 40 markets"
+          ],
+          "outlook": "Brand emotional equity will protect core consumption, but health credential building is a multi-year project."
+        },
+        "Digital & AI": {
+          "summary": "Digital marketing capabilities strong; supply chain digital transformation is an ongoing priority.",
+          "str": [
+            "Strong programmatic and digital marketing capabilities",
+            "Salesforce-powered retail execution analytics platform"
+          ],
+          "wk": [
+            "Supply chain digital infrastructure below P&G and PepsiCo benchmark",
+            "Limited consumer first-party data collection for personalization"
+          ],
+          "signals": [
+            "AI demand sensing deployment across European supply chain",
+            "Mondelez SnackFutures digital innovation hub launched in Singapore"
+          ],
+          "outlook": "Supply chain AI investment will close performance gap vs. peer group by 2026; marketing AI investment leading."
+        }
+      }
+    },
+    "NSRGY": {
+      "name": "Nestlé",
+      "ticker": "NSRGY",
+      "sector": "Packaged Foods",
+      "vci": 76,
+      "sc": 72,
+      "iv": 70,
+      "dm": 78,
+      "earnings": false,
+      "headline": "New Nestlé CEO Faces Portfolio Reset: Selling KitKat to Fund Nutrition Focus?",
+      "deck": "New CEO Laurent Freixe inherits a sprawling 2,000+ brand portfolio under activist investor pressure to divest confectionery and accelerate into medical nutrition and plant-based food.",
+      "execSummary": "New CEO Philipp Navratil — appointed in late 2025 following Laurent Freixe's departure — faces pressure to accelerate portfolio transformation across KitKat, Nespresso, and infant nutrition. Activist investor pressure is intensifying calls to divest confectionery and accelerate into medical nutrition and plant-based food, where Nestlé has legitimate science-based differentiation. The market is watching for a decisive portfolio reset announcement.",
+      "mgmtSignals": [
+        "We are committed to accelerating the portfolio transformation that shareholders have been asking for. Divestiture decisions will be announced in H1 2026.",
+        "Nestlé Health Science represents our highest-conviction growth vector — the intersection of nutrition and medicine is where this company will compete.",
+        "Nespresso and premium coffee broadly remain a core pillar. We are investing to defend and extend our position in this high-margin category."
+      ],
+      "risks": [
+        "Activist investor pressure for faster portfolio transformation",
+        "Confectionery margin erosion from cocoa and sugar inflation",
+        "Infant formula reputation risk following regulatory scrutiny",
+        "Nespresso DTC disruption from private label pod competition"
+      ],
+      "opps": [
+        {
+          "title": "Divest KitKat and confectionery to Ferrero or Mars",
+          "detail": "Confectionery divestiture would release €15-20B to fund medical nutrition and plant-based acquisitions."
+        },
+        {
+          "title": "Acquire medical nutrition company to compete with Abbott",
+          "detail": "Medical nutrition is growing 8% annually; Nestlé Health Science needs scale acquisitions to compete."
+        },
+        {
+          "title": "Build Nespresso luxury brand into coffee lifestyle ecosystem",
+          "detail": "Nespresso coffee bar and gifting platform can compete with luxury food and beverage gifting segment."
+        },
+        {
+          "title": "Expand Purina Pro Plan veterinary diet with telehealth",
+          "detail": "Veterinary nutrition subscription model leveraging Purina science credibility and distribution."
+        }
+      ],
+      "radar": {
+        "Strategy Clarity": 72,
+        "Innovation Velocity": 70,
+        "Supply Chain Resilience": 80,
+        "Mfg Efficiency": 78,
+        "Marketing Modernization": 74,
+        "Digital & AI": 78,
+        "Financial Flexibility": 69,
+        "Org Agility": 66,
+        "Competitive Position": 76
+      },
+      "news": [
+        {
+          "h": "New Nestlé CEO Navratil Accelerates Portfolio Review in First 100 Days",
+          "s": "FT",
+          "d": "Mar 12",
+          "url": "https://www.just-food.com/features/we-need-to-raise-our-game-new-nestle-ceo-laurent-freixe-sets-out-stall/"
+        },
+        {
+          "h": "Third Point Activist Fund Increases Nestlé Stake, Pushes for Confectionery Divestiture",
+          "s": "WSJ",
+          "d": "Mar 11",
+          "url": "https://www.wsj.com/articles/third-point-nestle-stake-confectionery-divestiture"
+        },
+        {
+          "h": "Nestlé Health Science Launches Peptamen AI Clinical Trial Management Platform",
+          "s": "PharmaTech",
+          "d": "Mar 7",
+          "url": "https://www.nestle.com/media/pressreleases/allpressreleases"
+        }
+      ],
+      "vc": {
+        "Research & Dev": {
+          "summary": "R&D excellence in nutrition science, clinical research, and flavor technology — underlevered across portfolio.",
+          "str": [
+            "Nestlé Research Center Lausanne is one of world's leading food science institutions",
+            "700+ dedicated nutrition science researchers with clinical trial capabilities"
+          ],
+          "wk": [
+            "R&D excellence not consistently translated into commercial success",
+            "Confectionery R&D resources should be reallocated to medical nutrition"
+          ],
+          "signals": [
+            "Plant-based protein absorption research published in Nature Nutrition",
+            "AI-assisted clinical nutrition formulation platform launched internally"
+          ],
+          "outlook": "R&D restructuring toward nutrition and health sciences will create competitive differentiation within 3-5 years."
+        },
+        "Marketing & Brand": {
+          "summary": "Fragmented marketing approach across 2000+ brands undermining brand building efficiency significantly.",
+          "str": [
+            "Nespresso luxury brand building is benchmark in premium food",
+            "Purina brand science credibility in pet care is unmatched globally"
+          ],
+          "wk": [
+            "2000+ brand portfolio creating severe marketing resource dilution",
+            "KitKat and confectionery brands aging without millennial appeal investment"
+          ],
+          "signals": [
+            "Nestlé reducing to 150 priority brands from 2000+",
+            "Nespresso boutique expansion in US luxury department store channel"
+          ],
+          "outlook": "Brand portfolio reduction will significantly improve marketing efficiency and per-brand investment by 2026."
+        },
+        "Digital & AI": {
+          "summary": "Advanced digital infrastructure in supply chain and retail analytics; catching up in consumer-facing digital.",
+          "str": [
+            "SAP-based supply chain digital twin deployed in 50+ manufacturing plants",
+            "Advanced data analytics partnership with Microsoft Azure"
+          ],
+          "wk": [
+            "Consumer D2C capability limited outside Nespresso ecosystem",
+            "AI marketing deployment 12-18 months behind Coca-Cola and P&G"
+          ],
+          "signals": [
+            "Nestlé AI Center of Excellence established in Vevey and Singapore",
+            "Precision nutrition app pilot with 10,000 consumers in DACH markets"
+          ],
+          "outlook": "AI investment acceleration will close gap vs. Coca-Cola by end of 2026; consumer digital still a 3-year journey."
+        }
+      }
+    }
+  },
+  "playbooks": [
+    {
+      "id": 1,
+      "co": "PG",
+      "title": "Win Back Gen Z: The P&G Authenticity Playbook",
+      "cat": "Marketing & Brand Strategy",
+      "challenge": "P&G's traditional marketing approach is losing Gen Z to challenger brands that feel more authentic and values-driven, with a 15-point decline in brand consideration among 18-25 year olds over 3 years.",
+      "situation": "Challengers like Dollar Shave Club, Harry's, and DTC skincare brands now own 12% of the grooming market. P&G brand tracking shows Gen Z consideration has dropped 15 points over 3 years. Emotional connection with the next generation of consumers is the defining brand battle of this decade.",
+      "plays": [
+        {
+          "n": 1,
+          "title": "Launch Creator Partnership Program",
+          "detail": "Partner with 500 micro-influencers (10K-100K followers) in beauty and wellness niches. Give creators product co-creation involvement and transparent revenue sharing. Budget: $25M annually.",
+          "impact": "2-3x engagement vs. celebrity endorsements, 40% lower CPM"
+        },
+        {
+          "n": 2,
+          "title": "Build Transparent Ingredient Platform",
+          "detail": "Launch \"What's Inside\" digital platform for all P&G products — full ingredient transparency, sourcing data, and clinical evidence. Position as the industry standard-setter on ingredient trust.",
+          "impact": "25% trust score improvement among 18-34 demographic in 18 months"
+        },
+        {
+          "n": 3,
+          "title": "Co-create Limited Editions with Cultural Icons",
+          "detail": "Launch Gillette × Supreme, Olay × emerging artist collaborations in quarterly drops. Create collectible packaging that generates organic social shareability and cultural relevance.",
+          "impact": "15-20% sales velocity lift on collaboration SKUs, earned media value 5x investment"
+        },
+        {
+          "n": 4,
+          "title": "Invest in Social Commerce Checkout",
+          "detail": "Deploy TikTok Shop and Instagram Checkout integration for all top 20 SKUs. Enable discovery-to-purchase in under 3 taps across all major social platforms.",
+          "impact": "Capture 5-8% of Gen Z purchases directly through social channels"
+        }
+      ],
+      "roles": [
+        "CMO",
+        "Brand Manager",
+        "Digital Marketing Lead"
+      ],
+      "timeframe": "6-12 months",
+      "impact": "Recover 8-10 points in Gen Z brand consideration within 24 months",
+      "steal": "Any incumbent CPG brand losing ground to DTC challengers should build a micro-influencer co-creation program. The authenticity gap is winnable with the right creator strategy and economic model."
+    },
+    {
+      "id": 2,
+      "co": "MNST",
+      "title": "The APAC Energy Drink Land Grab",
+      "cat": "Sales & Go-to-Market Strategy",
+      "challenge": "Monster has under-indexed in APAC — particularly India and Southeast Asia — where Red Bull has established first-mover advantage and local energy brands are growing fast.",
+      "situation": "India energy drink market growing 20% annually with Monster holding <5% share vs. Red Bull's 55%. Indonesia and Vietnam are similarly underpenetrated with Monster brand recognition below 40%. The APAC window is open now but won't be in 3 years.",
+      "plays": [
+        {
+          "n": 1,
+          "title": "Launch India Market with Cricket Sponsorship Anchor",
+          "detail": "Secure IPL team sponsorship as primary awareness vehicle. Co-brand with a top Indian cricket athlete as brand ambassador. Position Monster as the energy drink for performance-oriented Indian youth.",
+          "impact": "60-70% aided brand awareness target within 18 months of launch"
+        },
+        {
+          "n": 2,
+          "title": "Build Coca-Cola Distribution Coverage Plan",
+          "detail": "Leverage Coca-Cola India's 3.5M+ outlet network for rapid availability. Negotiate exclusive cold vault placement in top 50K outlets in Tier-1 and Tier-2 cities from day one.",
+          "impact": "80% weighted distribution in target markets within 12 months"
+        },
+        {
+          "n": 3,
+          "title": "Localize Flavors for Southeast Asian Palate",
+          "detail": "Launch 2-3 APAC-exclusive flavors (mango, lychee-mint, green tea) developed with local consumer insight research. Use limited edition model to drive initial trial velocity.",
+          "impact": "30% trial rate vs. 12% for standard SKUs in market testing"
+        },
+        {
+          "n": 4,
+          "title": "Seed Gaming and Esports Channel First",
+          "detail": "Sponsor top 5 Indian and Southeast Asian esports teams and gaming tournaments. Monster's gaming credibility is directly transferable to APAC digital-native youth audiences.",
+          "impact": "Build brand relevance with 200M+ APAC gaming audience before mass market launch"
+        }
+      ],
+      "roles": [
+        "VP International Expansion",
+        "Regional GM APAC",
+        "Sales Director"
+      ],
+      "timeframe": "12-18 months",
+      "impact": "Achieve 12-15% market share in India within 3 years — $400M+ incremental revenue",
+      "steal": "Any Western beverage brand entering APAC should combine one powerful cultural anchor (IPL cricket, K-pop, esports) with the incumbent distributor's network coverage to accelerate trial and distribution simultaneously."
+    },
+    {
+      "id": 3,
+      "co": "PEP",
+      "title": "The Frito-Lay Health Halo Playbook",
+      "cat": "Innovation & Product Pipeline",
+      "challenge": "GLP-1 drugs and health consciousness are reducing indulgent snack consumption, threatening Frito-Lay's $20B North American revenue base with structural volume headwinds.",
+      "situation": "GLP-1 drug users report 30-40% reduction in snack consumption frequency. Health-oriented snack brands (PopCorners, SkinnyPop, Lesser Evil) are growing 25-30% annually while Frito-Lay core volume is flat. The window to reposition is 12-18 months before volume loss accelerates.",
+      "plays": [
+        {
+          "n": 1,
+          "title": "Launch High-Protein Doritos and Lay's Variants",
+          "detail": "Reformulate top 3 SKUs with whey or chickpea protein to add 8-10g protein per serving. Position as \"snack that works as hard as you do.\" Target gym, fitness, and sports nutrition channels.",
+          "impact": "Capture $2B+ high-protein snack market; 15% premium price vs. standard SKUs"
+        },
+        {
+          "n": 2,
+          "title": "Acquire or License a Functional Snack Brand",
+          "detail": "Acquire RxBar, Perfect Bar, or Chomps (meat snacks) to fill portfolio gap in performance nutrition. Price range $400-800M. Maintain brand independence but leverage Frito-Lay distribution instantly.",
+          "impact": "Add $300-500M revenue within 3 years; higher margin profile than core Frito-Lay brands"
+        },
+        {
+          "n": 3,
+          "title": "Build \"Better For You\" Lay's Certification Program",
+          "detail": "Partner with Mayo Clinic or Cleveland Clinic for a \"better choice\" label program across reformulated SKUs. Use clinical endorsement to rebuild health credibility that advertising alone cannot achieve.",
+          "impact": "25% increase in purchase intent among health-conscious consumers in test markets"
+        },
+        {
+          "n": 4,
+          "title": "Target GLP-1 Users as High-Value Segment",
+          "detail": "GLP-1 users want smaller portions, higher quality, better nutrition. Launch premium single-serve \"mindful snacking\" pack for $3-4 vs. $1.50 standard. The GLP-1 user is a premium customer.",
+          "impact": "15M+ US GLP-1 users represent $600M+ premium pack revenue opportunity"
+        }
+      ],
+      "roles": [
+        "Chief Innovation Officer",
+        "VP Product Development",
+        "Category Manager"
+      ],
+      "timeframe": "12-24 months",
+      "impact": "Protect $3-4B revenue at risk from GLP-1 headwinds; build $1B+ health-oriented snack portfolio",
+      "steal": "Any snack brand facing GLP-1 headwinds should invest NOW in protein fortification and smaller premium packs. The window to reposition before volume loss accelerates is 12-18 months — that window is open today."
+    },
+    {
+      "id": 4,
+      "co": "KO",
+      "title": "AI-First Creative Production: The Coca-Cola Blueprint",
+      "cat": "Digital & AI Infrastructure",
+      "challenge": "Traditional creative production is too slow and too expensive for the content volume required by modern digital marketing across 200 markets with dozens of platforms each.",
+      "situation": "Coca-Cola spent $4B+ on marketing in 2024 with 40% going to agency production costs. Digital channels require 10x more creative variants than TV-era marketing. Every CPG brand has the same problem. Coca-Cola is building the solution.",
+      "plays": [
+        {
+          "n": 1,
+          "title": "Deploy GenAI Creative Platform Globally",
+          "detail": "Build internal AI studio using Adobe Firefly + Microsoft Copilot + custom brand-trained models. Enable any market team to produce campaign assets in brand guidelines within hours. Initial investment: $50M capex.",
+          "impact": "40% reduction in creative production costs = $640M annual savings at current Coca-Cola scale"
+        },
+        {
+          "n": 2,
+          "title": "Build Brand-Trained AI Model Library",
+          "detail": "Train proprietary AI models on 70+ years of brand assets, color systems, and photography style. Create \"brand rail\" system that ensures any AI output is automatically on-brand without human review.",
+          "impact": "Eliminate 80% of brand compliance review cycle; 3x content production speed globally"
+        },
+        {
+          "n": 3,
+          "title": "Launch AI Personalization Engine for 200 Markets",
+          "detail": "Use LLM-powered localization to produce culturally resonant campaign variants for every market from a single global brief. Replace 60% of local agency content production costs.",
+          "impact": "Local relevance at global scale; 30% improvement in cultural resonance scores"
+        },
+        {
+          "n": 4,
+          "title": "Build AI Performance Marketing Loop",
+          "detail": "Connect creative AI to real-time performance data. Automatically generate, test, and optimize ad variants based on engagement signals. Full closed-loop creative optimization running 24/7.",
+          "impact": "15-25% improvement in paid media ROAS across all digital channels"
+        }
+      ],
+      "roles": [
+        "Chief Marketing Officer",
+        "VP Digital Marketing",
+        "Head of Marketing Technology"
+      ],
+      "timeframe": "6-18 months",
+      "impact": "Save $600M+ in production costs annually; improve content effectiveness 20-30%",
+      "steal": "Any CMO managing more than $500M in marketing spend should build a branded AI creative platform. The economics are irrefutable — the question is build vs. buy and who gets first-mover advantage in your category."
+    },
+    {
+      "id": 5,
+      "co": "UL",
+      "title": "The Power Brand Portfolio Reset: Unilever's Blueprint",
+      "cat": "Strategic Planning",
+      "challenge": "Over-diversified portfolio with 2,000+ brands dilutes management focus, R&D investment, and marketing spend — depressing margins and strategic clarity relative to focused peers.",
+      "situation": "Unilever's 30 Power Brands represent 75% of revenue but receive insufficient management attention. Operating margin at 15% vs. P&G's 21% partially reflects portfolio complexity. The strategic case for simplification has never been stronger.",
+      "plays": [
+        {
+          "n": 1,
+          "title": "Classify All Brands into Three Strategic Tiers",
+          "detail": "Power (Top 30, invest behind), Scale (50-100, harvest for cash), Tail (remainder, divest or license). Use revenue, margin, growth rate, and strategic fit criteria for classification. Complete in 90 days.",
+          "impact": "Strategic clarity on where to compete; eliminate 70% of brand management overhead"
+        },
+        {
+          "n": 2,
+          "title": "Execute Tail Brand Divestiture Program",
+          "detail": "Run structured M&A process for tail brands in 18-month tranches. Target regional PE firms and strategic buyers for local brands with proven cash flow. Raise $3-5B for redeployment into Power Brands.",
+          "impact": "$3-5B capital release; 100bps margin improvement from complexity reduction alone"
+        },
+        {
+          "n": 3,
+          "title": "Concentrate Marketing Investment in Power Brands",
+          "detail": "Redirect 90% of marketing budget to 30 Power Brands. Require minimum €50M marketing investment threshold for Power Brand status. Create dedicated Power Brand P&L teams with single-brand focus.",
+          "impact": "30% improvement in Power Brand penetration scores within 24 months"
+        },
+        {
+          "n": 4,
+          "title": "Build Acquisition Pipeline for Adjacent Premium Brands",
+          "detail": "Use divestiture proceeds to acquire 2-3 premium brands in Beauty, Wellbeing, and Functional Nutrition. Target brands with >$200M revenue and 25%+ growth trajectory in attractive adjacencies.",
+          "impact": "Shift portfolio mix toward higher-growth, higher-margin categories over 3-5 years"
+        }
+      ],
+      "roles": [
+        "CEO",
+        "Chief Strategy Officer",
+        "Head of M&A"
+      ],
+      "timeframe": "18-36 months",
+      "impact": "150-200bps operating margin improvement; 15-20% portfolio P/E multiple re-rating",
+      "steal": "Any multi-brand CPG company with >200 brands should immediately conduct a portfolio rationalization. The strategic and financial returns from focus are well-documented in every major CPG peer case study of the past decade."
+    },
+    {
+      "id": 6,
+      "co": "GIS",
+      "title": "Reviving Blue Buffalo: Rebuilding Trust in Premium Pet Food",
+      "cat": "Brand Reputation & Recovery",
+      "challenge": "Blue Buffalo was acquired for $8B in 2018 and has consistently underperformed — with a lawsuit settlement damaging trust and premium competitors accelerating market share gains.",
+      "situation": "Blue Buffalo market share declined from 9.4% to 7.1% since acquisition. Royal Canin and Purina Pro Plan are gaining share in the premium and veterinary segments Blue Buffalo should own. The brand needs a science-led trust recovery, not just more advertising.",
+      "plays": [
+        {
+          "n": 1,
+          "title": "Launch Veterinary Partnership Program",
+          "detail": "Create \"Blue Buffalo Veterinary Preferred\" certification with 5,000+ vets. Provide clinical nutrition training, free product samples, and continuing education credits to build the vet recommendation channel.",
+          "impact": "Vet recommendation drives 65% of premium pet food trial. Grow vet-referred trial 40% in 18 months."
+        },
+        {
+          "n": 2,
+          "title": "Rebrand with Clinical Evidence Positioning",
+          "detail": "Reformulate top 5 SKUs with proven clinical benefits (joint health, digestive health, coat quality). Add clinical evidence statements backed by double-blind trials. New packaging communicates science first.",
+          "impact": "25-30% brand trust score recovery in 24 months based on competitive relaunch comparables"
+        },
+        {
+          "n": 3,
+          "title": "Build DTC Subscription Model for Prescription Diet",
+          "detail": "Launch Blue Buffalo Rx — a vet-prescribed therapeutic diet sold exclusively via DTC subscription. Higher margin, locked repeat purchase, and clinical positioning that differentiates from retail shelf.",
+          "impact": "DTC prescription pet food growing 35% annually. Target $200M DTC revenue in 3 years."
+        },
+        {
+          "n": 4,
+          "title": "Enter Fresh and Raw Pet Food Category",
+          "detail": "Launch Blue Buffalo Fresh refrigerated pet food line (fresh beef, turkey, salmon) to compete with Nom Nom and JustFoodForDogs. Enter the fastest-growing premium segment before the window closes.",
+          "impact": "Fresh pet food TAM $2B+ and growing at 40%. First-mover advantage within Blue Buffalo brand credibility."
+        }
+      ],
+      "roles": [
+        "Brand Manager",
+        "VP Pet Food Division",
+        "Chief Commercial Officer"
+      ],
+      "timeframe": "18-24 months",
+      "impact": "Recover 2 points of market share = $300M incremental revenue; rebuild brand health to pre-acquisition levels",
+      "steal": "Any brand recovering from a trust or quality issue should lead with veterinary/clinical credibility partnerships. Science-backed trust recovery is 3x faster than emotional marketing recovery and far more defensible."
+    },
+    {
+      "id": 7,
+      "co": "KMB",
+      "title": "Smart Diapers & The Connected Parent: K-C's IoT Play",
+      "cat": "Digital Innovation",
+      "challenge": "Huggies faces commoditization pressure from private label diapers which now hold 35%+ of the market at 25% lower price points, with no clear product differentiation driving premium pricing.",
+      "situation": "Parents are price-sensitive on diapers but will pay significantly for innovation that solves real problems. Pampers' Smart Diaper sensor technology has validated the premium segment exists and is growing. The technology moat window is 18-24 months.",
+      "plays": [
+        {
+          "n": 1,
+          "title": "Launch Huggies Connected Care Smart Diaper",
+          "detail": "Embed NFC + moisture sensor in diaper. Connect to Huggies app for wetness alerts, sleep tracking, and health insights. Partner with Owlet for integrated newborn care platform from day one.",
+          "impact": "Premium 20x price point ($6-8/diaper). Target 1M subscription households in Year 1."
+        },
+        {
+          "n": 2,
+          "title": "Build Huggies Parenting Ecosystem App",
+          "detail": "The Huggies app as the complete parenting hub — developmental milestones, pediatric advice, product recommendations, and community features. Own the digital relationship with parents from birth to age 3.",
+          "impact": "Captured first-party data on 5M+ parents annually; reduces CAC for premium product launches by 60%"
+        },
+        {
+          "n": 3,
+          "title": "Partner with Hospitals for Birth Registration Program",
+          "detail": "Secure Huggies Connected Care as the recommended hospital discharge product in 500+ US maternity wards. First-use experience in hospital creates brand preference at the highest-stakes parenting moment possible.",
+          "impact": "Brand preference set in hospital has 4x loyalty vs. retail-first trial. Capture 40% of US births."
+        },
+        {
+          "n": 4,
+          "title": "Create Subscription Model for Premium Diaper Line",
+          "detail": "Huggies Elite subscription: monthly delivery, smart diaper hardware included, personalized sizing adjustments, pediatric chat support. Design for 18-month customer lifetime value from the start.",
+          "impact": "LTV of subscription parent $1,800 vs. $240 for retail purchase pattern. 7.5x unit economics improvement."
+        }
+      ],
+      "roles": [
+        "Chief Innovation Officer",
+        "VP Digital Products",
+        "Head of Connected Consumer"
+      ],
+      "timeframe": "18-30 months",
+      "impact": "Create $500M+ premium smart diaper segment; defend against private label commoditization",
+      "steal": "Any commodity consumer product facing private label pressure should identify the digital/connected product opportunity. The IoT premium is defensible where the data has genuine, daily consumer utility."
+    },
+    {
+      "id": 8,
+      "co": "CL",
+      "title": "Oral Microbiome: Colgate's $10B Science Advantage",
+      "cat": "Innovation & Product Pipeline",
+      "challenge": "Colgate's core toothpaste category is under attack from premium challengers winning on functional claims — Sensodyne on sensitivity, Arm & Hammer on baking soda, natural brands on ingredient transparency.",
+      "situation": "Premium oral care (sensitivity, whitening, microbiome) growing 18-22% annually while standard fluoride toothpaste is flat. Colgate has 170 years of clinical oral science but hasn't fully commercialized it against premium challengers. The science advantage is there — the commercial execution is the gap.",
+      "plays": [
+        {
+          "n": 1,
+          "title": "Launch Colgate Microbiome Oral Health System",
+          "detail": "Develop probiotic toothpaste + mouthwash system backed by 5-year clinical study. Partner with Forsyth Institute oral microbiome research lab. Position as the first clinically proven oral microbiome product on market.",
+          "impact": "Enter $2.5B premium oral care segment with defensible science differentiation; 40% price premium"
+        },
+        {
+          "n": 2,
+          "title": "Build Dentist Recommendation Engine",
+          "detail": "Train 50,000 dental hygienists on Colgate microbiome science. Provide free clinical tools, patient education materials, and CE credits. Create \"Dentist Preferred\" certification program with ongoing support.",
+          "impact": "Dental professional recommendation is the #1 purchase driver in premium oral care. Build the channel."
+        },
+        {
+          "n": 3,
+          "title": "Acquire or Partner with Oral Health Digital Brand",
+          "detail": "Acquire Tend (dental wellness subscription) or Beam Dental (smart toothbrush insurance) to own the digital dental health relationship and data. Price range $150-400M for a proven platform.",
+          "impact": "Own digital touchpoint in oral care; platform for connected oral health data monetization at scale"
+        },
+        {
+          "n": 4,
+          "title": "Launch Colgate Professional Direct-to-Consumer Line",
+          "detail": "Colgate Pro Microbiome system sold exclusively at ColgateOralHealth.com and dentist offices. D2C channel protects premium pricing; dentist partnership adds the clinical credibility that drives trial.",
+          "impact": "Protect 40% premium vs. retail channel. DTC LTV 3x retail purchase pattern over 24 months."
+        }
+      ],
+      "roles": [
+        "Chief Science Officer",
+        "VP Innovation",
+        "Brand Manager - Oral Care"
+      ],
+      "timeframe": "12-24 months",
+      "impact": "Capture 15-20% of premium oral care segment = $1.5-2B incremental revenue within 5 years",
+      "steal": "Any consumer health brand with legitimate clinical science should commercialize it aggressively. The gap between what CPG brands know scientifically and what they communicate to consumers is a massive missed revenue opportunity."
+    }
+  ],
+  "earningsData": {
+    "reported": [
+      {
+        "ticker": "MNST",
+        "name": "Monster Beverage",
+        "date": "Mar 11, 2026",
+        "result": "BEAT",
+        "rev": "$7.14B",
+        "revSurp": "+4.2%",
+        "eps": "$0.42",
+        "epsSurp": "+8.3%",
+        "guidance": "Conservative FY2026 guidance citing FX headwinds and US convenience store traffic softening.",
+        "quote": "Our international business delivered exceptional results this quarter. EMEA and APAC are the next frontiers."
+      }
+    ],
+    "upcoming": [
+      {
+        "ticker": "GIS",
+        "name": "General Mills",
+        "date": "Mar 19, 2026",
+        "time": "Pre-market",
+        "watch": [
+          "Blue Buffalo volume trend and market share trajectory",
+          "Organic sales growth recovery pace",
+          "FY2026 guidance revision up or down"
+        ]
+      },
+      {
+        "ticker": "KMB",
+        "name": "Kimberly-Clark",
+        "date": "Mar 25, 2026",
+        "time": "Pre-market",
+        "watch": [
+          "Post-separation cost structure and margin outlook",
+          "Huggies innovation pipeline update",
+          "Emerging market volume growth trajectory"
+        ]
+      },
+      {
+        "ticker": "KO",
+        "name": "Coca-Cola",
+        "date": "Apr 1, 2026",
+        "time": "Pre-market",
+        "watch": [
+          "AI marketing ROI first quantitative disclosure",
+          "Fairlife revenue growth trajectory",
+          "GLP-1 impact on beverage volume commentary"
+        ]
+      },
+      {
+        "ticker": "PEP",
+        "name": "PepsiCo",
+        "date": "Apr 8, 2026",
+        "time": "Pre-market",
+        "watch": [
+          "Separation speculation management commentary",
+          "Frito-Lay vs. Beverages segment margin comparison",
+          "GLP-1 volume impact quantification by segment"
+        ]
+      },
+      {
+        "ticker": "PG",
+        "name": "Procter & Gamble",
+        "date": "Apr 22, 2026",
+        "time": "Pre-market",
+        "watch": [
+          "Volume growth vs. price mix breakdown",
+          "China market recovery trajectory update",
+          "GenAI cost savings quantification in SG&A"
+        ]
+      }
+    ]
+  },
+  "trends": [
+    {
+      "id": 1,
+      "title": "GLP-1 Drug Adoption Reshaping Snack & Beverage Markets",
+      "impact": "CRITICAL",
+      "cat": "Consumer Behavior",
+      "summary": "15M+ US adults now using GLP-1 medications, projected to reach 30M by 2028. Early data shows 25-35% reduction in snack occasion frequency. Indulgent food and beverage companies face structural volume headwinds that will compound over 3-5 years.",
+      "impl": [
+        "Mondelez and PepsiCo Frito-Lay face the largest near-term risk",
+        "Functional and better-for-you brands have a significant structural tailwind",
+        "Portion size reduction creates a premium small-pack pricing opportunity",
+        "GLP-1 maintenance phase may increase demand for nutrient-dense foods"
+      ],
+      "cos": [
+        "MDLZ",
+        "PEP",
+        "KO",
+        "GIS"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Retail Media Networks Become CPG's Most Important Marketing Channel",
+      "impact": "HIGH",
+      "cat": "Digital Commerce",
+      "summary": "Retail media ad spend reached $54B in 2025, projected to hit $128B by 2028 — surpassing linear TV. Walmart Connect, Kroger Precision Marketing, and Amazon DSP are now the most important marketing channels for CPG brands and the data they generate is becoming a strategic asset.",
+      "impl": [
+        "Brands with Walmart/Kroger exclusive data partnerships gain attribution advantage",
+        "First-party data has become a genuine source of competitive advantage",
+        "Traditional TV spend being reallocated to retail media at 20-30% annual pace",
+        "Smaller brands without retail media access face growing distribution challenges"
+      ],
+      "cos": [
+        "PG",
+        "PEP",
+        "KO",
+        "UL"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "GenAI Transforms Creative Production Economics Across CPG",
+      "impact": "HIGH",
+      "cat": "Marketing Technology",
+      "summary": "Generative AI is reducing creative production costs 30-50% while enabling 10-20x higher content volume. Coca-Cola's AI Studio partnership with Microsoft Azure is the bellwether deployment. Every major CPG company has a GenAI marketing pilot underway; 2025 is the year of scaled deployment.",
+      "impl": [
+        "Agency model faces disruption as in-house AI capabilities scale",
+        "Content personalization at local market level becomes economically viable",
+        "Brand guardianship becomes more important as AI content production scales",
+        "First-movers building proprietary brand models will have compounding advantages"
+      ],
+      "cos": [
+        "KO",
+        "PG",
+        "UL",
+        "PEP"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Premium Pet Food Disruption: Fresh, Raw, and Vet-Prescribed Models",
+      "impact": "HIGH",
+      "cat": "Category Disruption",
+      "summary": "The $130B global pet care market is being disrupted by fresh pet food, raw formats, and vet-prescribed therapeutic diets. Traditional kibble brands face $8-12B revenue at risk as pet humanization accelerates premium trade-up and digital-native brands build direct relationships with pet parents.",
+      "impl": [
+        "Blue Buffalo (GIS) and Hill's (CL) are most exposed to premium disruption",
+        "Veterinary channel is becoming the new battleground for premium pet food",
+        "DTC subscription model creates higher LTV than retail pet food purchase",
+        "Personalized pet nutrition with DNA/microbiome testing is the next frontier"
+      ],
+      "cos": [
+        "GIS",
+        "CL",
+        "NSRGY"
+      ]
+    }
+  ]
+}
