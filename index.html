@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Value Change</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='6' fill='%23B8732D'/%3E%3Cpath d='M7 8L14 20L21 8' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='10' y1='14' x2='18' y2='14' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:title" content="The Value Change — CPG Strategy Intelligence">
+<meta property="og:description" content="Earnings-driven strategy intelligence for consumer goods. Companies, playbooks, and management signals.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thevaluechange.com">
+<meta name="description" content="CPG strategy intelligence platform — earnings analysis, tactical playbooks, and management signals for consumer goods professionals.">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Syne:wght@400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -329,6 +335,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .tl-content{font-size:13px;color:var(--text2);line-height:1.7;white-space:pre-wrap}
 .tl-loading{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.1em}
 .tl-loading::before{content:'';width:12px;height:12px;border:2px solid var(--accent);border-top-color:transparent;border-radius:50%;animation:spin .7s linear infinite}
+/* COMPANY LOGOS */
+.co-logo{display:block;flex-shrink:0}
+img.co-logo{transition:opacity .2s}
 /* MISC */
 .page-title{font-family:var(--serif);font-size:26px;font-weight:700;margin-bottom:4px}
 .page-subtitle{font-size:13px;color:var(--text3);margin-bottom:24px}
@@ -477,9 +486,30 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 </head>
 <body>
 
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <defs>
+    <symbol id="icon-bolt" viewBox="0 0 16 16"><path d="M8.5 1L3 9h4.5L6.5 15 13 7H8.5L9.5 1z" fill="currentColor"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 16 16"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="11" y1="11" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="icon-heart" viewBox="0 0 16 16"><path d="M8 14s-5.5-3.5-5.5-7A3 3 0 0 1 8 4.5 3 3 0 0 1 13.5 7C13.5 10.5 8 14 8 14z" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="icon-heart-fill" viewBox="0 0 16 16"><path d="M8 14s-5.5-3.5-5.5-7A3 3 0 0 1 8 4.5 3 3 0 0 1 13.5 7C13.5 10.5 8 14 8 14z" fill="currentColor"/></symbol>
+    <symbol id="icon-chart" viewBox="0 0 16 16"><rect x="1" y="8" width="3" height="7" rx="1" fill="currentColor" opacity=".5"/><rect x="6.5" y="4" width="3" height="11" rx="1" fill="currentColor" opacity=".7"/><rect x="12" y="1" width="3" height="14" rx="1" fill="currentColor"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 16 16"><line x1="2" y1="8" x2="13" y2="8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><polyline points="9,4 13,8 9,12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-external" viewBox="0 0 16 16"><polyline points="6,2 14,2 14,10" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="2" x2="7" y2="9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 9v4a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="icon-moon" viewBox="0 0 16 16"><path d="M13.5 8.5a5.5 5.5 0 0 1-7-7 6 6 0 1 0 7 7z" fill="currentColor"/></symbol>
+    <symbol id="icon-sun" viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="currentColor"/><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="8" y1="1" x2="8" y2="3"/><line x1="8" y1="13" x2="8" y2="15"/><line x1="1" y1="8" x2="3" y2="8"/><line x1="13" y1="8" x2="15" y2="8"/><line x1="3" y1="3" x2="4.5" y2="4.5"/><line x1="11.5" y1="11.5" x2="13" y2="13"/><line x1="3" y1="13" x2="4.5" y2="11.5"/><line x1="11.5" y1="4.5" x2="13" y2="3"/></g></symbol>
+  </defs>
+</svg>
+
 <!-- TOP NAV -->
 <nav class="top-nav">
-  <div class="nav-logo">The Value<span> Change</span></div>
+  <div class="nav-logo" style="display:flex;align-items:center;gap:8px">
+    <svg class="nav-logo-mark" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="28" height="28" rx="6" fill="var(--accent)"/>
+      <path d="M7 8L14 20L21 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="10" y1="14" x2="18" y2="14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <span style="font-family:var(--serif);font-size:15px;font-weight:700;letter-spacing:.05em;white-space:nowrap"><span style="color:var(--text)">The Value</span><span style="color:var(--accent)"> Change</span></span>
+  </div>
   <div class="nav-tabs">
     <div class="nav-tab active" onclick="showPage('week',this)">THIS WEEK</div>
     <div class="nav-tab" onclick="showPage('companies',this)">COMPANIES</div>
@@ -489,12 +519,12 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
   </div>
   <div class="nav-right">
     <div class="search-wrap">
-      <span class="search-icon">⌕</span>
+      <span class="search-icon"><svg width="12" height="12"><use href="#icon-search"/></svg></span>
       <input class="search-input" id="global-search" type="text" placeholder="Search companies, playbooks..." oninput="handleSearch(this.value)" onfocus="if(this.value.length>=2)document.getElementById('search-results').classList.add('open')" />
       <div class="search-results" id="search-results"></div>
     </div>
     <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-      <span id="theme-icon">☾</span> <span id="theme-label">Dark</span>
+      <span id="theme-icon"><svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-moon"/></svg></span> <span id="theme-label">Dark</span>
     </button>
     <div class="active-co-pill" onclick="toggleCoDropdown()">
       <span id="nav-co-ticker" class="ticker">PG</span>
@@ -623,7 +653,7 @@ function toggleTheme(){
 function updateThemeUI(isDark){
   const icon=document.getElementById('theme-icon');
   const label=document.getElementById('theme-label');
-  if(icon) icon.textContent = isDark ? '☀' : '☾';
+  if(icon) icon.innerHTML = isDark ? '<svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-sun"/></svg>' : '<svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-moon"/></svg>';
   if(label) label.textContent = isDark ? 'Light' : 'Dark';
 }
 // Apply saved theme on load
@@ -649,6 +679,25 @@ const vciHistory={
   KMB:[72,73,74,75,76,76],CL:[76,77,78,79,80,80],MDLZ:[72,73,74,75,76,77],
   NSRGY:[80,79,78,77,76,76]
 };
+
+// Company logo domain map
+const coLogoDomains={
+  PG:'pg.com',UL:'unilever.com',MNST:'monsterbevcorp.com',PEP:'pepsico.com',
+  KO:'coca-colacompany.com',GIS:'generalmills.com',KMB:'kimberly-clark.com',
+  CL:'colgatepalmolive.com',MDLZ:'mondelezinternational.com',NSRGY:'nestle.com'
+};
+function coLogoUrl(ticker,size){
+  size=size||64;
+  const domain=coLogoDomains[ticker];
+  return domain?`https://logo.clearbit.com/${domain}?size=${size}`:'';
+}
+function coLogoImg(ticker,size,cls){
+  size=size||32;
+  cls=cls||'';
+  const url=coLogoUrl(ticker,size*2); // 2x for retina
+  const initials=ticker[0];
+  return url?`<img src="${url}" alt="${ticker}" width="${size}" height="${size}" class="co-logo ${cls}" style="border-radius:6px;object-fit:contain;background:white;border:1px solid var(--border)" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="co-avatar ${cls}" style="display:none;width:${size}px;height:${size}px">${initials}</div>`:`<div class="co-avatar ${cls}" style="width:${size}px;height:${size}px">${initials}</div>`;
+}
 
 // ── GLOBAL SEARCH ────────────────────────────────────────────────────
 function handleSearch(q){
@@ -1063,11 +1112,11 @@ function renderHero(){
   const rep=earningsData.reported[0];
   if(!rep){el.innerHTML='<div style="padding:20px;color:var(--text3)">No recent earnings reported.</div>';return;}
   const co=companies[rep.ticker];
-  const resultLabel=rep.result==='BEAT'?'⚡ EARNINGS BEAT':rep.result==='MISS'?'⚠ EARNINGS MISS':'📊 EARNINGS REPORTED';
+  const resultLabel=rep.result==='BEAT'?'<svg width="14" height="14" style="vertical-align:-2px;color:var(--accent)"><use href="#icon-bolt"/></svg> EARNINGS BEAT':rep.result==='MISS'?'<svg width="14" height="14" style="vertical-align:-2px;color:var(--danger)"><use href="#icon-chart"/></svg> EARNINGS MISS':'<svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-chart"/></svg> EARNINGS REPORTED';
   el.innerHTML=`
     <div class="hero-eyebrow">
       <span>${resultLabel}</span>
-      <span class="co-tag">${rep.ticker}</span>
+      <span class="co-tag" style="display:inline-flex;align-items:center;gap:5px">${coLogoImg(rep.ticker,18)} ${rep.ticker}</span>
       <span style="color:var(--text3)">${rep.name}</span>
     </div>
     <div class="hero-headline">${rep.name} ${rep.date.split(',')[0]}: Revenue ${rep.result==='BEAT'?'Beats':'Misses'} at ${rep.rev}${rep.revSurp?' ('+rep.revSurp+')':''}</div>
@@ -1082,14 +1131,14 @@ function renderEarningsStrip(){
   // Reported
   earningsData.reported.forEach(e=>{
     strip.innerHTML+=`<div class="earnings-pill beat" onclick="showPage('earnings',document.querySelectorAll('.nav-tab')[3])">
-      <span class="pill-ticker">${e.ticker}</span>
+      <span class="pill-ticker" style="display:inline-flex;align-items:center;gap:4px">${coLogoImg(e.ticker,16)} ${e.ticker}</span>
       <span class="pill-badge beat">BEAT</span>
       <span class="pill-date">${e.date}</span>
     </div>`;
   });
   earningsData.upcoming.forEach(e=>{
     strip.innerHTML+=`<div class="earnings-pill" onclick="showPage('earnings',document.querySelectorAll('.nav-tab')[3])">
-      <span class="pill-ticker">${e.ticker}</span>
+      <span class="pill-ticker" style="display:inline-flex;align-items:center;gap:4px">${coLogoImg(e.ticker,16)} ${e.ticker}</span>
       <span class="pill-badge upcoming">UPCOMING</span>
       <span class="pill-date">${e.date}</span>
     </div>`;
@@ -1125,7 +1174,7 @@ function renderFocusGrid(){
     const c=companies[t];
     return `<div class="focus-card" onclick="setActiveCompany('${t}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">
       <div class="focus-card-header">
-        <div><div class="focus-co-name">${c.name}</div><div class="focus-co-ticker">${t} · ${c.sector}</div></div>
+        <div style="display:flex;align-items:center;gap:10px">${coLogoImg(t,28)}<div><div class="focus-co-name">${c.name}</div><div class="focus-co-ticker">${t} · ${c.sector}</div></div></div>
         <div class="vci-badge">${c.vci}</div>
       </div>
       <div class="focus-headline">${c.headline}</div>
@@ -1139,7 +1188,7 @@ function renderFocusGrid(){
 function renderFeaturedPlaybook(){
   const pb=playbooks[1]; // Monster APAC
   document.getElementById('featured-playbook').innerHTML=`
-    <div class="feat-pb-eyebrow">⚡ FEATURED PLAYBOOK · ${pb.co}</div>
+    <div class="feat-pb-eyebrow"><svg width="12" height="12" style="vertical-align:-1px"><use href="#icon-bolt"/></svg> FEATURED PLAYBOOK · ${pb.co}</div>
     <div class="feat-pb-title">${pb.title}</div>
     <div class="feat-pb-situation">${pb.situation}</div>
     <div class="feat-pb-play">
@@ -1195,7 +1244,7 @@ function renderCoList(){
     const deltaColor=delta>0?'var(--accent)':delta<0?'var(--danger)':'var(--text3)';
     return `
     <div class="co-list-item ${c.ticker===activeCompany?'active':''}" onclick="setActiveCompany('${c.ticker}')">
-      <div class="co-avatar">${c.ticker[0]}</div>
+      ${coLogoImg(c.ticker,32)}
       <div style="min-width:0;flex:1">
         <div class="co-list-name">${c.name}</div>
         <div class="co-list-meta"><span>${c.ticker}</span><span class="vci">${c.vci}</span><span style="color:${deltaColor};font-size:10px;margin-left:2px">${arrow}${Math.abs(delta)}</span></div>
@@ -1219,12 +1268,15 @@ function renderCoDetail(){
   document.getElementById('co-detail').innerHTML=`
     <!-- Header -->
     <div class="co-header">
-      <div class="co-name-block">
+      <div class="co-name-block" style="display:flex;align-items:center;gap:14px">
+        ${coLogoImg(co.ticker,48)}
+        <div>
         <div class="co-name">${co.name}</div>
         <div class="co-meta">
           <span class="ticker" style="color:var(--accent);font-family:var(--mono)">${co.ticker}</span>
           <span class="co-sector">${co.sector}</span>
           ${co.earnings?'<span style="background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-border);font-family:var(--mono);font-size:9px;padding:2px 7px;border-radius:3px">EARNINGS REPORTED</span>':''}
+        </div>
         </div>
       </div>
       <div class="co-vci-block">
@@ -1324,7 +1376,7 @@ function renderCoDetail(){
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px">
       <div class="tl-gen-header">
         <div class="section-label" style="margin-bottom:0">THOUGHT LEADERSHIP GENERATOR</div>
-        <button class="tl-generate-btn" onclick="generateTL('${co.ticker}')">⚡ GENERATE CONTENT</button>
+        <button class="tl-generate-btn" onclick="generateTL('${co.ticker}')"><svg width="12" height="12" style="vertical-align:-1px"><use href="#icon-bolt"/></svg> GENERATE CONTENT</button>
       </div>
       <div style="font-size:11px;color:var(--text3);margin-bottom:14px;margin-top:6px">AI-assisted content based on ${co.name}'s current strategy signals and this week's intelligence.</div>
       <div class="tl-outputs" id="tl-outputs">
@@ -1381,7 +1433,7 @@ function generateTL(ticker){
   if(!liEl||!brEl)return;
 
   // Show loading state
-  btn.textContent='⟳ Generating…';btn.disabled=true;
+  btn.innerHTML='<span class="tl-loading" style="display:inline-flex;font-size:inherit;letter-spacing:inherit">GENERATING</span>';btn.disabled=true;
   liEl.innerHTML='<span class="tl-loading">GENERATING</span>';
   brEl.innerHTML='<span class="tl-loading">GENERATING</span>';
 
@@ -1729,7 +1781,7 @@ function renderEarnings(){
       <div class="earnings-section-title">REPORTED THIS WEEK</div>
       <div class="reported-card">
         <div class="reported-header">
-          <div><div class="reported-name">${rep.name}</div><div class="reported-date">${rep.date}</div></div>
+          <div><div class="reported-name" style="display:flex;align-items:center;gap:10px">${coLogoImg(rep.ticker,28)} ${rep.name}</div><div class="reported-date">${rep.date}</div></div>
           <div class="beat-badge">✓ ${rep.result}</div>
         </div>
         <div class="reported-metrics">
@@ -1750,7 +1802,7 @@ function renderEarnings(){
         ${earningsData.upcoming.map(e=>`
         <div class="upcoming-card">
           <div class="upcoming-header">
-            <div><div class="upcoming-name">${e.name}</div><div class="upcoming-date">${e.date}</div></div>
+            <div><div class="upcoming-name" style="display:flex;align-items:center;gap:10px">${coLogoImg(e.ticker,24)} ${e.name}</div><div class="upcoming-date">${e.date}</div></div>
             <div class="upcoming-time">${e.time}</div>
           </div>
           <div class="watch-items">${e.watch.map(w=>`<div class="watch-item">${w}</div>`).join('')}</div>
