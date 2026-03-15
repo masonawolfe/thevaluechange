@@ -6,6 +6,7 @@
 <title>The Value Change</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Syne:wght@400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -52,6 +53,21 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 .co-dropdown-item:last-child{border-bottom:none}
 .co-dropdown-item:hover{background:var(--surface3)}
 .co-dropdown-item.selected{color:var(--accent)}
+/* SEARCH */
+.search-wrap{position:relative}
+.search-input{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:6px 10px 6px 28px;font-family:var(--mono);font-size:11px;color:var(--text);width:180px;outline:none;transition:border-color .2s}
+.search-input::placeholder{color:var(--text3)}
+.search-input:focus{border-color:var(--accent)}
+.search-icon{position:absolute;left:9px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--text3);pointer-events:none}
+.search-results{position:absolute;top:calc(100% + 4px);right:0;background:var(--surface);border:1px solid var(--border);border-radius:8px;width:320px;max-height:360px;overflow-y:auto;z-index:300;display:none;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.search-results.open{display:block}
+.sr-section{padding:6px 12px;font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--text3);border-bottom:1px solid var(--border)}
+.sr-item{padding:10px 14px;cursor:pointer;border-bottom:1px solid var(--border);transition:background .15s}
+.sr-item:last-child{border-bottom:none}
+.sr-item:hover{background:var(--surface2)}
+.sr-item-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
+.sr-item-meta{font-family:var(--mono);font-size:10px;color:var(--text3)}
+.sr-empty{padding:20px 14px;text-align:center;font-size:12px;color:var(--text3)}
 /* LAYOUT */
 .page{display:none;padding:28px 32px;max-width:1400px;margin:0 auto}
 .page.active{display:block}
@@ -331,9 +347,20 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
   .nav-logo{font-size:16px;padding:12px 0}
   .nav-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap;width:100%;border-top:1px solid var(--border)}
   .nav-tab{padding:0 12px;height:44px;font-size:9px;white-space:nowrap;flex-shrink:0}
-  .nav-right{padding:8px 0;margin-left:0;width:100%}
+  .nav-right{padding:8px 0;margin-left:0;width:100%;flex-wrap:wrap}
+  .search-wrap{width:100%;order:-1}
+  .search-input{width:100%}
+  .search-results{width:100%;right:0;left:0}
   .active-co-pill{width:100%}
   .co-dropdown{right:0;left:0;width:100%}
+
+  /* Newsletter */
+  .newsletter-inner{flex-direction:column;align-items:stretch;padding:20px}
+  .newsletter-form{flex-direction:column}
+  .newsletter-input{width:100%}
+
+  /* Sector filter */
+  .sector-filter{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap!important;padding-bottom:6px}
 
   /* Page padding */
   .page{padding:16px 14px}
@@ -401,6 +428,17 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
   .co-list-item{min-width:100px}
 }
 
+/* ── NEWSLETTER SIGNUP ────────────────────────────────────── */
+.newsletter-section{margin-top:32px;border-top:1px solid var(--border);padding-top:32px}
+.newsletter-inner{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:28px 32px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.newsletter-text{flex:1;min-width:240px}
+.newsletter-form{display:flex;gap:8px;flex-shrink:0}
+.newsletter-input{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-family:var(--mono);font-size:12px;color:var(--text);width:220px;outline:none;transition:border-color .2s}
+.newsletter-input:focus{border-color:var(--accent)}
+.newsletter-input::placeholder{color:var(--text3)}
+.newsletter-btn{background:var(--accent);color:#fff;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;padding:10px 20px;border-radius:6px;cursor:pointer;border:none;white-space:nowrap;transition:opacity .15s}
+.newsletter-btn:hover{opacity:.85}
+.newsletter-btn:disabled{opacity:.5;cursor:default}
 /* ── PAYWALL BANNER ──────────────────────────────────────── */
 .paywall-banner{margin-top:12px;background:var(--surface2);border-radius:8px;padding:14px 16px;border:1px solid var(--border)}
 .paywall-content{display:flex;align-items:center;gap:14px}
@@ -450,6 +488,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     <div class="nav-tab" onclick="showPage('watchlist',this)">WATCHLIST <span class="badge" id="wl-badge" style="display:none">0</span></div>
   </div>
   <div class="nav-right">
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input class="search-input" id="global-search" type="text" placeholder="Search companies, playbooks..." oninput="handleSearch(this.value)" onfocus="if(this.value.length>=2)document.getElementById('search-results').classList.add('open')" />
+      <div class="search-results" id="search-results"></div>
+    </div>
     <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
       <span id="theme-icon">☾</span> <span id="theme-label">Dark</span>
     </button>
@@ -468,7 +511,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 <div class="page active" id="page-week">
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
     <div style="font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--text3)">THE VALUE CHANGE</div>
-    <div style="font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.1em">WEEK OF MARCH 9–13, 2026</div>
+    <div style="font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:.1em" id="week-date-label"></div>
   </div>
   <div style="font-family:var(--serif);font-size:32px;font-weight:700;margin-bottom:4px;letter-spacing:-.5px">The CPG Intelligence Brief</div>
   <div style="font-size:13px;color:var(--text3);margin-bottom:20px">Strategy intelligence for consumer goods — companies, earnings, and tactical playbooks.</div>
@@ -476,18 +519,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
   <!-- EARNINGS STRIP -->
   <div class="week-bar" id="earnings-strip"></div>
   
-  <!-- HERO + SIGNALS -->
+  <!-- HERO + SIGNALS (dynamic) -->
   <div class="hero-section">
-    <div class="hero-card">
-      <div class="hero-eyebrow">
-        <span>⚡ EARNINGS BEAT</span>
-        <span class="co-tag">MNST</span>
-        <span style="color:var(--text3)">Monster Beverage</span>
-      </div>
-      <div class="hero-headline">Monster Q4 2025: Revenue Beats at $7.14B as International Hits 40% of Sales</div>
-      <div class="hero-deck">Monster Beverage Corp delivered a strong Q4 2025, with net sales of $7.14B beating consensus by +4.2%. International markets — particularly EMEA and APAC — now represent 40% of total revenue, validating the company's multi-year geographic expansion thesis. Management issued conservative FY2026 guidance citing dollar strength headwinds, creating a potential entry point as the international story remains intact.</div>
-      <div class="hero-cta" onclick="setActiveCompany('MNST');showPage('companies',document.querySelectorAll('.nav-tab')[1])">READ FULL ANALYSIS →</div>
-    </div>
+    <div class="hero-card" id="hero-card"></div>
     <div class="signals-col">
       <div class="signals-header">LATEST SIGNALS</div>
       <div id="week-signals"></div>
@@ -505,10 +539,29 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
   <!-- INDUSTRY SIGNALS BOTTOM -->
   <div style="font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--text3);margin-bottom:12px">TRENDING STRATEGIC THEMES</div>
   <div class="trends-grid" id="week-trends"></div>
+
+  <!-- NEWSLETTER SIGNUP -->
+  <div class="newsletter-section" id="newsletter-section">
+    <div class="newsletter-inner">
+      <div class="newsletter-text">
+        <div style="font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:6px">Get the Weekly Brief</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.5">Curated CPG strategy intelligence — earnings analysis, playbooks, and management signals delivered every Monday.</div>
+      </div>
+      <div class="newsletter-form" id="newsletter-form">
+        <input class="newsletter-input" type="email" id="newsletter-email" placeholder="your@email.com" />
+        <button class="newsletter-btn" onclick="submitNewsletter()">SUBSCRIBE</button>
+      </div>
+      <div class="newsletter-success" id="newsletter-success" style="display:none">
+        <div style="font-size:14px;font-weight:600;color:var(--accent)">You're in.</div>
+        <div style="font-size:12px;color:var(--text2);margin-top:4px">First brief arrives Monday morning.</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- COMPANIES -->
 <div class="page" id="page-companies">
+  <div class="sector-filter" id="sector-filter" style="display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap"></div>
   <div class="co-page-grid">
     <div>
       <div class="co-list" id="co-list"></div>
@@ -584,9 +637,116 @@ function updateThemeUI(isDark){
 
 // ── STATE ──────────────────────────────────────────────────────────────
 let activeCompany = 'PG';
-let watchlist = [];
+let watchlist = JSON.parse(localStorage.getItem('tvc-watchlist')||'[]');
 let pbFilter = 'ALL';
 let activeVcTab = {};
+function saveWatchlist(){ localStorage.setItem('tvc-watchlist',JSON.stringify(watchlist)); }
+
+// VCI historical trend data (quarterly, last 6 quarters)
+const vciHistory={
+  PG:[84,86,87,88,89,90],UL:[78,79,80,80,81,81],KO:[82,83,84,84,85,85],
+  PEP:[80,82,83,84,84,84],MNST:[71,74,76,78,80,82],GIS:[77,76,75,74,74,74],
+  KMB:[72,73,74,75,76,76],CL:[76,77,78,79,80,80],MDLZ:[72,73,74,75,76,77],
+  NSRGY:[80,79,78,77,76,76]
+};
+
+// ── GLOBAL SEARCH ────────────────────────────────────────────────────
+function handleSearch(q){
+  const box=document.getElementById('search-results');
+  if(q.length<2){box.classList.remove('open');box.innerHTML='';return;}
+  const lq=q.toLowerCase();
+  let html='';
+  // Search companies
+  const coMatches=Object.values(companies).filter(c=>
+    c.name.toLowerCase().includes(lq)||c.ticker.toLowerCase().includes(lq)||
+    c.sector.toLowerCase().includes(lq)||c.headline.toLowerCase().includes(lq)
+  );
+  if(coMatches.length){
+    html+=`<div class="sr-section">COMPANIES</div>`;
+    coMatches.forEach(c=>{
+      html+=`<div class="sr-item" onclick="searchNav('company','${c.ticker}')">
+        <div class="sr-item-title">${c.ticker} — ${c.name}</div>
+        <div class="sr-item-meta">${c.sector} · VCI ${c.vci}</div>
+      </div>`;
+    });
+  }
+  // Search playbooks (defined later, so we check existence)
+  if(typeof playbooks!=='undefined'){
+    const pbMatches=playbooks.filter(p=>
+      p.title.toLowerCase().includes(lq)||p.cat.toLowerCase().includes(lq)||
+      p.challenge.toLowerCase().includes(lq)||p.co.toLowerCase().includes(lq)||
+      p.plays.some(pl=>pl.title.toLowerCase().includes(lq))
+    );
+    if(pbMatches.length){
+      html+=`<div class="sr-section">PLAYBOOKS</div>`;
+      pbMatches.forEach(p=>{
+        html+=`<div class="sr-item" onclick="searchNav('playbook','${p.id}')">
+          <div class="sr-item-title">${p.title}</div>
+          <div class="sr-item-meta">${p.co} · ${p.cat}</div>
+        </div>`;
+      });
+    }
+  }
+  // Search news across companies
+  const newsMatches=[];
+  Object.values(companies).forEach(c=>{
+    if(c.news) c.news.forEach(n=>{
+      if(n.h.toLowerCase().includes(lq)||n.s.toLowerCase().includes(lq))
+        newsMatches.push({...n,ticker:c.ticker});
+    });
+  });
+  if(newsMatches.length){
+    html+=`<div class="sr-section">NEWS</div>`;
+    newsMatches.slice(0,5).forEach(n=>{
+      html+=`<div class="sr-item" onclick="searchNav('company','${n.ticker}')">
+        <div class="sr-item-title">${n.h}</div>
+        <div class="sr-item-meta">${n.ticker} · ${n.s} · ${n.d}</div>
+      </div>`;
+    });
+  }
+  if(!html) html=`<div class="sr-empty">No results for "${q}"</div>`;
+  box.innerHTML=html;
+  box.classList.add('open');
+}
+function searchNav(type,val){
+  const box=document.getElementById('search-results');
+  const input=document.getElementById('global-search');
+  box.classList.remove('open');input.value='';
+  if(type==='company'){setActiveCompany(val);showPage('companies',document.querySelectorAll('.nav-tab')[1]);}
+  else if(type==='playbook'){showPage('playbooks',document.querySelectorAll('.nav-tab')[2]);setTimeout(()=>togglePb(parseInt(val)),100);}
+}
+// ── NEWSLETTER ───────────────────────────────────────────────────────
+function submitNewsletter(){
+  const input=document.getElementById('newsletter-email');
+  const email=input.value.trim();
+  if(!email||!email.includes('@')){showToast('Please enter a valid email');return;}
+  // Store locally (connect to ConvertKit/Mailchimp/Netlify Forms later)
+  const subs=JSON.parse(localStorage.getItem('tvc-subscribers')||'[]');
+  if(subs.includes(email)){showToast('Already subscribed!');return;}
+  subs.push(email);
+  localStorage.setItem('tvc-subscribers',JSON.stringify(subs));
+  document.getElementById('newsletter-form').style.display='none';
+  document.getElementById('newsletter-success').style.display='block';
+  showToast('Subscribed — welcome aboard');
+}
+// Restore newsletter state if already subscribed
+(function(){
+  const subs=JSON.parse(localStorage.getItem('tvc-subscribers')||'[]');
+  if(subs.length>0){
+    const form=document.getElementById('newsletter-form');
+    const success=document.getElementById('newsletter-success');
+    if(form) form.style.display='none';
+    if(success) success.style.display='block';
+  }
+})();
+
+// Close search on outside click
+document.addEventListener('click',e=>{
+  const wrap=document.querySelector('.search-wrap');
+  if(wrap&&!wrap.contains(e.target)){
+    document.getElementById('search-results').classList.remove('open');
+  }
+});
 
 // ── DATA ───────────────────────────────────────────────────────────────
 const companies = {
@@ -594,7 +754,7 @@ const companies = {
     headline:'P&G\'s $1B Gillette HQ Signals Premium Manufacturing Play',
     deck:'P&G is transitioning from pricing-led growth to volume recovery, supported by its "Irrestible Superiority" doctrine across product, packaging, and brand communication. The company\'s $1B Gillette Global HQ investment in Boston cements its premium innovation commitment.',
     execSummary:'P&G continues to lead the CPG industry executing its Integrated Growth Strategy — a portfolio of daily-use categories where performance drives brand choice. The company is shifting from a pricing-led model to volume-driven growth, backed by relentless investment in product superiority. Their operational excellence is underpinned by a massive digital transformation aimed at productivity and consumer centricity.',
-    mgmtSignals:['We remain committed to our integrated growth strategy: a portfolio of daily-use categories where performance drives brand choice.','Superiority is a moving target. We must continue to innovate to stay ahead of consumer expectations and private label competition.','Digital transformation is not a project; it is a fundamental shift in how we operate the company.'],
+    mgmtSignals:[{q:'We remain committed to our integrated growth strategy: a portfolio of daily-use categories where performance drives brand choice.',speaker:'Jon Moeller',title:'Chairman & CEO',source:'Q2 FY2025 Earnings Call'},{q:'Superiority is a moving target. We must continue to innovate to stay ahead of consumer expectations and private label competition.',speaker:'Andre Schulten',title:'CFO',source:'Q2 FY2025 Earnings Call'},{q:'Digital transformation is not a project; it is a fundamental shift in how we operate the company.',speaker:'Jon Moeller',title:'Chairman & CEO',source:'Investor Day 2025'}],
     risks:['Continued inflationary pressure on raw materials and labor','Geopolitical instability affecting China market recovery','Retailer inventory destocking and shelf-space competition','Consumer trade-down to private label brands'],
     opps:[{title:'Expand premiumization in BRICS+ emerging markets',detail:'Target Tier-1 cities with specialized Beauty and Home Care premium SKUs. Achieve 15% net sales increase in premium categories by end of FY25.'},{title:'Accelerate retail media monetization',detail:'Partner with major retailers on closed-loop measurement to capture share of the $54B retail media market.'},{title:'Deploy GenAI to reduce SG&A and creative costs',detail:'AI creative platform targeting 40% production cost reduction and 5x content velocity increase.'},{title:'Grow professional/commercial cleaning sector',detail:'Leverage Tide and Febreze brand equity to expand B2B cleaning addressable market by $2B+.'}],
     radar:{'Strategy Clarity':95,'Innovation Velocity':88,'Supply Chain Resilience':82,'Mfg Efficiency':86,'Marketing Modernization':91,'Digital & AI':85,'Financial Flexibility':79,'Org Agility':77,'Competitive Position':90},
@@ -609,7 +769,7 @@ const companies = {
     headline:'Unilever\'s 30 Power Brands Strategy: Focus Over Scale',
     deck:'New CEO Hein Schumacher is executing a historic portfolio reset — concentrating investment behind 30 Power Brands representing 75% of revenue and separating the ice cream division.',
     execSummary:'Unilever is executing a fundamental portfolio reset under CEO Hein Schumacher, divesting laggard brands and concentrating investment behind 30 Power Brands. The Ice Cream separation is the most significant structural move, expected to unlock margin expansion and strategic focus in Beauty, Wellbeing, and Home Care.',
-    mgmtSignals:['We are simplifying and focusing. Fewer, bigger bets on brands that can win globally.','Our 30 Power Brands now represent 75% of revenue. That is where our resources and leadership attention go.','The Ice Cream separation will create two stronger, more focused businesses.'],
+    mgmtSignals:[{q:'We are simplifying and focusing. Fewer, bigger bets on brands that can win globally.',speaker:'Hein Schumacher',title:'CEO',source:'Q4 2024 Earnings Call'},{q:'Our 30 Power Brands now represent 75% of revenue. That is where our resources and leadership attention go.',speaker:'Hein Schumacher',title:'CEO',source:'Capital Markets Day 2025'},{q:'The Ice Cream separation will create two stronger, more focused businesses.',speaker:'Fernando Fernandez',title:'CFO',source:'Q4 2024 Earnings Call'}],
     risks:['Ice Cream separation execution complexity and cost','Emerging market currency headwinds','Private label competition in European home care','Pace of digital commerce capability vs. pure-play competitors'],
     opps:[{title:'Premiumize Beauty & Wellbeing portfolio',detail:'Leverage dermatological credibility of Dove and Simple to compete in the $40B+ premium skincare segment.'},{title:'Accelerate e-commerce in Southeast Asia',detail:'Southeast Asia D2C opportunity valued at $12B by 2027 — underpenetrated by Unilever today.'},{title:'Build climate-positive supply chain narrative',detail:'Leverage established sustainability credentials to command a 5-10% pricing premium vs. conventional peers.'},{title:'Expand Prestige Beauty via acquisitions',detail:'Fill portfolio gaps in luxury fragrance and color cosmetics to complement core brands.'}],
     radar:{'Strategy Clarity':78,'Innovation Velocity':74,'Supply Chain Resilience':76,'Mfg Efficiency':73,'Marketing Modernization':82,'Digital & AI':80,'Financial Flexibility':71,'Org Agility':69,'Competitive Position':81},
@@ -624,7 +784,7 @@ const companies = {
     headline:'Monster Q4 2025 BEAT: $7.14B Revenue, International Now 40% of Sales',
     deck:'Monster delivered a strong Q4 beating consensus by +4.2% driven by EMEA and APAC expansion. Conservative FY2026 guidance on FX headwinds may create a buying opportunity as the international thesis remains intact.',
     execSummary:'Monster Beverage reported Q4 2025 results beating consensus on revenue at $7.14B (+8.2% YoY), driven by strong international expansion particularly in EMEA and APAC. The Coca-Cola distribution network continues to be Monster\'s primary competitive moat, enabling rapid market entry in emerging markets. Management guided conservatively for 2026, flagging FX headwinds and softening US convenience store traffic.',
-    mgmtSignals:['Our international business is the next frontier of growth. EMEA is performing exceptionally well this quarter.','We are expanding our energy drink portfolio into new functional formats — hydration, focus, and recovery.','The Coca-Cola partnership remains our most powerful competitive advantage. We are investing to deepen it.'],
+    mgmtSignals:[{q:'Our international business is the next frontier of growth. EMEA is performing exceptionally well this quarter.',speaker:'Hilton Schlosberg',title:'Co-CEO',source:'Q4 2025 Earnings Call'},{q:'We are expanding our energy drink portfolio into new functional formats — hydration, focus, and recovery.',speaker:'Rodney Sacks',title:'Co-CEO & Chairman',source:'Q4 2025 Earnings Call'},{q:'The Coca-Cola partnership remains our most powerful competitive advantage. We are investing to deepen it.',speaker:'Hilton Schlosberg',title:'Co-CEO',source:'Investor Presentation 2025'}],
     risks:['US energy drink category saturation and deceleration','FX headwinds from strong dollar vs. EMEA currencies','Regulatory scrutiny on energy drink marketing to minors','Increased competition from Celsius and Prime energy brands'],
     opps:[{title:'Accelerate APAC and India market entry',detail:'India energy drink market growing 20% annually, currently less than 5% Monster share — massive underpenetration opportunity.'},{title:'Launch functional beverage extensions',detail:'Nootropic and recovery-focused formats to capture $8B+ functional beverage opportunity adjacent to core energy.'},{title:'Expand Beast Unleashed alcohol brand',detail:'The Beast Unleashed alcohol brand targeting $2B+ addressable market in the flavored malt beverage category.'},{title:'Deepen Coca-Cola distribution exclusivity in APAC',detail:'Negotiate extended distribution rights in high-growth APAC markets to widen moat against Red Bull.'}],
     radar:{'Strategy Clarity':92,'Innovation Velocity':94,'Supply Chain Resilience':80,'Mfg Efficiency':84,'Marketing Modernization':88,'Digital & AI':76,'Financial Flexibility':91,'Org Agility':86,'Competitive Position':93},
@@ -639,7 +799,7 @@ const companies = {
     headline:'PepsiCo Splits Beverages & Snacks Reporting — Separation Signal?',
     deck:'New segment reporting structure fuels speculation about a potential long-term portfolio separation. Frito-Lay continues to outperform while North American beverages face GLP-1 headwinds.',
     execSummary:'PepsiCo is navigating a complex bifurcation: its Frito-Lay snacks business continues to outperform while its beverage portfolio faces volume pressure from GLP-1 drug adoption and health-conscious consumer trends. Management\'s new reporting structure separating beverages and snacks fuels speculation about a potential long-term portfolio separation.',
-    mgmtSignals:['Our snacks business is performing exceptionally. Frito-Lay North America is the crown jewel of our portfolio.','The new reporting structure reflects how we run the business internally and provides greater investor clarity.','We are investing heavily in better-for-you innovation — less sodium, less sugar, more function.'],
+    mgmtSignals:[{q:'Our snacks business is performing exceptionally. Frito-Lay North America is the crown jewel of our portfolio.',speaker:'Ramon Laguarta',title:'Chairman & CEO',source:'Q4 2024 Earnings Call'},{q:'The new reporting structure reflects how we run the business internally and provides greater investor clarity.',speaker:'Jamie Caulfield',title:'CFO',source:'Q4 2024 Earnings Call'},{q:'We are investing heavily in better-for-you innovation — less sodium, less sugar, more function.',speaker:'Ramon Laguarta',title:'Chairman & CEO',source:'CAGNY 2025'}],
     risks:['GLP-1 drug adoption reducing snack and soda consumption frequency','Volume deceleration in North American beverages','Private label competition in commodity snack segments','Potential separation costs and complexity if pursued'],
     opps:[{title:'Spin-off beverages to unlock Frito-Lay value',detail:'Analysts estimate Frito-Lay standalone would trade at 25-28x EBITDA vs. 18x blended today — significant multiple expansion.'},{title:'Expand Gatorade into functional hydration',detail:'$15B+ sports nutrition adjacency opportunity for a trusted performance brand with existing distribution.'},{title:'Launch better-for-you snack innovation pipeline',detail:'High-protein, low-sugar formats to capture GLP-1-adjacent health-conscious consumers and defend volume.'},{title:'Deepen retail media partnerships with Walmart and Kroger',detail:'First-party snack purchase data is a monetizable asset in the rapidly growing retail media ecosystem.'}],
     radar:{'Strategy Clarity':82,'Innovation Velocity':80,'Supply Chain Resilience':84,'Mfg Efficiency':83,'Marketing Modernization':85,'Digital & AI':88,'Financial Flexibility':77,'Org Agility':75,'Competitive Position':85},
@@ -654,7 +814,7 @@ const companies = {
     headline:'Coca-Cola\'s AI Marketing Machine: 30% More Content, 40% Less Cost',
     deck:'Coca-Cola is executing the most aggressive AI transformation in CPG marketing, deploying generative AI across its entire global creative pipeline with Microsoft Azure as its primary partner.',
     execSummary:'Coca-Cola is deploying the most aggressive AI transformation in CPG marketing, building proprietary brand-trained models and enabling any market team to produce on-brand campaign assets within hours. The company is leveraging its iconic brand equity and the world\'s most powerful distribution network (30M outlets, 200 countries) to defend volume share while competitors scramble to catch up on digital capabilities.',
-    mgmtSignals:['AI is transforming how we create, localize, and deploy marketing content at scale globally.','Our distribution moat — 200 countries, 30 million outlets — is our greatest competitive advantage.','We\'re investing in the occasions that matter: on-premise dining, sports, and live entertainment.'],
+    mgmtSignals:[{q:'AI is transforming how we create, localize, and deploy marketing content at scale globally.',speaker:'James Quincey',title:'Chairman & CEO',source:'Q4 2024 Earnings Call'},{q:'Our distribution moat — 200 countries, 30 million outlets — is our greatest competitive advantage.',speaker:'James Quincey',title:'Chairman & CEO',source:'CAGNY 2025'},{q:'We\'re investing in the occasions that matter: on-premise dining, sports, and live entertainment.',speaker:'John Murphy',title:'President & CFO',source:'Q4 2024 Earnings Call'}],
     risks:['Volume decline in carbonated soft drinks in health-conscious markets','GLP-1 drug adoption reducing sugar consumption frequency','Water scarcity risks to production in key markets','Currency headwinds from dollar strength in emerging markets'],
     opps:[{title:'Deploy AI-generated personalized marketing at scale',detail:'AI creative platform enabling 1:1 personalization across 200 markets at one-third the cost of traditional production.'},{title:'Capture sports and live entertainment occasion share',detail:'Exclusive venue partnerships and experiential marketing in high-value social occasions drive volume growth.'},{title:'Expand premium water and hydration portfolio',detail:'Smart Water and Topo Chico can capture significant share of the $20B+ premium water segment.'},{title:'Grow Fairlife and functional nutrition brands',detail:'Fairlife milk growing 20%+ annually; expand into protein shakes and functional dairy adjacencies.'}],
     radar:{'Strategy Clarity':91,'Innovation Velocity':79,'Supply Chain Resilience':87,'Mfg Efficiency':85,'Marketing Modernization':94,'Digital & AI':82,'Financial Flexibility':88,'Org Agility':80,'Competitive Position':92},
@@ -669,7 +829,7 @@ const companies = {
     headline:'General Mills FQ3: Organic Growth Returns as Blue Buffalo Drag Fades',
     deck:'General Mills is navigating a challenging transition — its Blue Buffalo acquisition continues to underperform while core North America Retail faces volume pressure. Management\'s Accelerate strategy is showing early traction.',
     execSummary:'General Mills is navigating a challenging transition as its Blue Buffalo pet food acquisition underperforms and its core North America Retail segment faces volume pressure. The company is leaning into trusted brands while divesting underperforming assets and investing in HMW (Health, Meals, and Wellbeing) priority platforms.',
-    mgmtSignals:['Blue Buffalo is a long-term asset. We remain committed to the pet food category.','Our Accelerate strategy is delivering. HMW platforms now represent 45% of portfolio revenue.','We are being disciplined about where we invest and where we divest.'],
+    mgmtSignals:[{q:'Blue Buffalo is a long-term asset. We remain committed to the pet food category.',speaker:'Jeff Harmening',title:'Chairman & CEO',source:'Q3 FY2025 Earnings Call'},{q:'Our Accelerate strategy is delivering. HMW platforms now represent 45% of portfolio revenue.',speaker:'Jeff Harmening',title:'Chairman & CEO',source:'CAGNY 2025'},{q:'We are being disciplined about where we invest and where we divest.',speaker:'Kofi Bruce',title:'CFO',source:'Q3 FY2025 Earnings Call'}],
     risks:['Blue Buffalo market share loss to premium and fresh pet food competitors','Private label encroachment in cereal and snack bars','Consumer trade-down from premium Häagen-Dazs to private label','Volume declines in North America frozen meals'],
     opps:[{title:'Revitalize Blue Buffalo with vet endorsement strategy',detail:'Partner with 10,000+ vet practices to rebuild trust and drive prescription pet food market entry.'},{title:'Expand Häagen-Dazs luxury positioning globally',detail:'Asian premium ice cream market growing 15% annually; brand has significant equity leverage in the region.'},{title:'Launch high-protein cereal extensions',detail:'Protein-fortified Cheerios and Nature Valley variants to capture GLP-1 adjacent health occasion.'},{title:'Build DTC capabilities for Häagen-Dazs and Annie\'s',detail:'Premium brands have unmonetized DTC potential in gifting and subscription models.'}],
     radar:{'Strategy Clarity':68,'Innovation Velocity':65,'Supply Chain Resilience':72,'Mfg Efficiency':74,'Marketing Modernization':70,'Digital & AI':70,'Financial Flexibility':66,'Org Agility':64,'Competitive Position':72},
@@ -684,7 +844,7 @@ const companies = {
     headline:'Kimberly-Clark Separates Professional Business — Pure-Play Consumer Focus',
     deck:'Kimberly-Clark completed its professional business separation, creating a pure-play consumer products company focused on Huggies, Kleenex, Scott, and Cottonelle under the "Powering Care" strategy.',
     execSummary:'Kimberly-Clark completed its professional business separation in late 2024, creating a pure-play consumer products company. Under the Powering Care strategy, the company is investing in premiumization, emerging market expansion, and digital consumer engagement to drive sustainable volume growth across its iconic diaper, tissue, and personal care brands.',
-    mgmtSignals:['The separation is complete. We are now a pure-play consumer company with unprecedented focus and clarity.','Huggies innovation pipeline is the strongest it has been in a decade.','Emerging markets represent 40% of our revenue and growing. That is our primary growth engine.'],
+    mgmtSignals:[{q:'The separation is complete. We are now a pure-play consumer company with unprecedented focus and clarity.',speaker:'Mike Hsu',title:'Chairman & CEO',source:'Q4 2024 Earnings Call'},{q:'Huggies innovation pipeline is the strongest it has been in a decade.',speaker:'Mike Hsu',title:'Chairman & CEO',source:'CAGNY 2025'},{q:'Emerging markets represent 40% of our revenue and growing. That is our primary growth engine.',speaker:'Nelson Urdaneta',title:'CFO',source:'Q4 2024 Earnings Call'}],
     risks:['Private label competition intensifying in tissue and diaper categories','Commodity pulp and polymer cost inflation','Birth rate decline in developed markets reducing diaper addressable market','Transition costs from professional business separation'],
     opps:[{title:'Premiumize Huggies with smart diaper technology',detail:'Connected diaper sensor technology can command 40% premium and create a recurring subscription revenue model.'},{title:'Expand in Africa and Southeast Asia emerging markets',detail:'Sub-Saharan Africa diaper penetration below 20%; significant runway for Huggies market development.'},{title:'Build direct-to-consumer subscription model',detail:'Consumable nature of diapers, wipes, and tissue creates ideal DTC subscription economics and LTV.'},{title:'Leverage Kleenex for wellness and therapeutic positioning',detail:'Kleenex with aloe, menthol, and dermatologist-tested variants can command 25%+ price premium.'}],
     radar:{'Strategy Clarity':80,'Innovation Velocity':72,'Supply Chain Resilience':78,'Mfg Efficiency':82,'Marketing Modernization':75,'Digital & AI':74,'Financial Flexibility':76,'Org Agility':79,'Competitive Position':78},
@@ -699,7 +859,7 @@ const companies = {
     headline:'Colgate\'s Oral Care Evolution: $500M to Own the Premium Dental Market',
     deck:'Colgate is doubling down on its core oral care dominance while using Hill\'s Pet Nutrition as its premium growth engine, investing $500M to capture the premium sensitivity and whitening care segment.',
     execSummary:'Colgate-Palmolive is doubling down on its core oral care dominance while using Hill\'s Pet Nutrition as its premium growth engine. The Colgate Oral Care Evolution platform is investing $500M to capture the premium teeth whitening and sensitivity care segment, directly targeting Sensodyne and Crest market positions.',
-    mgmtSignals:['Oral care is 42% of our revenue, and we intend to grow that share. It is our core and our superpower.','Hill\'s Pet Nutrition is our highest-growth and highest-margin business. We are investing to accelerate it.','Premiumization is happening in every category we operate in. We are determined to lead it.'],
+    mgmtSignals:[{q:'Oral care is 42% of our revenue, and we intend to grow that share. It is our core and our superpower.',speaker:'Noel Wallace',title:'Chairman, President & CEO',source:'Q4 2024 Earnings Call'},{q:'Hill\'s Pet Nutrition is our highest-growth and highest-margin business. We are investing to accelerate it.',speaker:'Noel Wallace',title:'Chairman, President & CEO',source:'CAGNY 2025'},{q:'Premiumization is happening in every category we operate in. We are determined to lead it.',speaker:'Stanley Sutula',title:'CFO',source:'Q4 2024 Earnings Call'}],
     risks:['P&G Oral-B electric toothbrush competition in premium segment','Dental subscription challengers attacking premium oral care','Hill\'s competition from Royal Canin and Purina Pro Plan','EM currency headwinds reducing Hill\'s profitability'],
     opps:[{title:'Launch Colgate Professional teeth whitening DTC line',detail:'Professional whitening segment growing 18% annually; dentist-recommended positioning creates 50%+ price premium.'},{title:'Expand Hill\'s Prescription Diet into vet telehealth',detail:'Vet telehealth partnerships can create a prescription pet food subscription revenue model with strong LTV.'},{title:'Build electric toothbrush platform to compete with Oral-B',detail:'Colgate e1 connected toothbrush has strong initial reviews; scale investment to capture $3B+ market.'},{title:'Launch microbiome oral care line',detail:'Oral microbiome science is creating a new premium segment for probiotic toothpaste and mouthwash.'}],
     radar:{'Strategy Clarity':84,'Innovation Velocity':77,'Supply Chain Resilience':81,'Mfg Efficiency':83,'Marketing Modernization':79,'Digital & AI':79,'Financial Flexibility':82,'Org Agility':77,'Competitive Position':83},
@@ -714,7 +874,7 @@ const companies = {
     headline:'Mondelez\'s Premium Snacking Bet vs. GLP-1 Headwinds',
     deck:'Mondelez is navigating the most significant structural headwind in its history: the rise of GLP-1 weight loss drugs threatening its core indulgent snacking portfolio of Oreo, Cadbury, and Milka.',
     execSummary:'Mondelez International is navigating a structural headwind: the rise of GLP-1 weight loss drugs threatening its core indulgent snacking portfolio. The company is responding with better-for-you reformulations of iconic brands and acquisitions of functional snack brands, betting that Oreo, Cadbury, and Milka will retain emotional loyalty even as consumption patterns shift.',
-    mgmtSignals:['GLP-1 is a real trend. We are planning for a world where consumers eat less but better quality.','Our iconic brands create emotional bonds that survive dietary changes. People moderate, they do not eliminate.','We are acquiring into better-for-you snacking while protecting and investing in our core business.'],
+    mgmtSignals:[{q:'GLP-1 is a real trend. We are planning for a world where consumers eat less but better quality.',speaker:'Dirk Van de Put',title:'Chairman & CEO',source:'Q4 2024 Earnings Call'},{q:'Our iconic brands create emotional bonds that survive dietary changes. People moderate, they do not eliminate.',speaker:'Dirk Van de Put',title:'Chairman & CEO',source:'CAGNY 2025'},{q:'We are acquiring into better-for-you snacking while protecting and investing in our core business.',speaker:'Luca Zaramella',title:'CFO',source:'Q4 2024 Earnings Call'}],
     risks:['GLP-1 drug adoption reducing indulgent snack occasion frequency','Private label biscuit and chocolate competition in Europe','Cocoa price inflation affecting Cadbury and Milka margins','Consumer perception of Oreo as ultra-processed food growing'],
     opps:[{title:'Launch Oreo Zero Sugar across international markets',detail:'Zero sugar Oreo has 40% lower calorie profile, directly addressing GLP-1 user moderation behavior.'},{title:'Acquire high-protein snack bar brand',detail:'RxBar, Perfect Bar, or similar high-protein brand would reposition Mondelez in health-adjacent snacking.'},{title:'Expand Cadbury gifting and premium box business',detail:'Chocolate gifting growing 12% annually; Cadbury premium boxed chocolate has significant headroom globally.'},{title:'Build Milka luxury Alpine positioning for US market entry',detail:'Milka\'s Alpine heritage can support 30-40% price premium vs. Hershey in the US market.'}],
     radar:{'Strategy Clarity':76,'Innovation Velocity':78,'Supply Chain Resilience':75,'Mfg Efficiency':77,'Marketing Modernization':80,'Digital & AI':77,'Financial Flexibility':74,'Org Agility':73,'Competitive Position':79},
@@ -729,7 +889,7 @@ const companies = {
     headline:'New Nestlé CEO Faces Portfolio Reset: Selling KitKat to Fund Nutrition Focus?',
     deck:'New CEO Laurent Freixe inherits a sprawling 2,000+ brand portfolio under activist investor pressure to divest confectionery and accelerate into medical nutrition and plant-based food.',
     execSummary:'New CEO Laurent Freixe inherits a portfolio in need of strategic clarity — spanning KitKat to Nespresso to infant nutrition. Activist investor pressure is intensifying calls to divest confectionery and accelerate into medical nutrition and plant-based food, where Nestlé has legitimate science-based differentiation. The market is watching for a decisive portfolio reset announcement.',
-    mgmtSignals:['I am committed to creating a simpler, faster, and more focused Nestlé. Simplicity is a strategic imperative.','Our nutrition science heritage is what makes Nestlé unique. That is where we will concentrate our investment.','Portfolio optimization is an ongoing process. Every business must earn its place in our portfolio.'],
+    mgmtSignals:[{q:'I am committed to creating a simpler, faster, and more focused Nestlé. Simplicity is a strategic imperative.',speaker:'Laurent Freixe',title:'CEO',source:'First 100 Days Address'},{q:'Our nutrition science heritage is what makes Nestlé unique. That is where we will concentrate our investment.',speaker:'Laurent Freixe',title:'CEO',source:'Investor Update 2025'},{q:'Portfolio optimization is an ongoing process. Every business must earn its place in our portfolio.',speaker:'Anna Manz',title:'CFO',source:'FY 2024 Results'}],
     risks:['Activist investor pressure for faster portfolio transformation','Confectionery margin erosion from cocoa and sugar inflation','Infant formula reputation risk following regulatory scrutiny','Nespresso DTC disruption from private label pod competition'],
     opps:[{title:'Divest KitKat and confectionery to Ferrero or Mars',detail:'Confectionery divestiture would release €15-20B to fund medical nutrition and plant-based acquisitions.'},{title:'Acquire medical nutrition company to compete with Abbott',detail:'Medical nutrition is growing 8% annually; Nestlé Health Science needs scale acquisitions to compete.'},{title:'Build Nespresso luxury brand into coffee lifestyle ecosystem',detail:'Nespresso coffee bar and gifting platform can compete with luxury food and beverage gifting segment.'},{title:'Expand Purina Pro Plan veterinary diet with telehealth',detail:'Veterinary nutrition subscription model leveraging Purina science credibility and distribution.'}],
     radar:{'Strategy Clarity':72,'Innovation Velocity':70,'Supply Chain Resilience':80,'Mfg Efficiency':78,'Marketing Modernization':74,'Digital & AI':78,'Financial Flexibility':69,'Org Agility':66,'Competitive Position':76},
@@ -887,6 +1047,34 @@ function setActiveCompany(ticker){
   renderCoList();
 }
 
+// ── RENDER: WEEK DATE ───────────────────────────────────────────────────
+function renderWeekDate(){
+  const now=new Date();
+  const day=now.getDay();
+  const mon=new Date(now);mon.setDate(now.getDate()-(day===0?6:day-1));
+  const fri=new Date(mon);fri.setDate(mon.getDate()+4);
+  const fmt=d=>d.toLocaleDateString('en-US',{month:'long',day:'numeric'});
+  document.getElementById('week-date-label').textContent=`WEEK OF ${fmt(mon).toUpperCase()}–${fri.getDate()}, ${fri.getFullYear()}`;
+}
+
+// ── RENDER: HERO CARD (dynamic from latest reported earnings) ───────────
+function renderHero(){
+  const el=document.getElementById('hero-card');
+  const rep=earningsData.reported[0];
+  if(!rep){el.innerHTML='<div style="padding:20px;color:var(--text3)">No recent earnings reported.</div>';return;}
+  const co=companies[rep.ticker];
+  const resultLabel=rep.result==='BEAT'?'⚡ EARNINGS BEAT':rep.result==='MISS'?'⚠ EARNINGS MISS':'📊 EARNINGS REPORTED';
+  el.innerHTML=`
+    <div class="hero-eyebrow">
+      <span>${resultLabel}</span>
+      <span class="co-tag">${rep.ticker}</span>
+      <span style="color:var(--text3)">${rep.name}</span>
+    </div>
+    <div class="hero-headline">${rep.name} ${rep.date.split(',')[0]}: Revenue ${rep.result==='BEAT'?'Beats':'Misses'} at ${rep.rev}${rep.revSurp?' ('+rep.revSurp+')':''}</div>
+    <div class="hero-deck">${co?co.deck:rep.guidance}</div>
+    <div class="hero-cta" onclick="setActiveCompany('${rep.ticker}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">READ FULL ANALYSIS →</div>`;
+}
+
 // ── RENDER: EARNINGS STRIP ──────────────────────────────────────────────
 function renderEarningsStrip(){
   const strip=document.getElementById('earnings-strip');
@@ -926,7 +1114,13 @@ function renderWeekSignals(){
 
 // ── RENDER: FOCUS GRID ───────────────────────────────────────────────────
 function renderFocusGrid(){
-  const focusCos=['PG','UL','PEP'];
+  // Pick top 3 companies by VCI, excluding the hero company (latest reported earnings)
+  const heroTicker=earningsData.reported.length?earningsData.reported[0].ticker:null;
+  const focusCos=Object.values(companies)
+    .filter(c=>c.ticker!==heroTicker)
+    .sort((a,b)=>b.vci-a.vci)
+    .slice(0,3)
+    .map(c=>c.ticker);
   document.getElementById('focus-grid').innerHTML=focusCos.map(t=>{
     const c=companies[t];
     return `<div class="focus-card" onclick="setActiveCompany('${t}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">
@@ -976,15 +1170,39 @@ function renderWeekTrends(){
 }
 
 // ── RENDER: COMPANY LIST ─────────────────────────────────────────────────
+function sparklineSVG(data,w=48,h=16){
+  if(!data||data.length<2) return '';
+  const mn=Math.min(...data),mx=Math.max(...data),rng=mx-mn||1;
+  const pts=data.map((v,i)=>`${(i/(data.length-1))*w},${h-((v-mn)/rng)*h}`).join(' ');
+  const trend=data[data.length-1]>=data[0];
+  const color=trend?'var(--accent)':'var(--danger)';
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="display:block"><polyline points="${pts}" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+}
+let sectorFilter='ALL';
+function renderSectorFilter(){
+  const sectors=['ALL',...new Set(Object.values(companies).map(c=>c.sector))];
+  document.getElementById('sector-filter').innerHTML=sectors.map(s=>`
+    <button class="pb-filter-btn ${s===sectorFilter?'active':''}" onclick="setSectorFilter('${s}')">${s}</button>
+  `).join('');
+}
+function setSectorFilter(s){sectorFilter=s;renderSectorFilter();renderCoList();}
 function renderCoList(){
-  document.getElementById('co-list').innerHTML=Object.values(companies).map(c=>`
+  const filtered=Object.values(companies).filter(c=>sectorFilter==='ALL'||c.sector===sectorFilter);
+  document.getElementById('co-list').innerHTML=filtered.map(c=>{
+    const hist=vciHistory[c.ticker];
+    const delta=hist?(hist[hist.length-1]-hist[0]):0;
+    const arrow=delta>0?'↑':delta<0?'↓':'→';
+    const deltaColor=delta>0?'var(--accent)':delta<0?'var(--danger)':'var(--text3)';
+    return `
     <div class="co-list-item ${c.ticker===activeCompany?'active':''}" onclick="setActiveCompany('${c.ticker}')">
       <div class="co-avatar">${c.ticker[0]}</div>
-      <div style="min-width:0">
+      <div style="min-width:0;flex:1">
         <div class="co-list-name">${c.name}</div>
-        <div class="co-list-meta"><span>${c.ticker}</span><span class="vci">${c.vci}</span></div>
+        <div class="co-list-meta"><span>${c.ticker}</span><span class="vci">${c.vci}</span><span style="color:${deltaColor};font-size:10px;margin-left:2px">${arrow}${Math.abs(delta)}</span></div>
       </div>
-    </div>`).join('');
+      <div style="flex-shrink:0">${hist?sparklineSVG(hist):''}</div>
+    </div>`;
+  }).join('');
 }
 
 // ── RENDER: COMPANY DETAIL ───────────────────────────────────────────────
@@ -1017,7 +1235,7 @@ function renderCoDetail(){
 
     <!-- KPI Tiles -->
     <div class="kpi-grid">
-      <div class="kpi-tile"><div class="kpi-label">VALUE CHANGE INDEX</div><div class="kpi-value">${co.vci}</div><div class="kpi-delta ${co.vci>=85?'up':co.vci>=75?'flat':'down'}">${co.vci>=85?'↑ Strong':co.vci>=75?'→ Moderate':'↓ Lagging'}</div></div>
+      <div class="kpi-tile"><div class="kpi-label">VALUE CHANGE INDEX</div><div style="display:flex;align-items:center;gap:10px"><div class="kpi-value">${co.vci}</div>${vciHistory[co.ticker]?sparklineSVG(vciHistory[co.ticker],64,24):''}</div><div class="kpi-delta ${co.vci>=85?'up':co.vci>=75?'flat':'down'}">${co.vci>=85?'↑ Strong':co.vci>=75?'→ Moderate':'↓ Lagging'}</div></div>
       <div class="kpi-tile"><div class="kpi-label">STRATEGIC CLARITY</div><div class="kpi-value">${co.sc}</div><div class="kpi-delta ${co.sc>=85?'up':co.sc>=70?'flat':'down'}">${co.sc>=85?'↑ High':'→ Moderate'}</div></div>
       <div class="kpi-tile"><div class="kpi-label">INNOVATION VELOCITY</div><div class="kpi-value">${co.iv}</div><div class="kpi-delta ${co.iv>=85?'up':co.iv>=70?'flat':'down'}">${co.iv>=85?'↑ High':'→ Building'}</div></div>
       <div class="kpi-tile"><div class="kpi-label">DIGITAL MATURITY</div><div class="kpi-value">${co.dm}</div><div class="kpi-delta ${co.dm>=85?'up':co.dm>=70?'flat':'down'}">${co.dm>=85?'↑ Advanced':'→ Progressing'}</div></div>
@@ -1035,7 +1253,10 @@ function renderCoDetail(){
       ${co.mgmtSignals.map(s=>`
       <div class="signal-quote">
         <div class="quote-mark">"</div>
-        <div class="quote-text">${s}</div>
+        <div>
+          <div class="quote-text">${typeof s==='object'?s.q:s}</div>
+          ${typeof s==='object'?`<div class="quote-attr" style="font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:4px">— ${s.speaker}, ${s.title}${s.source?' · '+s.source:''}</div>`:''}
+        </div>
       </div>`).join('')}
     </div>
 
@@ -1166,7 +1387,9 @@ function generateTL(ticker){
 
   setTimeout(()=>{
     const opp=co.opps[0];
-    const sig=co.mgmtSignals[0];
+    const sigObj=co.mgmtSignals[0];
+    const sig=typeof sigObj==='object'?sigObj.q:sigObj;
+    const sigAttr=typeof sigObj==='object'?` — ${sigObj.speaker}, ${sigObj.title}`:'';
     const risk=co.risks[0];
     const news=co.news[0];
 
@@ -1177,7 +1400,7 @@ ${co.headline}
 
 ${co.deck}
 
-Key insight from management: "${sig}"
+Key insight from management: "${sig}"${sigAttr}
 
 Strategic opportunity I'm watching: ${opp.title}
 
@@ -1194,7 +1417,7 @@ SITUATION SUMMARY
 ${co.execSummary}
 
 KEY MANAGEMENT SIGNAL
-"${sig}"
+"${sig}"${sigAttr}
 
 PRIORITY OPPORTUNITY
 ${opp.title}: ${opp.detail}
@@ -1374,40 +1597,74 @@ function realExportTEP(oppIdx, ticker){
   const opp=co.opps[oppIdx];
   const plan=tepPlans[oppIdx]||tepPlans[0];
   const today=new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
-  document.getElementById('printable-tep').innerHTML=`
-    <div class="print-header">
-      <div class="print-logo">THE VALUE CHANGE</div>
-      <div class="print-date">${today}</div>
-    </div>
-    <div class="print-eyebrow">TACTICAL EXECUTION PLAN · ${co.name} (${ticker})</div>
-    <div class="print-title">${opp.title}</div>
-    <div class="print-objective">${opp.detail}</div>
-    <div class="print-section-head">EXECUTION ROADMAP</div>
-    <div class="print-steps">
-      ${plan.steps.map((s,i)=>`
-      <div class="print-step">
-        <div class="print-step-num">${i+1}</div>
-        <div style="flex:1">
-          <div class="print-step-title">${s.t}<span class="print-months">MONTHS ${s.m}</span></div>
-          <div class="print-step-detail">${s.d}</div>
-        </div>
-      </div>`).join('')}
-    </div>
-    <div class="print-bottom-grid">
-      <div>
-        <div class="print-section-head">RESOURCE REQUIREMENTS</div>
-        <ul class="print-list">${plan.resources.map(r=>`<li>${r}</li>`).join('')}</ul>
-      </div>
-      <div>
-        <div class="print-section-head">EXPECTED IMPACT</div>
-        <div class="print-impact">${plan.impact}</div>
-      </div>
-    </div>
-    <div class="print-footer">
-      <div>thevaluechange.com · Confidential</div>
-      <div>Generated ${today} · Professional Use Only</div>
-    </div>`;
-  window.print();
+  const{jsPDF}=window.jspdf;
+  const doc=new jsPDF({unit:'mm',format:'a4'});
+  const w=doc.internal.pageSize.getWidth();
+  const m=20; // margin
+  let y=20;
+  // Header
+  doc.setFont('courier','bold');doc.setFontSize(9);doc.setTextColor(30,30,30);
+  doc.text('THE VALUE CHANGE',m,y);
+  doc.setFont('courier','normal');doc.setFontSize(8);doc.setTextColor(120,120,120);
+  doc.text(today,w-m,y,{align:'right'});
+  y+=4;doc.setDrawColor(30,30,30);doc.setLineWidth(0.5);doc.line(m,y,w-m,y);
+  // Eyebrow
+  y+=10;doc.setFont('courier','bold');doc.setFontSize(8);doc.setTextColor(100,100,100);
+  doc.text(`TACTICAL EXECUTION PLAN · ${co.name} (${ticker})`,m,y);
+  // Title
+  y+=8;doc.setFont('times','bold');doc.setFontSize(18);doc.setTextColor(20,20,20);
+  const titleLines=doc.splitTextToSize(opp.title,w-m*2);
+  doc.text(titleLines,m,y);y+=titleLines.length*7+4;
+  // Objective
+  doc.setFillColor(241,245,249);doc.roundedRect(m,y-3,w-m*2,20,2,2,'F');
+  doc.setDrawColor(30,30,30);doc.setLineWidth(0.3);doc.line(m,y-3,m,y+17);
+  doc.setFont('helvetica','normal');doc.setFontSize(9);doc.setTextColor(51,65,85);
+  const objLines=doc.splitTextToSize(opp.detail,w-m*2-8);
+  doc.text(objLines,m+4,y+3);y+=24;
+  // Roadmap header
+  doc.setFont('courier','bold');doc.setFontSize(8);doc.setTextColor(100,100,100);
+  doc.text('EXECUTION ROADMAP',m,y);y+=2;
+  doc.setDrawColor(226,232,240);doc.setLineWidth(0.2);doc.line(m,y,w-m,y);y+=6;
+  // Steps
+  plan.steps.forEach((s,i)=>{
+    if(y>260){doc.addPage();y=20;}
+    doc.setFillColor(248,250,252);doc.roundedRect(m,y-4,w-m*2,18,2,2,'F');
+    doc.setFillColor(30,30,30);doc.circle(m+5,y+2,3.5,'F');
+    doc.setFont('courier','bold');doc.setFontSize(8);doc.setTextColor(255,255,255);
+    doc.text(String(i+1),m+5,y+3,{align:'center'});
+    doc.setFont('helvetica','bold');doc.setFontSize(10);doc.setTextColor(15,23,42);
+    doc.text(s.t,m+12,y+2);
+    doc.setFont('courier','normal');doc.setFontSize(7);doc.setTextColor(100,100,100);
+    doc.text(`MONTHS ${s.m}`,m+12+doc.getTextWidth(s.t)+3,y+2);
+    doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(71,85,105);
+    const dLines=doc.splitTextToSize(s.d,w-m*2-16);
+    doc.text(dLines,m+12,y+8);y+=18+Math.max(0,(dLines.length-1)*4);
+  });
+  y+=6;
+  // Resources & Impact side by side
+  if(y>220){doc.addPage();y=20;}
+  const halfW=(w-m*2-8)/2;
+  doc.setFont('courier','bold');doc.setFontSize(8);doc.setTextColor(100,100,100);
+  doc.text('RESOURCE REQUIREMENTS',m,y);
+  doc.text('EXPECTED IMPACT',m+halfW+8,y);
+  y+=2;doc.setDrawColor(226,232,240);doc.line(m,y,m+halfW,y);doc.line(m+halfW+8,y,w-m,y);y+=6;
+  doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor(51,65,85);
+  plan.resources.forEach(r=>{
+    const rLines=doc.splitTextToSize('• '+r,halfW-4);
+    doc.text(rLines,m+2,y);y+=rLines.length*4+2;
+  });
+  let iy=y-plan.resources.length*6;
+  doc.setFont('helvetica','italic');doc.setFontSize(9);
+  const impLines=doc.splitTextToSize(plan.impact,halfW-4);
+  doc.text(impLines,m+halfW+10,iy>40?iy:y);
+  // Footer
+  y=doc.internal.pageSize.getHeight()-12;
+  doc.setDrawColor(226,232,240);doc.line(m,y-4,w-m,y-4);
+  doc.setFont('courier','normal');doc.setFontSize(7);doc.setTextColor(148,163,184);
+  doc.text('thevaluechange.com · Confidential',m,y);
+  doc.text(`Generated ${today} · Professional Use Only`,w-m,y,{align:'right'});
+  doc.save(`TEP-${ticker}-${opp.title.replace(/[^a-zA-Z0-9]/g,'-').substring(0,40)}.pdf`);
+  showToast('PDF downloaded');
 }
 
 // ── RENDER: PLAYBOOKS ────────────────────────────────────────────────────
@@ -1523,7 +1780,7 @@ function toggleEarningsWatch(ticker, name){
     if(btn){btn.classList.add('watching');btn.textContent='♥ WATCHING';}
     showToast('Added to watchlist');
   }
-  updateWlBadge();
+  saveWatchlist(); updateWlBadge();
   if(document.getElementById('page-watchlist').classList.contains('active')) renderWatchlist();
 }
 
@@ -1541,7 +1798,7 @@ function renderWatchlist(){
       <span class="wl-remove" onclick="event.stopPropagation();removeWlItem(${i})">✕</span>
     </div>`).join('')}</div>`;
 }
-function removeWlItem(i){ watchlist.splice(i,1); updateWlBadge(); renderWatchlist(); }
+function removeWlItem(i){ watchlist.splice(i,1); saveWatchlist(); updateWlBadge(); renderWatchlist(); }
 function navToWlItem(type, ticker){
   if(type==='earnings') showPage('earnings',document.querySelectorAll('.nav-tab')[3]);
   else if(ticker){ setActiveCompany(ticker); showPage('companies',document.querySelectorAll('.nav-tab')[1]); }
@@ -1558,7 +1815,7 @@ function showPage(id, tabEl){
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
   if(tabEl) tabEl.classList.add('active');
-  if(id==='companies'){ renderCoList(); renderCoDetail(); }
+  if(id==='companies'){ renderSectorFilter(); renderCoList(); renderCoDetail(); }
   if(id==='playbooks'){ renderPbFilter(); renderPbGrid(); }
   if(id==='earnings') renderEarnings();
   if(id==='watchlist') renderWatchlist();
@@ -1571,13 +1828,47 @@ function showToast(msg){
   setTimeout(()=>t.classList.remove('show'),2500);
 }
 
+// ── DATA LAYER ──────────────────────────────────────────────────────────
+// Try to load external data.json to override inline data (enables CMS-free content updates)
+async function loadExternalData(){
+  try{
+    const res=await fetch('data.json');
+    if(!res.ok) return;
+    const data=await res.json();
+    // Merge external company data into inline companies object
+    if(data.companies){
+      Object.keys(data.companies).forEach(k=>{
+        if(companies[k]) Object.assign(companies[k],data.companies[k]);
+        else companies[k]=data.companies[k];
+      });
+    }
+    // Override playbooks if provided
+    if(data.playbooks) playbooks.length=0,playbooks.push(...data.playbooks);
+    // Override earnings if provided
+    if(data.reported) reported.length=0,reported.push(...data.reported);
+    if(data.upcoming) upcoming.length=0,upcoming.push(...data.upcoming);
+    // Override trends if provided
+    if(data.trends) trends.length=0,trends.push(...data.trends);
+    // VCI history overrides
+    if(data.vciHistory) Object.assign(vciHistory,data.vciHistory);
+    console.log('[TVC] External data loaded successfully');
+  }catch(e){
+    console.log('[TVC] No external data.json found, using inline data');
+  }
+}
+
 // ── INIT ─────────────────────────────────────────────────────────────────
-// printable-tep div is in the DOM (added before </body>), hidden unless printing
-renderEarningsStrip();
-renderWeekSignals();
-renderFocusGrid();
-renderFeaturedPlaybook();
-renderWeekTrends();
+(async function init(){
+  await loadExternalData();
+  renderWeekDate();
+  renderHero();
+  renderEarningsStrip();
+  renderWeekSignals();
+  renderFocusGrid();
+  renderFeaturedPlaybook();
+  renderWeekTrends();
+  updateWlBadge();
+})();
 
 </script>
 <!-- Printable TEP 1-pager (visible only during window.print()) -->
