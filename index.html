@@ -506,6 +506,27 @@ select.intake-input{appearance:none;cursor:pointer}
 .admin-export-btn{font-family:var(--mono);font-size:10px;letter-spacing:.06em;padding:8px 16px;border-radius:5px;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text2);transition:all .15s;margin-bottom:20px}
 .admin-export-btn:hover{background:var(--surface2);border-color:var(--accent-border);color:var(--accent)}
 
+/* ── AI PROFILE BADGES ──────────────────────────────────────── */
+.ai-badge{font-family:var(--mono);font-size:8px;letter-spacing:.1em;background:var(--surface2);color:var(--text3);border:1px solid var(--border);border-radius:3px;padding:1px 5px;margin-left:6px}
+.ai-gen-banner{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px 16px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.ai-gen-banner-label{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--text3)}
+.ai-gen-banner-label strong{color:var(--text2)}
+.ai-gen-refresh{font-family:var(--mono);font-size:10px;padding:4px 10px;border-radius:4px;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text3);transition:all .15s;margin-left:auto}
+.ai-gen-refresh:hover{background:var(--accent-soft);color:var(--accent);border-color:var(--accent-border)}
+/* AI PROFILE LOADING SKELETON */
+.ai-skeleton{padding:24px}
+.ai-skeleton-line{background:var(--surface2);border-radius:4px;margin-bottom:12px;animation:skPulse 1.5s ease-in-out infinite}
+@keyframes skPulse{0%,100%{opacity:.4}50%{opacity:1}}
+.ai-skeleton-header{height:48px;width:60%;margin-bottom:20px}
+.ai-skeleton-text{height:14px;width:100%}
+.ai-skeleton-text.short{width:40%}
+.ai-skeleton-text.med{width:70%}
+.ai-skeleton-block{height:120px;width:100%;border-radius:8px;margin-bottom:16px}
+/* SEARCH GENERATE CTA */
+.sr-generate{padding:12px 14px;border-top:1px solid var(--border);cursor:pointer;transition:background .15s}
+.sr-generate:hover{background:var(--accent-soft)}
+.sr-generate-label{font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--accent);margin-bottom:4px}
+.sr-generate-text{font-size:12px;color:var(--text2)}
 /* ── MOBILE RESPONSIVE @ 768px ─────────────────────────────── */
 @media(max-width:768px){
 
@@ -926,6 +947,32 @@ function handleSearch(q){
       </div>`;
     });
   }
+  // Search cached AI profiles (not already in curated results)
+  const curatedTickers=new Set(Object.keys(companies).filter(t=>!companies[t]._meta?.generated));
+  const aiCache=getAICache();
+  const aiMatches=Object.entries(aiCache).filter(([ticker,entry])=>{
+    if(curatedTickers.has(ticker)) return false;
+    const d=entry.data;
+    return d.name.toLowerCase().includes(lq)||d.ticker.toLowerCase().includes(lq)||
+      (d.sector&&d.sector.toLowerCase().includes(lq));
+  });
+  if(aiMatches.length){
+    html+=`<div class="sr-section">AI-GENERATED PROFILES</div>`;
+    aiMatches.forEach(([ticker,entry])=>{
+      const d=entry.data;
+      html+=`<div class="sr-item" onclick="searchNav('company','${d.ticker}')">
+        <div class="sr-item-title">${d.ticker} — ${d.name} <span class="ai-badge">AI</span></div>
+        <div class="sr-item-meta">${d.sector||''} · VCI ${d.vci||'—'}</div>
+      </div>`;
+    });
+  }
+  // Generate CTA if no curated match and query looks like a company name
+  if(!coMatches.length && q.length>=2){
+    html+=`<div class="sr-generate" onclick="searchNav('ai-generate','${q.replace(/'/g,"\\'")}')">
+      <div class="sr-generate-label">⚡ GENERATE AI PROFILE</div>
+      <div class="sr-generate-text">"${q}" — ~15 seconds · AI-generated</div>
+    </div>`;
+  }
   if(!html) html=`<div class="sr-empty">No results for "${q}"</div>`;
   box.innerHTML=html;
   box.classList.add('open');
@@ -936,6 +983,7 @@ function searchNav(type,val){
   box.classList.remove('open');input.value='';
   if(type==='company'){setActiveCompany(val);showPage('companies',document.querySelectorAll('.nav-tab')[1]);}
   else if(type==='playbook'){showPage('playbooks',document.querySelectorAll('.nav-tab')[2]);setTimeout(()=>togglePb(parseInt(val)),100);}
+  else if(type==='ai-generate'){generateAIProfile(val);}
 }
 // ── NEWSLETTER ───────────────────────────────────────────────────────
 function submitNewsletter(){
@@ -1510,7 +1558,7 @@ function renderCoList(){
     <div class="co-list-item ${c.ticker===activeCompany?'active':''}" onclick="setActiveCompany('${c.ticker}')">
       ${coLogoImg(c.ticker,32)}
       <div style="min-width:0;flex:1">
-        <div class="co-list-name">${c.name}</div>
+        <div class="co-list-name">${c.name}${c._meta&&c._meta.generated?'<span class="ai-badge">AI</span>':''}</div>
         <div class="co-list-meta"><span>${c.ticker}</span><span class="vci">${c.vci}</span><span style="color:${deltaColor};font-size:10px;margin-left:2px">${arrow}${Math.abs(delta)}</span></div>
       </div>
       <div style="flex-shrink:0">${hist?sparklineSVG(hist):''}</div>
@@ -1563,6 +1611,12 @@ function renderCoDetail(){
         <button class="lens-btn ${activeLens==='strategy'?'active':''}" onclick="setLens('strategy')">Strategy</button>
       </div>
     </div>
+
+    <!-- AI Generated Banner -->
+    ${co._meta&&co._meta.generated?`<div class="ai-gen-banner">
+      <div class="ai-gen-banner-label"><strong>AI-GENERATED PROFILE</strong> · Created ${new Date(co._meta.generatedAt).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})} · May contain inaccuracies</div>
+      <button class="ai-gen-refresh" onclick="refreshAIProfile('${co.ticker}')">↻ Refresh</button>
+    </div>`:''}
 
     <!-- Our Read (Sprint 13A) -->
     ${co.ourRead?`<div class="our-read">
@@ -2571,6 +2625,110 @@ function exportIntakes(){
   navigator.clipboard.writeText(intakes).then(()=>showToast('Intakes copied to clipboard'));
 }
 
+// ── AI PROFILE CACHE ────────────────────────────────────────────────────
+const AI_CACHE_KEY='tvc-ai-profiles';
+const AI_CACHE_TTL=7*24*60*60*1000; // 7 days
+
+function getAICache(){
+  try{return JSON.parse(localStorage.getItem(AI_CACHE_KEY))||{};}catch(e){return {};}
+}
+function saveAICache(cache){
+  try{
+    localStorage.setItem(AI_CACHE_KEY,JSON.stringify(cache));
+  }catch(e){
+    // Quota exceeded — evict oldest 10
+    const entries=Object.entries(cache).sort((a,b)=>new Date(a[1].cachedAt)-new Date(b[1].cachedAt));
+    entries.slice(0,10).forEach(([k])=>delete cache[k]);
+    try{localStorage.setItem(AI_CACHE_KEY,JSON.stringify(cache));}catch(e2){}
+  }
+}
+function loadCachedAIProfiles(){
+  const cache=getAICache();
+  Object.entries(cache).forEach(([ticker,entry])=>{
+    if(!companies[ticker]){
+      companies[ticker]=entry.data;
+    }
+  });
+}
+function isAICacheStale(ticker){
+  const cache=getAICache();
+  if(!cache[ticker]) return true;
+  return Date.now()-new Date(cache[ticker].cachedAt).getTime()>AI_CACHE_TTL;
+}
+
+let aiGenerating=false;
+async function generateAIProfile(query){
+  if(aiGenerating){showToast('Already generating a profile — please wait');return;}
+  aiGenerating=true;
+  // Show loading skeleton
+  showPage('companies',document.querySelectorAll('.nav-tab')[1]);
+  const detail=document.getElementById('co-detail');
+  detail.innerHTML=`
+    <div class="ai-skeleton">
+      <div class="ai-skeleton-line ai-skeleton-header"></div>
+      <div style="font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:.06em;margin-bottom:20px">GENERATING AI PROFILE FOR "${query.toUpperCase()}"</div>
+      <div class="ai-skeleton-line ai-skeleton-text"></div>
+      <div class="ai-skeleton-line ai-skeleton-text med"></div>
+      <div class="ai-skeleton-line ai-skeleton-text short"></div>
+      <div class="ai-skeleton-line ai-skeleton-block"></div>
+      <div class="ai-skeleton-line ai-skeleton-text"></div>
+      <div class="ai-skeleton-line ai-skeleton-text med"></div>
+      <div style="font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:16px">This takes ~15 seconds...</div>
+    </div>`;
+  try{
+    const res=await fetch('/.netlify/functions/generate-profile',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({query})
+    });
+    if(!res.ok){
+      const err=await res.json().catch(()=>({error:'Unknown error'}));
+      if(res.status===422){
+        detail.innerHTML=`<div style="padding:40px;text-align:center">
+          <div style="font-size:24px;margin-bottom:12px">🏭</div>
+          <div style="font-family:var(--serif);font-size:18px;font-weight:700;margin-bottom:8px">Not a CPG Company</div>
+          <div style="font-size:13px;color:var(--text2);max-width:400px;margin:0 auto">${err.message||'This company doesn\'t appear to be in the consumer packaged goods industry.'}</div>
+        </div>`;
+      }else{
+        detail.innerHTML=`<div style="padding:40px;text-align:center">
+          <div style="font-size:24px;margin-bottom:12px">⚠</div>
+          <div style="font-family:var(--serif);font-size:18px;font-weight:700;margin-bottom:8px">Generation Failed</div>
+          <div style="font-size:13px;color:var(--text2);margin-bottom:16px">${err.error||'Could not generate profile. Try again.'}</div>
+          <button class="intake-next" onclick="generateAIProfile('${query.replace(/'/g,"\\'")}')">Retry</button>
+        </div>`;
+      }
+      aiGenerating=false;
+      return;
+    }
+    const profile=await res.json();
+    // Inject into companies object
+    companies[profile.ticker]=profile;
+    // Cache it
+    const cache=getAICache();
+    cache[profile.ticker]={data:profile,cachedAt:new Date().toISOString(),query};
+    saveAICache(cache);
+    // Render
+    activeCompany=profile.ticker;
+    renderCoDetail();
+    renderCoList();
+    renderSectorFilter();
+    showToast(`Profile generated for ${profile.name}`);
+  }catch(e){
+    detail.innerHTML=`<div style="padding:40px;text-align:center">
+      <div style="font-size:24px;margin-bottom:12px">⚠</div>
+      <div style="font-family:var(--serif);font-size:18px;font-weight:700;margin-bottom:8px">Connection Error</div>
+      <div style="font-size:13px;color:var(--text2);margin-bottom:16px">Check your internet connection and try again.</div>
+      <button class="intake-next" onclick="generateAIProfile('${query.replace(/'/g,"\\'")}')">Retry</button>
+    </div>`;
+  }
+  aiGenerating=false;
+}
+
+async function refreshAIProfile(ticker){
+  const co=companies[ticker];
+  if(co) await generateAIProfile(co._meta?.query||co.name);
+}
+
 // ── DATA LAYER ──────────────────────────────────────────────────────────
 // Try to load external data.json to override inline data (enables CMS-free content updates)
 async function loadExternalData(){
@@ -2603,6 +2761,7 @@ async function loadExternalData(){
 // ── INIT ─────────────────────────────────────────────────────────────────
 (async function init(){
   await loadExternalData();
+  loadCachedAIProfiles();
   trackVisit();
   // Admin mode detection
   if(new URLSearchParams(window.location.search).get('admin')==='true'){
