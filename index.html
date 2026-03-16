@@ -462,6 +462,49 @@ img.co-logo{transition:opacity .2s}
 .watch-heart.active{color:#ef4444}
 .toast{position:fixed;bottom:24px;right:24px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px 18px;font-family:var(--mono);font-size:11px;color:var(--text);z-index:2000;transform:translateY(100px);opacity:0;transition:all .3s}
 .toast.show{transform:translateY(0);opacity:1}
+/* ── CONSULTING CTA ──────────────────────────────────────────── */
+.consulting-cta{margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
+.consulting-cta-inner{background:var(--surface2);border:1px solid var(--accent-border);border-radius:10px;padding:20px 24px;position:relative;overflow:hidden}
+.consulting-cta-inner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);animation:ctaShimmer 3s ease-in-out infinite}
+@keyframes ctaShimmer{0%,100%{opacity:.3}50%{opacity:.8}}
+.consulting-cta-label{font-family:var(--mono);font-size:9px;letter-spacing:.15em;color:var(--accent);display:block;margin-bottom:6px}
+.consulting-cta-text{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--text);line-height:1.4}
+.consulting-cta-sub{font-size:12px;color:var(--text2);line-height:1.5;margin:8px 0 14px}
+.consulting-cta-btn{font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding:10px 20px;border-radius:6px;cursor:pointer;border:1px solid var(--accent-border);background:var(--accent-soft);color:var(--accent);transition:all .15s;display:inline-flex;align-items:center;gap:6px}
+.consulting-cta-btn:hover{background:var(--accent-soft2);border-color:var(--accent)}
+/* ── INTAKE FORM ─────────────────────────────────────────────── */
+.intake-input{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-family:var(--sans);font-size:13px;color:var(--text);width:100%;outline:none;transition:border-color .2s;margin-bottom:12px;box-sizing:border-box}
+.intake-input:focus{border-color:var(--accent)}
+.intake-input::placeholder{color:var(--text3)}
+textarea.intake-input{resize:vertical;min-height:100px;line-height:1.6}
+select.intake-input{appearance:none;cursor:pointer}
+.intake-label{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--text3);margin-bottom:6px;display:block}
+.intake-step-num{font-family:var(--mono);font-size:9px;letter-spacing:.15em;color:var(--text3);margin-bottom:4px}
+.intake-heading{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:6px}
+.intake-sub{font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:18px}
+.intake-nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
+.intake-back{font-family:var(--mono);font-size:11px;padding:8px 16px;border-radius:5px;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text2);transition:all .15s}
+.intake-back:hover{background:var(--surface2)}
+.intake-next{font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding:8px 20px;border-radius:5px;cursor:pointer;border:1px solid var(--accent-border);background:var(--accent-soft);color:var(--accent);transition:all .15s}
+.intake-next:hover{background:var(--accent-soft2);border-color:var(--accent)}
+/* ── ADMIN INTAKE REVIEW ─────────────────────────────────────── */
+.intake-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:12px}
+.intake-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.intake-name{font-size:15px;font-weight:700}
+.intake-email{font-family:var(--mono);font-size:11px;color:var(--accent)}
+.intake-time{font-family:var(--mono);font-size:10px;color:var(--text3)}
+.intake-summary{background:var(--surface2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:12px 16px;font-size:13px;line-height:1.6;color:var(--text2);margin-bottom:12px}
+.intake-detail{font-size:12px;color:var(--text2);line-height:1.6;margin-bottom:12px;display:none}
+.intake-detail.open{display:block}
+.intake-detail-label{font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--text3);margin-bottom:4px;margin-top:10px}
+.intake-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.intake-status-badge{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.1em;padding:2px 8px;border-radius:3px}
+.intake-status-badge.new{background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-border)}
+.intake-status-badge.reviewed{background:var(--warn-soft);color:var(--warn);border:1px solid var(--warn-border)}
+.intake-status-badge.contacted{background:var(--accent2-soft);color:var(--accent2);border:1px solid var(--accent2-border)}
+.intake-score{font-family:var(--mono);font-size:10px;color:var(--text3)}
+.admin-export-btn{font-family:var(--mono);font-size:10px;letter-spacing:.06em;padding:8px 16px;border-radius:5px;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--text2);transition:all .15s;margin-bottom:20px}
+.admin-export-btn:hover{background:var(--surface2);border-color:var(--accent-border);color:var(--accent)}
 
 /* ── MOBILE RESPONSIVE @ 768px ─────────────────────────────── */
 @media(max-width:768px){
@@ -541,6 +584,9 @@ img.co-logo{transition:opacity .2s}
   /* Page title */
   .page-title{font-size:20px}
   .page-subtitle{font-size:12px}
+  .consulting-cta-inner{padding:16px}
+  .consulting-cta-text{font-size:14px}
+  .intake-heading{font-size:17px}
 }
 
 /* ── SMALL MOBILE @ 480px ─────────────────────────────────── */
@@ -744,8 +790,13 @@ img.co-logo{transition:opacity .2s}
 </div>
 
 <!-- TACTICAL MODAL -->
+<div class="page" id="page-admin"></div>
+
 <div class="modal-overlay" id="tep-modal">
   <div class="modal-box" id="tep-box"></div>
+</div>
+<div class="modal-overlay" id="intake-modal">
+  <div class="modal-box" id="intake-box" style="max-width:560px"></div>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -1218,6 +1269,7 @@ document.addEventListener('click',e=>{
 });
 function setActiveCompany(ticker){
   activeCompany=ticker;
+  trackEngagement('co',ticker);
   const co=companies[ticker];
   document.getElementById('nav-co-ticker').textContent=ticker;
   document.getElementById('nav-co-name').textContent=co.name;
@@ -1425,6 +1477,7 @@ function renderSinglePbCard(pb){
           <button class="pb-cta-btn secondary" onclick="event.stopPropagation();setActiveCompany('${pb.co}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">View ${pb.co} →</button>
           <span class="pb-save-wl" onclick="event.stopPropagation();togglePbWatchlist(${pb.id},'${pb.co}','${pb.title.replace(/'/g,'\\&#39;')}')" id="pb-wl-${pb.id}">${watchlist.some(w=>w.type==='playbook'&&w.pbId===pb.id)?'<svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-heart-fill"/></svg> Saved':'<svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-heart"/></svg> Save to Watchlist'}</span>
         </div>
+        ${consultingCTAHtml()}
       </div>
     </div>`;
 }
@@ -2134,11 +2187,14 @@ function renderPbGrid(){
           <button class="pb-cta-btn secondary" onclick="event.stopPropagation();setActiveCompany('${pb.co}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">View ${pb.co} →</button>
           <span class="pb-save-wl" onclick="event.stopPropagation();togglePbWatchlist(${pb.id},'${pb.co}','${pb.title.replace(/'/g,'\\&#39;')}')" id="pb-wl-${pb.id}">${watchlist.some(w=>w.type==='playbook'&&w.pbId===pb.id)?'<svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-heart-fill"/></svg> Saved':'<svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-heart"/></svg> Save to Watchlist'}</span>
         </div>
+        ${consultingCTAHtml()}
       </div>
     </div>`).join('');
 }
 function togglePb(id){
-  document.getElementById('pb-'+id).classList.toggle('open');
+  const el=document.getElementById('pb-'+id);
+  el.classList.toggle('open');
+  if(el.classList.contains('open')) trackEngagement('pb',id);
 }
 function togglePbWatchlist(pbId, co, title){
   const existing=watchlist.findIndex(w=>w.type==='playbook'&&w.pbId===pbId);
@@ -2299,6 +2355,7 @@ function showPage(id, tabEl){
   if(id==='playbooks'){ renderPbFilter(); renderPbGrid(); }
   if(id==='earnings') renderEarnings();
   if(id==='watchlist') renderWatchlist();
+  if(id==='admin') renderAdminPage();
 }
 
 // ── TOAST ────────────────────────────────────────────────────────────────
@@ -2306,6 +2363,212 @@ function showToast(msg){
   const t=document.getElementById('toast');
   t.textContent=msg;t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),2500);
+}
+
+// ── ENGAGEMENT TRACKING ─────────────────────────────────────────────────
+function getEngagement(){
+  try{ return JSON.parse(localStorage.getItem('tvc-engagement'))||{pbViews:[],coViews:[],visits:[],firstSeen:new Date().toISOString(),score:0}; }
+  catch(e){ return {pbViews:[],coViews:[],visits:[],firstSeen:new Date().toISOString(),score:0}; }
+}
+function saveEngagement(eng){
+  eng.score=getEngagementScore(eng);
+  localStorage.setItem('tvc-engagement',JSON.stringify(eng));
+}
+function trackEngagement(type,id){
+  const eng=getEngagement();
+  const now=new Date().toISOString();
+  if(type==='pb') eng.pbViews.push({id,ts:now});
+  if(type==='co') eng.coViews.push({ticker:id,ts:now});
+  saveEngagement(eng);
+}
+function trackVisit(){
+  const eng=getEngagement();
+  const now=new Date().toISOString();
+  const lastVisit=eng.visits.length?eng.visits[eng.visits.length-1]:null;
+  // Count as new visit if >30 min since last
+  if(!lastVisit||new Date(now)-new Date(lastVisit)>30*60*1000) eng.visits.push(now);
+  if(!eng.firstSeen) eng.firstSeen=now;
+  saveEngagement(eng);
+}
+function getEngagementScore(eng){
+  const uniquePbs=new Set(eng.pbViews.map(v=>v.id));
+  const repeatPbs=eng.pbViews.length-uniquePbs.size;
+  const uniqueCos=new Set(eng.coViews.map(v=>v.ticker));
+  return (uniquePbs.size*3)+(repeatPbs*1)+(uniqueCos.size*2)+(eng.visits.length*5);
+}
+function shouldShowConsultingCTA(){
+  const eng=getEngagement();
+  const score=getEngagementScore(eng);
+  const intakes=JSON.parse(localStorage.getItem('tvc-intakes')||'[]');
+  const hasSubmitted=intakes.some(i=>i.status!=='draft');
+  return score>=9 && !hasSubmitted;
+}
+function consultingCTAHtml(){
+  if(!shouldShowConsultingCTA()) return '';
+  return `<div class="consulting-cta"><div class="consulting-cta-inner"><span class="consulting-cta-label">ADVISORY</span><div class="consulting-cta-text">Want to discuss your specific challenge?</div><div class="consulting-cta-sub">We help CPG teams turn these playbooks into execution plans tailored to their portfolio.</div><button class="consulting-cta-btn" onclick="event.stopPropagation();openIntakeModal()">Start a conversation →</button></div></div>`;
+}
+
+// ── CONSULTING INTAKE MODAL ─────────────────────────────────────────────
+let intakeStep=1;
+let intakeData={};
+function openIntakeModal(){
+  intakeStep=1;
+  intakeData={};
+  renderIntakeStep();
+  document.getElementById('intake-modal').classList.add('open');
+}
+function closeIntakeModal(){
+  document.getElementById('intake-modal').classList.remove('open');
+}
+document.getElementById('intake-modal').addEventListener('click',e=>{ if(e.target===e.currentTarget) closeIntakeModal(); });
+function renderIntakeStep(){
+  const box=document.getElementById('intake-box');
+  if(intakeStep===1){
+    box.innerHTML=`<div class="modal-head"><div><div class="intake-step-num">STEP 1 OF 4</div><div class="intake-heading">What challenge are you working on?</div><div class="intake-sub">Be as specific as you like. We've seen most CPG problems before.</div></div><span class="modal-close" onclick="closeIntakeModal()">&times;</span></div><div class="modal-body"><textarea class="intake-input" id="intake-challenge" rows="6" placeholder="e.g. Our brand is losing share to private label in the club channel and we need a pricing architecture that protects margin...">${intakeData.challenge||''}</textarea></div><div class="intake-nav"><div></div><button class="intake-next" onclick="nextIntakeStep()">Continue →</button></div>`;
+  } else if(intakeStep===2){
+    box.innerHTML=`<div class="modal-head"><div><div class="intake-step-num">STEP 2 OF 4</div><div class="intake-heading">Tell us about your business</div></div><span class="modal-close" onclick="closeIntakeModal()">&times;</span></div><div class="modal-body"><label class="intake-label">COMPANY / BRAND</label><input class="intake-input" id="intake-company" placeholder="e.g. Kraft Heinz, Oatly, your brand name" value="${intakeData.company||''}"><label class="intake-label">CATEGORY</label><select class="intake-input" id="intake-category"><option value="">Select a category</option><option ${intakeData.category==='Beverages'?'selected':''}>Beverages</option><option ${intakeData.category==='Food & Snacks'?'selected':''}>Food & Snacks</option><option ${intakeData.category==='Personal Care'?'selected':''}>Personal Care</option><option ${intakeData.category==='Household'?'selected':''}>Household</option><option ${intakeData.category==='Health & Wellness'?'selected':''}>Health & Wellness</option><option ${intakeData.category==='Other'?'selected':''}>Other</option></select><label class="intake-label">YOUR ROLE / TITLE</label><input class="intake-input" id="intake-role" placeholder="e.g. VP Marketing, Brand Director, PE Operating Partner" value="${intakeData.role||''}"></div><div class="intake-nav"><button class="intake-back" onclick="prevIntakeStep()">← Back</button><button class="intake-next" onclick="nextIntakeStep()">Continue →</button></div>`;
+  } else if(intakeStep===3){
+    box.innerHTML=`<div class="modal-head"><div><div class="intake-step-num">STEP 3 OF 4</div><div class="intake-heading">What have you tried so far?</div><div class="intake-sub">This helps us skip the obvious and focus on what will actually move the needle.</div></div><span class="modal-close" onclick="closeIntakeModal()">&times;</span></div><div class="modal-body"><textarea class="intake-input" id="intake-tried" rows="5" placeholder="e.g. We ran a price pack architecture study, tested DTC, hired a new agency for digital...">${intakeData.tried||''}</textarea></div><div class="intake-nav"><button class="intake-back" onclick="prevIntakeStep()">← Back</button><button class="intake-next" onclick="nextIntakeStep()">Continue →</button></div>`;
+  } else if(intakeStep===4){
+    box.innerHTML=`<div class="modal-head"><div><div class="intake-step-num">STEP 4 OF 4</div><div class="intake-heading">Where should we reach you?</div></div><span class="modal-close" onclick="closeIntakeModal()">&times;</span></div><div class="modal-body"><label class="intake-label">NAME</label><input class="intake-input" id="intake-name" placeholder="Your name" value="${intakeData.name||''}"><label class="intake-label">EMAIL</label><input class="intake-input" type="email" id="intake-email" placeholder="your@email.com" value="${intakeData.email||''}"><label class="intake-label">PHONE (OPTIONAL)</label><input class="intake-input" id="intake-phone" placeholder="Optional" value="${intakeData.phone||''}"><div style="font-size:11px;color:var(--text3);margin-top:4px">We'll reach out within 48 hours with initial thoughts.</div></div><div class="intake-nav"><button class="intake-back" onclick="prevIntakeStep()">← Back</button><button class="intake-next" onclick="submitIntake()">Submit</button></div>`;
+  } else if(intakeStep===5){
+    box.innerHTML=`<div style="text-align:center;padding:48px 24px"><div style="font-size:36px;margin-bottom:16px">✓</div><div class="intake-heading" style="margin-bottom:8px">We've got it.</div><div style="font-size:13px;color:var(--text2);line-height:1.6;max-width:360px;margin:0 auto 24px">Mason will review your challenge and reach out within 48 hours with initial strategic thoughts — no obligation, no pitch deck.</div><button class="intake-next" onclick="closeIntakeModal()">Close</button></div>`;
+  }
+}
+function saveCurrentStepData(){
+  if(intakeStep===1){
+    const el=document.getElementById('intake-challenge');
+    if(el) intakeData.challenge=el.value;
+  } else if(intakeStep===2){
+    const co=document.getElementById('intake-company');
+    const cat=document.getElementById('intake-category');
+    const role=document.getElementById('intake-role');
+    if(co) intakeData.company=co.value;
+    if(cat) intakeData.category=cat.value;
+    if(role) intakeData.role=role.value;
+  } else if(intakeStep===3){
+    const el=document.getElementById('intake-tried');
+    if(el) intakeData.tried=el.value;
+  } else if(intakeStep===4){
+    const n=document.getElementById('intake-name');
+    const e=document.getElementById('intake-email');
+    const p=document.getElementById('intake-phone');
+    if(n) intakeData.name=n.value;
+    if(e) intakeData.email=e.value;
+    if(p) intakeData.phone=p.value;
+  }
+}
+function nextIntakeStep(){
+  saveCurrentStepData();
+  if(intakeStep===1 && !intakeData.challenge?.trim()){showToast('Please describe your challenge');return;}
+  if(intakeStep===4){submitIntake();return;}
+  intakeStep++;
+  renderIntakeStep();
+}
+function prevIntakeStep(){
+  saveCurrentStepData();
+  if(intakeStep>1){intakeStep--;renderIntakeStep();}
+}
+function submitIntake(){
+  saveCurrentStepData();
+  if(!intakeData.email||!intakeData.email.includes('@')){showToast('Please enter a valid email');return;}
+  const eng=getEngagement();
+  const entry={
+    id:Date.now(),
+    timestamp:new Date().toISOString(),
+    challenge:intakeData.challenge||'',
+    company:intakeData.company||'',
+    category:intakeData.category||'',
+    role:intakeData.role||'',
+    tried:intakeData.tried||'',
+    name:intakeData.name||'',
+    email:intakeData.email||'',
+    phone:intakeData.phone||'',
+    engagementScore:getEngagementScore(eng),
+    summary:generateIntakeSummary(intakeData,eng),
+    status:'new'
+  };
+  const intakes=JSON.parse(localStorage.getItem('tvc-intakes')||'[]');
+  intakes.push(entry);
+  localStorage.setItem('tvc-intakes',JSON.stringify(intakes));
+  intakeStep=5;
+  renderIntakeStep();
+  showToast('Inquiry submitted');
+}
+function generateIntakeSummary(data,eng){
+  const score=getEngagementScore(eng);
+  const intent=score>=20?'high':score>=12?'moderate':'early';
+  let angle='general strategy engagement';
+  const ch=(data.challenge||'').toLowerCase();
+  if(ch.includes('price')||ch.includes('margin')||ch.includes('premium')) angle='pricing & margin strategy';
+  else if(ch.includes('share')||ch.includes('compet')||ch.includes('private label')) angle='competitive positioning';
+  else if(ch.includes('digital')||ch.includes('dtc')||ch.includes('ecomm')) angle='digital & DTC transformation';
+  else if(ch.includes('innovat')||ch.includes('launch')||ch.includes('new product')) angle='innovation pipeline';
+  else if(ch.includes('international')||ch.includes('global')||ch.includes('market entry')) angle='international expansion';
+  return `${data.role||'Professional'} at ${data.company||'undisclosed company'} in ${data.category||'CPG'}. Challenge area: ${angle}. Engagement score: ${score} (${intent} intent). ${data.tried?'Has tried prior approaches.':'No prior approaches noted.'}`;
+}
+
+// ── ADMIN REVIEW PAGE ────────────────────────────────────────────────────
+function renderAdminPage(){
+  const intakes=JSON.parse(localStorage.getItem('tvc-intakes')||'[]').sort((a,b)=>b.id-a.id);
+  const pending=intakes.filter(i=>i.status==='new').length;
+  const el=document.getElementById('page-admin');
+  el.innerHTML=`
+    <div class="page-title">Consulting Intake Review</div>
+    <div class="page-subtitle">${intakes.length} total inquir${intakes.length===1?'y':'ies'} · ${pending} pending</div>
+    <button class="admin-export-btn" onclick="exportIntakes()">Copy All as JSON</button>
+    ${intakes.length===0?'<div style="color:var(--text3);font-size:13px;margin-top:20px">No intakes yet. The consulting CTA appears after users view 3+ playbooks.</div>':''}
+    ${intakes.map(i=>`
+    <div class="intake-card" id="intake-${i.id}">
+      <div class="intake-header">
+        <div>
+          <div class="intake-name">${i.name||'Anonymous'}</div>
+          <div class="intake-email">${i.email}</div>
+          <div class="intake-time">${new Date(i.timestamp).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'})}</div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span class="intake-score">Score: ${i.engagementScore}</span>
+          <span class="intake-status-badge ${i.status}">${i.status.toUpperCase()}</span>
+        </div>
+      </div>
+      <div class="intake-summary">${i.summary}</div>
+      <div class="intake-detail" id="intake-detail-${i.id}">
+        <div class="intake-detail-label">CHALLENGE</div>
+        <div>${i.challenge||'—'}</div>
+        <div class="intake-detail-label">COMPANY / CATEGORY / ROLE</div>
+        <div>${i.company||'—'} · ${i.category||'—'} · ${i.role||'—'}</div>
+        <div class="intake-detail-label">WHAT THEY'VE TRIED</div>
+        <div>${i.tried||'—'}</div>
+        ${i.phone?`<div class="intake-detail-label">PHONE</div><div>${i.phone}</div>`:''}
+      </div>
+      <div class="intake-actions">
+        <button class="intake-back" onclick="toggleIntakeDetail(${i.id})">Details ⌄</button>
+        <button class="intake-back" onclick="updateIntakeStatus(${i.id},'reviewed')">Mark Reviewed</button>
+        <button class="intake-back" onclick="updateIntakeStatus(${i.id},'contacted')">Mark Contacted</button>
+        <button class="intake-back" style="color:var(--danger)" onclick="deleteIntake(${i.id})">Delete</button>
+      </div>
+    </div>`).join('')}`;
+}
+function toggleIntakeDetail(id){
+  document.getElementById('intake-detail-'+id).classList.toggle('open');
+}
+function updateIntakeStatus(id,status){
+  const intakes=JSON.parse(localStorage.getItem('tvc-intakes')||'[]');
+  const idx=intakes.findIndex(i=>i.id===id);
+  if(idx>=0){intakes[idx].status=status;localStorage.setItem('tvc-intakes',JSON.stringify(intakes));}
+  renderAdminPage();
+  showToast('Status updated to '+status);
+}
+function deleteIntake(id){
+  let intakes=JSON.parse(localStorage.getItem('tvc-intakes')||'[]');
+  intakes=intakes.filter(i=>i.id!==id);
+  localStorage.setItem('tvc-intakes',JSON.stringify(intakes));
+  renderAdminPage();
+  showToast('Intake deleted');
+}
+function exportIntakes(){
+  const intakes=localStorage.getItem('tvc-intakes')||'[]';
+  navigator.clipboard.writeText(intakes).then(()=>showToast('Intakes copied to clipboard'));
 }
 
 // ── DATA LAYER ──────────────────────────────────────────────────────────
@@ -2340,6 +2603,13 @@ async function loadExternalData(){
 // ── INIT ─────────────────────────────────────────────────────────────────
 (async function init(){
   await loadExternalData();
+  trackVisit();
+  // Admin mode detection
+  if(new URLSearchParams(window.location.search).get('admin')==='true'){
+    renderAdminPage();
+    showPage('admin',null);
+    return;
+  }
   // First-visit onboarding (Sprint 16D)
   if(!localStorage.getItem('tvc-onboarded')){
     const banner=document.createElement('div');
