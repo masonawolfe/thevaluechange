@@ -1337,15 +1337,36 @@ function renderWeekDate(){
 }
 
 // ── RENDER: HERO CARD (dynamic from latest reported earnings) ───────────
+let thisWeekPick=null; // Set by data.json
 function renderHero(){
   const el=document.getElementById('hero-card');
   el.classList.add('hero-card-enhanced');
+
+  // Priority 1: thisWeekPick from data.json (editorial pick)
+  if(thisWeekPick && companies[thisWeekPick.ticker]){
+    const co=companies[thisWeekPick.ticker];
+    const heroPb=playbooks.find(p=>p.co===co.ticker&&p.triggeredBy);
+    el.innerHTML=`
+      <div class="hero-eyebrow">
+        <span><svg width="14" height="14" style="vertical-align:-2px;color:var(--accent)"><use href="#icon-bolt"/></svg> THIS WEEK'S LEAD</span>
+        <span class="co-tag" style="display:inline-flex;align-items:center;gap:5px">${coLogoImg(co.ticker,18)} ${co.ticker}</span>
+        <span style="color:var(--text3)">${co.name}</span>
+      </div>
+      <div class="hero-headline">${co.headline}</div>
+      <div class="hero-deck">${co.deck}</div>
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <button class="pb-cta-btn" style="font-size:11px;padding:10px 20px" onclick="setActiveCompany('${co.ticker}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">READ FULL ANALYSIS →</button>
+        ${heroPb?`<span class="cross-link" onclick="showPage('playbooks',document.querySelectorAll('.nav-tab')[2]);setTimeout(()=>togglePb(${heroPb.id}),150)"><svg width="12" height="12" style="vertical-align:-1px"><use href="#icon-bolt"/></svg> Related Playbook →</span>`:''}
+      </div>`;
+    return;
+  }
+
+  // Priority 2: Latest earnings beat
   const rep=earningsData.reported[0];
-  if(!rep){el.innerHTML='<div style="padding:20px;color:var(--text3)">No recent earnings reported.</div>';return;}
+  if(!rep){el.innerHTML='<div style="padding:20px;color:var(--text3)">No stories this week.</div>';return;}
   const co=companies[rep.ticker];
   const rr=(rep.result||'').toUpperCase();
   const resultLabel=rr==='BEAT'?'<svg width="14" height="14" style="vertical-align:-2px;color:var(--accent)"><use href="#icon-bolt"/></svg> EARNINGS BEAT':rr==='MISS'?'<svg width="14" height="14" style="vertical-align:-2px;color:var(--danger)"><use href="#icon-chart"/></svg> EARNINGS MISS':'<svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-chart"/></svg> EARNINGS REPORTED';
-  // Find related playbook for the hero company
   const heroPb=playbooks.find(p=>p.co===rep.ticker&&p.triggeredBy);
   el.innerHTML=`
     <div class="hero-eyebrow">
@@ -1403,7 +1424,7 @@ function renderWeekSignals(){
 // ── RENDER: FOCUS GRID ───────────────────────────────────────────────────
 function renderFocusGrid(){
   // Pick top 3 companies by VCI, excluding the hero company (latest reported earnings)
-  const heroTicker=earningsData.reported.length?earningsData.reported[0].ticker:null;
+  const heroTicker=thisWeekPick?thisWeekPick.ticker:(earningsData.reported.length?earningsData.reported[0].ticker:null);
   const focusCos=Object.values(companies)
     .filter(c=>c.ticker!==heroTicker)
     .sort((a,b)=>b.vci-a.vci)
@@ -2749,6 +2770,8 @@ async function loadExternalData(){
     // Override earnings if provided
     if(data.reported){ earningsData.reported=data.reported; }
     if(data.upcoming){ earningsData.upcoming=data.upcoming; }
+    // This week's editorial pick
+    if(data.thisWeekPick){ thisWeekPick=data.thisWeekPick; }
     // Override trends if provided
     if(data.trends) trends.length=0,trends.push(...data.trends);
     // VCI history overrides
