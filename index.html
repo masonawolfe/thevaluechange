@@ -1343,7 +1343,8 @@ function renderHero(){
   const rep=earningsData.reported[0];
   if(!rep){el.innerHTML='<div style="padding:20px;color:var(--text3)">No recent earnings reported.</div>';return;}
   const co=companies[rep.ticker];
-  const resultLabel=rep.result==='BEAT'?'<svg width="14" height="14" style="vertical-align:-2px;color:var(--accent)"><use href="#icon-bolt"/></svg> EARNINGS BEAT':rep.result==='MISS'?'<svg width="14" height="14" style="vertical-align:-2px;color:var(--danger)"><use href="#icon-chart"/></svg> EARNINGS MISS':'<svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-chart"/></svg> EARNINGS REPORTED';
+  const rr=(rep.result||'').toUpperCase();
+  const resultLabel=rr==='BEAT'?'<svg width="14" height="14" style="vertical-align:-2px;color:var(--accent)"><use href="#icon-bolt"/></svg> EARNINGS BEAT':rr==='MISS'?'<svg width="14" height="14" style="vertical-align:-2px;color:var(--danger)"><use href="#icon-chart"/></svg> EARNINGS MISS':'<svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-chart"/></svg> EARNINGS REPORTED';
   // Find related playbook for the hero company
   const heroPb=playbooks.find(p=>p.co===rep.ticker&&p.triggeredBy);
   el.innerHTML=`
@@ -1352,7 +1353,7 @@ function renderHero(){
       <span class="co-tag" style="display:inline-flex;align-items:center;gap:5px">${coLogoImg(rep.ticker,18)} ${rep.ticker}</span>
       <span style="color:var(--text3)">${rep.name}</span>
     </div>
-    <div class="hero-headline">${rep.name} ${rep.date.split(',')[0]}: Revenue ${rep.result==='BEAT'?'Beats':'Misses'} at ${rep.rev}${rep.revSurp?' ('+rep.revSurp+')':''}</div>
+    <div class="hero-headline">${rep.name} ${rep.date.split(',')[0]}: Revenue ${rr==='BEAT'?'Beats':'Misses'} at ${rep.rev}${rep.revSurp?' ('+rep.revSurp+')':''}</div>
     <div class="hero-deck">${co?co.deck:rep.guidance}</div>
     <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
       <button class="pb-cta-btn" style="font-size:11px;padding:10px 20px" onclick="setActiveCompany('${rep.ticker}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">READ FULL ANALYSIS →</button>
@@ -2746,8 +2747,8 @@ async function loadExternalData(){
     // Override playbooks if provided
     if(data.playbooks) playbooks.length=0,playbooks.push(...data.playbooks);
     // Override earnings if provided
-    if(data.reported) reported.length=0,reported.push(...data.reported);
-    if(data.upcoming) upcoming.length=0,upcoming.push(...data.upcoming);
+    if(data.reported){ earningsData.reported=data.reported; }
+    if(data.upcoming){ earningsData.upcoming=data.upcoming; }
     // Override trends if provided
     if(data.trends) trends.length=0,trends.push(...data.trends);
     // VCI history overrides

@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-03-14",
-    "weekLabel": "WEEK OF MARCH 9–14, 2026",
-    "version": "5.7"
+    "lastUpdated": "2026-03-15",
+    "weekLabel": "WEEK OF MARCH 16–20, 2026",
+    "version": "5.8"
   },
   "companies": {
     "PG": {
@@ -14,21 +14,25 @@
       "iv": 88,
       "dm": 85,
       "earnings": false,
-      "headline": "P&G's $1B Gillette HQ Signals Premium Manufacturing Play",
-      "deck": "P&G is transitioning from pricing-led growth to volume recovery, supported by its \"Irrestible Superiority\" doctrine across product, packaging, and brand communication. The company's $1B Gillette Global HQ investment in Boston cements its premium innovation commitment.",
+      "headline": "P&G's $1B Gillette HQ Cements Premium Innovation Commitment",
+      "deck": "P&G doubles down on premiumization with a nearly $1B Gillette global HQ and innovation center in Boston. Quarterly results met revenue expectations and exceeded EBITDA forecasts. Citi maintains Buy rating.",
       "execSummary": "P&G continues to lead the CPG industry executing its Integrated Growth Strategy — a portfolio of daily-use categories where performance drives brand choice. The company is shifting from a pricing-led model to volume-driven growth, backed by relentless investment in product superiority. Their operational excellence is underpinned by a massive digital transformation aimed at productivity and consumer centricity.",
       "mgmtSignals": [
-        "We remain committed to our integrated growth strategy: a portfolio of daily-use categories where performance drives brand choice.",
-        "Superiority is a moving target. We must continue to innovate to stay ahead of consumer expectations and private label competition.",
-        "Digital transformation is not a project; it is a fundamental shift in how we operate the company."
+        "Citi reiterated Buy rating (Mar 2). AI Analyst consensus: Outperform, driven by strong profitability and returns on equity."
       ],
       "risks": [
+        "Insider selling: CEO of Baby/Fem/Family Care sold $917K in shares (Mar 2)",
+        "Capital Wealth Planning reduced PG holdings by 14.2% — potential institutional rotation out of staples",
         "Continued inflationary pressure on raw materials and labor",
         "Geopolitical instability affecting China market recovery",
         "Retailer inventory destocking and shelf-space competition",
         "Consumer trade-down to private label brands"
       ],
       "opps": [
+        {
+          "title": "Gillette Innovation Center",
+          "detail": "Nearly $1B investment consolidates R&D, engineering, and business ops into a single advanced facility in Boston. Signals long-term premium manufacturing play."
+        },
         {
           "title": "Expand premiumization in BRICS+ emerging markets",
           "detail": "Target Tier-1 cities with specialized Beauty and Home Care premium SKUs. Achieve 15% net sales increase in premium categories by end of FY25."
@@ -59,34 +63,16 @@
       },
       "news": [
         {
-          "h": "P&G's $1B Gillette Global HQ Investment in Boston",
+          "h": "P&G Plans $1B Gillette Global HQ in Boston",
           "s": "SimplyWallSt",
           "d": "Mar 13",
-          "url": "https://www.bostonglobe.com/2026/03/10/business/gillette-headquarters-proctor-gamble-south-boston/"
+          "url": ""
         },
         {
-          "h": "Significant Insider Selling Reported at Procter & Gamble",
-          "s": "MarketBeat",
-          "d": "Mar 14",
-          "url": "https://www.marketbeat.com/stocks/NYSE/PG/insider-trades/"
-        },
-        {
-          "h": "P&G Proposes Acquisition of Remaining Gillette Pakistan Stake",
-          "s": "MarketScreener",
+          "h": "P&G Valuation Check After Earnings Beat and Product Refresh",
+          "s": "SimplyWallSt",
           "d": "Mar 10",
-          "url": "https://www.marketscreener.com/quote/stock/PROCTER-GAMBLE-CO-THE-11422/news/"
-        },
-        {
-          "h": "Morgan Stanley Issues Cautionary Note Ahead of P&G Catalysts",
-          "s": "Investing.com",
-          "d": "Mar 10",
-          "url": "https://www.investing.com/news/analyst-ratings/procter--gamble-stock-faces-fy2025-catalysts-morgan-stanley-says-93CH-3964534"
-        },
-        {
-          "h": "P&G Relaunches Mr. Clean with Largest Magic Eraser Innovation in 20 Years",
-          "s": "StockTitan",
-          "d": "Mar 4",
-          "url": "https://www.pginvestor.com/financial-information/press-releases"
+          "url": ""
         }
       ],
       "vc": {
@@ -135,7 +121,8 @@
           ],
           "outlook": "AI capabilities expected to yield 15-20% efficiency gains in marketing operations by 2026."
         }
-      }
+      },
+      "lastUpdated": "Mar 15, 2026"
     },
     "UL": {
       "name": "Unilever",
@@ -146,21 +133,26 @@
       "iv": 74,
       "dm": 80,
       "earnings": false,
-      "headline": "Unilever's 30 Power Brands Strategy: Focus Over Scale",
-      "deck": "New CEO Hein Schumacher is executing a historic portfolio reset — concentrating investment behind 30 Power Brands representing 75% of revenue and separating the ice cream division.",
-      "execSummary": "Unilever is executing a fundamental portfolio reset under CEO Hein Schumacher, divesting laggard brands and concentrating investment behind 30 Power Brands. The Ice Cream separation is the most significant structural move, expected to unlock margin expansion and strategic focus in Beauty, Wellbeing, and Home Care.",
+      "headline": "Unilever Stock Slides 13% as 2026 Guidance Disappoints",
+      "deck": "Unilever faces its toughest month in years — down 13% in March after Berenberg downgraded from Buy to Hold on valuation concerns. Cautious 2026 organic growth outlook (low end of 4-6%) rattles investors. Google Cloud AI partnership announced.",
+      "execSummary": "Unilever enters a turbulent stretch as slowing demand in the US and Europe forces management to guide to the lower end of its 4-6% organic growth target for 2026. Berenberg's downgrade from Buy to Hold signals the market is questioning whether peak margins are achievable. The five-year Google Cloud AI partnership for agentic commerce represents the most significant tech bet in Unilever's recent history.",
       "mgmtSignals": [
-        "We are simplifying and focusing. Fewer, bigger bets on brands that can win globally.",
-        "Our 30 Power Brands now represent 75% of revenue. That is where our resources and leadership attention go.",
-        "The Ice Cream separation will create two stronger, more focused businesses."
+        "Berenberg downgraded UL from Buy to Hold on valuation concerns (Mar 2026)",
+        "Analysts describe 2026 margin guidance as 'ambitious' — doubts on achievability"
       ],
       "risks": [
+        "Demand slowdown in US and Europe driving cautious 2026 guidance",
+        "Stock down 13% in March — institutional selling accelerating (Quadrant Capital reduced stake 18.5%)",
         "Ice Cream separation execution complexity and cost",
         "Emerging market currency headwinds",
         "Private label competition in European home care",
         "Pace of digital commerce capability vs. pure-play competitors"
       ],
       "opps": [
+        {
+          "title": "Google Cloud AI Partnership",
+          "detail": "Landmark five-year deal uniting Unilever brands with Google Cloud AI for agentic commerce. Could transform consumer engagement and supply chain intelligence."
+        },
         {
           "title": "Premiumize Beauty & Wellbeing portfolio",
           "detail": "Leverage dermatological credibility of Dove and Simple to compete in the $40B+ premium skincare segment."
@@ -191,22 +183,22 @@
       },
       "news": [
         {
-          "h": "Unilever Confirms Ice Cream Separation Timeline for Late 2025",
-          "s": "Reuters",
+          "h": "Unilever Stock Slides 13% on Cautious 2026 Outlook",
+          "s": "AAII",
+          "d": "Mar 14",
+          "url": ""
+        },
+        {
+          "h": "Berenberg Downgrades Unilever to Hold",
+          "s": "Yahoo Finance",
           "d": "Mar 12",
-          "url": "https://www.cnbc.com/2025/12/08/magnum-ice-cream-ben-jerrys-amsterdam-stock-market-debut.html"
+          "url": ""
         },
         {
-          "h": "Unilever's Power Brands Strategy Draws Analyst Praise at Investor Day",
-          "s": "FT",
-          "d": "Mar 9",
-          "url": "https://www.unilever.com/investors/investor-events/"
-        },
-        {
-          "h": "Dove Launches AI Pledge: Will Never Use AI to Alter Real Women in Ads",
-          "s": "AdAge",
-          "d": "Mar 7",
-          "url": "https://www.adweek.com/brand-marketing/dove-ai-real-beauty-pledge/"
+          "h": "Unilever Files 2025 Annual Report (€50.5B Sales)",
+          "s": "SEC Filing",
+          "d": "Mar 12",
+          "url": ""
         }
       ],
       "vc": {
@@ -256,7 +248,8 @@
           ],
           "outlook": "Target 30% reduction in creative production costs through AI by end of 2025."
         }
-      }
+      },
+      "lastUpdated": "Mar 15, 2026"
     },
     "MNST": {
       "name": "Monster Beverage",
@@ -267,21 +260,31 @@
       "iv": 94,
       "dm": 76,
       "earnings": true,
-      "headline": "Monster Q4 2025 BEAT: $7.14B Revenue, International Now 40% of Sales",
-      "deck": "Monster delivered a strong Q4 beating consensus by +4.2% driven by EMEA and APAC expansion. Conservative FY2026 guidance on FX headwinds may create a buying opportunity as the international thesis remains intact.",
-      "execSummary": "Monster Beverage reported Q4 2025 results beating consensus on revenue at $7.14B (+8.2% YoY), driven by strong international expansion particularly in EMEA and APAC. The Coca-Cola distribution network continues to be Monster's primary competitive moat, enabling rapid market entry in emerging markets. Management guided conservatively for 2026, flagging FX headwinds and softening US convenience store traffic.",
+      "headline": "Monster Posts Record $2.13B Quarter, International Growth Surges 18%",
+      "deck": "Monster Beverage reported record Q4 net sales of $2.13B, up 17.6% YoY, with core energy drinks growing 18.3% ex-alcohol. January 2026 sales tracking +20.5%. New CEO of Americas appointed as leadership reshuffles.",
+      "execSummary": "Monster Beverage is firing on all cylinders. Record Q4 sales of $2.13B (+17.6%) were powered by international expansion, with core energy ex-alcohol up 18.3%. The +10.42% EPS surprise confirms the margin recovery thesis. January 2026 tracking +20.5% signals no slowdown. The leadership reshuffle — Rob Gehring becoming CEO of Americas — positions the company for its next growth phase. Only blemish: Alcohol Brands segment down 16.8% with $51M in impairment charges.",
       "mgmtSignals": [
-        "Our international business is the next frontier of growth. EMEA is performing exceptionally well this quarter.",
-        "We are expanding our energy drink portfolio into new functional formats — hydration, focus, and recovery.",
-        "The Coca-Cola partnership remains our most powerful competitive advantage. We are investing to deepen it."
+        "Tariff impact described as 'modest' — does not expect material impact on operating results",
+        "January 2026 sales +20.5% vs prior year on reported basis",
+        "Rob Gehring appointed CEO Americas effective Feb 25, 2026"
       ],
       "risks": [
+        "Alcohol Brands segment declining (-16.8%) with $51.2M impairment charges",
+        "Modest cost inflation from aluminum/tariffs expected in H1 2026",
         "US energy drink category saturation and deceleration",
         "FX headwinds from strong dollar vs. EMEA currencies",
         "Regulatory scrutiny on energy drink marketing to minors",
         "Increased competition from Celsius and Prime energy brands"
       ],
       "opps": [
+        {
+          "title": "Americas Leadership Upgrade",
+          "detail": "Rob Gehring (former Chief Growth Officer) now CEO Americas, overseeing North America, Latin America, and Caribbean. Signals acceleration of regional strategy."
+        },
+        {
+          "title": "International Momentum",
+          "detail": "Core business +18.3% ex-alcohol. EMEA and APAC driving growth. January tracking +20.5% — strongest start to a year in company history."
+        },
         {
           "title": "Accelerate APAC and India market entry",
           "detail": "India energy drink market growing 20% annually, currently less than 5% Monster share — massive underpenetration opportunity."
@@ -312,22 +315,22 @@
       },
       "news": [
         {
-          "h": "Monster Beverage Q4 2025 Revenue Beats at $7.14B, International Growth Accelerates",
-          "s": "Bloomberg",
-          "d": "Mar 11",
-          "url": "https://investors.monsterbevcorp.com/news-releases/news-release-details/monster-beverage-reports-2025-fourth-quarter-and-full-year"
+          "h": "Monster Beverage Reports Record Q4: $2.13B Revenue (+17.6%)",
+          "s": "Monster IR",
+          "d": "Feb 26",
+          "url": ""
         },
         {
-          "h": "Monster Eyes India Market Entry with Coca-Cola Partnership Expansion",
-          "s": "WSJ",
-          "d": "Mar 8",
-          "url": "https://www.wsj.com/articles/monster-beverage-international-expansion-india"
+          "h": "Monster Rides Record Quarter Into 2026",
+          "s": "TipRanks",
+          "d": "Mar 1",
+          "url": ""
         },
         {
-          "h": "Celsius vs. Monster: Analyst Breaks Down Energy Drink Market Share Battle",
-          "s": "Barron's",
-          "d": "Mar 6",
-          "url": "https://www.barrons.com/articles/celsius-monster-energy-drinks-stock-market-share"
+          "h": "Leadership Changes: Rob Gehring Named CEO Americas",
+          "s": "Monster IR",
+          "d": "Feb 25",
+          "url": ""
         }
       ],
       "vc": {
@@ -378,7 +381,8 @@
           ],
           "outlook": "Digital capability investment will accelerate to close gap vs. PG and Unilever over 2025-2027."
         }
-      }
+      },
+      "lastUpdated": "Mar 15, 2026"
     },
     "PEP": {
       "name": "PepsiCo",
@@ -389,21 +393,31 @@
       "iv": 80,
       "dm": 88,
       "earnings": true,
-      "headline": "PepsiCo Splits Beverages & Snacks Reporting — Separation Signal?",
-      "deck": "New segment reporting structure fuels speculation about a potential long-term portfolio separation. Frito-Lay continues to outperform while North American beverages face GLP-1 headwinds.",
-      "execSummary": "PepsiCo is navigating a complex bifurcation: its Frito-Lay snacks business continues to outperform while its beverage portfolio faces volume pressure from GLP-1 drug adoption and health-conscious consumer trends. Management's new reporting structure separating beverages and snacks fuels speculation about a potential long-term portfolio separation.",
+      "headline": "PepsiCo Formalizes Elliott-Driven Restructuring: 20% SKU Cuts, Plant Closures",
+      "deck": "PepsiCo reached agreement with activist Elliott Investment Management ($4B stake) to cut 20% of US SKUs, close three plants, and reduce prices on Lay's, Doritos, and Cheetos. Q4 revenue beat estimates at $29.34B (+5.6%) but food volumes still declining (-2%).",
+      "execSummary": "PepsiCo is in full restructuring mode. The Elliott deal formalizes what was already in motion — 20% SKU reduction, three plant closures, price cuts on flagship brands, and a comprehensive North America supply chain review due late 2026. Q4 revenue of $29.34B beat estimates but food volumes fell 2%, confirming the volume problem that triggered Elliott's intervention. The company projects 2-4% organic revenue growth and 100bps+ of operating margin expansion over three years through automation and digitization.",
       "mgmtSignals": [
-        "Our snacks business is performing exceptionally. Frito-Lay North America is the crown jewel of our portfolio.",
-        "The new reporting structure reflects how we run the business internally and provides greater investor clarity.",
-        "We are investing heavily in better-for-you innovation — less sodium, less sugar, more function."
+        "Elliott will not receive board seats — no proxy contest",
+        "Projecting 100bps+ core operating margin expansion over next 3 fiscal years",
+        "Multiple analyst upgrades: JPMorgan, BNP Paribas, TD Cowen raised targets"
       ],
       "risks": [
+        "Food volume decline of -2% in Q4 — North America weakness persists",
+        "Plant closures and workforce reduction carry execution risk",
+        "Price cuts on core brands (Lay's, Doritos, Cheetos) could pressure near-term margins",
         "GLP-1 drug adoption reducing snack and soda consumption frequency",
         "Volume deceleration in North American beverages",
-        "Private label competition in commodity snack segments",
-        "Potential separation costs and complexity if pursued"
+        "Private label competition in commodity snack segments"
       ],
       "opps": [
+        {
+          "title": "SKU Rationalization",
+          "detail": "Cutting 20% of US SKUs should improve shelf efficiency, reduce supply chain complexity, and free up capacity for higher-margin innovation."
+        },
+        {
+          "title": "Automation & Digitization",
+          "detail": "Comprehensive supply chain review with results expected late 2026. Major investment in automation replacing labor-intensive processes."
+        },
         {
           "title": "Spin-off beverages to unlock Frito-Lay value",
           "detail": "Analysts estimate Frito-Lay standalone would trade at 25-28x EBITDA vs. 18x blended today — significant multiple expansion."
@@ -434,22 +448,22 @@
       },
       "news": [
         {
-          "h": "PepsiCo Restructures Reporting to Separate Beverages and Snacks Business Segments",
-          "s": "WSJ",
-          "d": "Mar 13",
-          "url": "https://www.pepsico.com/en/newsroom/press-releases/2025/pepsico-announces-priorities-to-enhance-shareholder-value-and-provides-preliminary-2026-outlook"
-        },
-        {
-          "h": "Analysts Raise PepsiCo Price Target on Frito-Lay Outperformance",
-          "s": "Bloomberg",
+          "h": "PepsiCo Formalizes Elliott Restructuring: 20% SKU Cuts",
+          "s": "Fox Business",
           "d": "Mar 10",
-          "url": "https://www.bloomberg.com/news/articles/pepsico-frito-lay-analyst-price-target"
+          "url": ""
         },
         {
-          "h": "GLP-1 Drugs Pose Largest Threat to PepsiCo Snack Portfolio, Says RBC",
-          "s": "Reuters",
-          "d": "Mar 7",
-          "url": "https://www.reuters.com/business/retail-consumer/pepsico-glp1-snack-demand-2025/"
+          "h": "JPMorgan Upgrades PepsiCo on Restructuring Push",
+          "s": "Yahoo Finance",
+          "d": "Mar 8",
+          "url": ""
+        },
+        {
+          "h": "PepsiCo Q4 Revenue Beats at $29.34B, Food Volumes Still Falling",
+          "s": "CNBC",
+          "d": "Feb 3",
+          "url": ""
         }
       ],
       "vc": {
@@ -499,7 +513,8 @@
           ],
           "outlook": "Digital infrastructure advantage to yield 15-20% supply chain cost reduction by 2027."
         }
-      }
+      },
+      "lastUpdated": "Mar 15, 2026"
     },
     "KO": {
       "name": "Coca-Cola",
@@ -510,21 +525,31 @@
       "iv": 79,
       "dm": 82,
       "earnings": true,
-      "headline": "Coca-Cola's AI Marketing Machine: 30% More Content, 40% Less Cost",
-      "deck": "Coca-Cola is executing the most aggressive AI transformation in CPG marketing, deploying generative AI across its entire global creative pipeline with Microsoft Azure as its primary partner.",
-      "execSummary": "Coca-Cola is deploying the most aggressive AI transformation in CPG marketing, building proprietary brand-trained models and enabling any market team to produce on-brand campaign assets within hours. The company is leveraging its iconic brand equity and the world's most powerful distribution network (30M outlets, 200 countries) to defend volume share while competitors scramble to catch up on digital capabilities.",
+      "headline": "Coca-Cola Names New CDO, Shifts to 'Persuasion-Led' AI Growth",
+      "deck": "Coca-Cola creates a new Chief Digital Officer role (Sedef Salingan Sahin) as Henrique Braun prepares to become CEO on March 31. AI marketing generating 63% higher click-throughs and 20% sales uplift in pilots. Zero Sugar Year 3000 AI-designed soda hits shelves.",
+      "execSummary": "Coca-Cola is executing the most aggressive AI transformation in CPG marketing. The creation of a Chief Digital Officer role unifying digital, data, and operational excellence signals this is no longer experimental — it's structural. Production time collapsed from 12 months to 30 days using AI creative studios (70,000 video clips in weeks). Pilot campaigns show 63% higher click-throughs and up to 20% sales uplift. But consumer trust remains the risk: the AI Christmas ad scored 2% higher on distrust vs. norms.",
       "mgmtSignals": [
-        "AI is transforming how we create, localize, and deploy marketing content at scale globally.",
-        "Our distribution moat — 200 countries, 30 million outlets — is our greatest competitive advantage.",
-        "We're investing in the occasions that matter: on-premise dining, sports, and live entertainment."
+        "CMO Manolo Arroyo: production time fell from 'twelve months to about thirty days'",
+        "New strategy focused on 'influence not pricing power' — persuasion-led growth",
+        "Henrique Braun becomes CEO March 31, 2026"
       ],
       "risks": [
+        "AI Christmas ad backlash: 2.1% lower positive emotions, 2% higher distrust vs. norms (DAIVID)",
+        "Consumer data reluctance: 'majority of consumers still wary about sharing personal information' (GlobalData)",
         "Volume decline in carbonated soft drinks in health-conscious markets",
         "GLP-1 drug adoption reducing sugar consumption frequency",
         "Water scarcity risks to production in key markets",
         "Currency headwinds from dollar strength in emerging markets"
       ],
       "opps": [
+        {
+          "title": "AI Creative Scale",
+          "detail": "70,000 video clips generated in weeks vs. months. 63% higher click-throughs, 20% sales uplift in pilot campaigns. If scalable, this is a structural cost advantage."
+        },
+        {
+          "title": "CEO Transition",
+          "detail": "Henrique Braun takes over March 31. New CDO Sedef Salingan Sahin unifies digital/data/ops. Clean leadership transition with clear digital mandate."
+        },
         {
           "title": "Deploy AI-generated personalized marketing at scale",
           "detail": "AI creative platform enabling 1:1 personalization across 200 markets at one-third the cost of traditional production."
@@ -555,22 +580,22 @@
       },
       "news": [
         {
-          "h": "Coca-Cola's AI Marketing System Generates 30% More Content at 40% Lower Cost",
-          "s": "AdAge",
-          "d": "Mar 14",
-          "url": "https://www.marketingdive.com/news/what-coca-cola-learned-generative-ai/741709/"
+          "h": "Coca-Cola Creates Chief Digital Officer Role, Names Sahin",
+          "s": "Yahoo Finance",
+          "d": "Jan 16",
+          "url": ""
         },
         {
-          "h": "Coca-Cola Secures Exclusive Partnership with Formula 1 Through 2030",
-          "s": "SportsPro",
-          "d": "Mar 11",
-          "url": "https://www.sportspromedia.com/news/coca-cola-formula-1-sponsorship-2030/"
+          "h": "Coca-Cola's AI Marketing: 63% Higher Click-Throughs in Pilots",
+          "s": "AI CERTs",
+          "d": "Mar 5",
+          "url": ""
         },
         {
-          "h": "Fairlife Protein Shake Revenue Surpasses $1B, Fastest Growing Brand in Portfolio",
-          "s": "Bloomberg",
-          "d": "Mar 8",
-          "url": "https://edition.cnn.com/2025/02/16/business/coca-cola-fairlife-milk"
+          "h": "Zero Sugar Year 3000: AI-Designed Soda Hits Shelves",
+          "s": "UCStrategies",
+          "d": "Feb 2026",
+          "url": ""
         }
       ],
       "vc": {
@@ -622,7 +647,8 @@
           ],
           "outlook": "Azure partnership expected to yield $500M+ in efficiency gains across supply chain and marketing by 2027."
         }
-      }
+      },
+      "lastUpdated": "Mar 15, 2026"
     },
     "GIS": {
       "name": "General Mills",
@@ -633,21 +659,24 @@
       "iv": 65,
       "dm": 70,
       "earnings": true,
-      "headline": "General Mills FQ3: Organic Growth Returns as Blue Buffalo Drag Fades",
-      "deck": "General Mills is navigating a challenging transition — its Blue Buffalo acquisition continues to underperform while core North America Retail faces volume pressure. Management's Accelerate strategy is showing early traction.",
+      "headline": "General Mills Q3 Earnings Due March 18 — Analysts Expect Soft Quarter",
+      "deck": "General Mills reports fiscal Q3 2026 on March 18. Analysts project EPS of $0.73-0.75, down from $1.40 year-ago. CFO flagged Q3 headwinds from divestiture overhang, investment timing, and trade expense. Key test for volume recovery narrative.",
       "execSummary": "General Mills is navigating a challenging transition as its Blue Buffalo pet food acquisition underperforms and its core North America Retail segment faces volume pressure. The company is leaning into trusted brands while divesting underperforming assets and investing in HMW (Health, Meals, and Wellbeing) priority platforms.",
       "mgmtSignals": [
-        "Blue Buffalo is a long-term asset. We remain committed to the pet food category.",
-        "Our Accelerate strategy is delivering. HMW platforms now represent 45% of portfolio revenue.",
-        "We are being disciplined about where we invest and where we divest."
+        "CFO Kofi Bruce: 'We always expected Q3 to be down because of the overhang from the divestiture, investment baked into the year, and trade expense timing'"
       ],
       "risks": [
+        "Q3 EPS expected to decline significantly from $1.40 to ~$0.74 — market may punish even if guided",
         "Blue Buffalo market share loss to premium and fresh pet food competitors",
         "Private label encroachment in cereal and snack bars",
         "Consumer trade-down from premium Häagen-Dazs to private label",
         "Volume declines in North America frozen meals"
       ],
       "opps": [
+        {
+          "title": "Q2 Beat Sets Floor",
+          "detail": "Q2 EPS of $1.10 beat estimates by 7.84%. If Q3 comes in above $0.75, could signal the volume recovery is ahead of schedule."
+        },
         {
           "title": "Revitalize Blue Buffalo with vet endorsement strategy",
           "detail": "Partner with 10,000+ vet practices to rebuild trust and drive prescription pet food market entry."
@@ -678,22 +707,10 @@
       },
       "news": [
         {
-          "h": "General Mills Q3 Organic Sales Return to Growth, Blue Buffalo Still Lagging",
-          "s": "Reuters",
-          "d": "Mar 12",
-          "url": "https://www.generalmills.com/news/press-releases/general-mills-reports-fiscal-2025-fourth-quarter-and-full-year-results"
-        },
-        {
-          "h": "General Mills Sells Helper and Suddenly Salad Brands to Focus Core Portfolio",
-          "s": "FoodDive",
-          "d": "Mar 9",
-          "url": "https://www.fooddive.com/news/general-mills-sells-helper-suddenly-salad-brands-brand/"
-        },
-        {
-          "h": "Häagen-Dazs Opens 50th Premium Parlor in Asia, Eyes 200 by 2027",
-          "s": "Bloomberg",
-          "d": "Mar 6",
-          "url": "https://www.bloomberg.com/news/articles/general-mills-haagen-dazs-asia-expansion"
+          "h": "General Mills to Report Q3 FY2026 Results March 18",
+          "s": "BusinessWire",
+          "d": "Feb 25",
+          "url": ""
         }
       ],
       "vc": {
@@ -745,7 +762,8 @@
           ],
           "outlook": "Digital gap vs. Coca-Cola and PepsiCo will take 3+ years to close at current investment pace."
         }
-      }
+      },
+      "lastUpdated": "Mar 15, 2026"
     },
     "KMB": {
       "name": "Kimberly-Clark",
@@ -756,21 +774,31 @@
       "iv": 72,
       "dm": 74,
       "earnings": true,
-      "headline": "Kimberly-Clark Separates Professional Business — Pure-Play Consumer Focus",
-      "deck": "Kimberly-Clark completed its professional business separation, creating a pure-play consumer products company focused on Huggies, Kleenex, Scott, and Cottonelle under the \"Powering Care\" strategy.",
-      "execSummary": "Kimberly-Clark completed its professional business separation in late 2024, creating a pure-play consumer products company. Under the Powering Care strategy, the company is investing in premiumization, emerging market expansion, and digital consumer engagement to drive sustainable volume growth across its iconic diaper, tissue, and personal care brands.",
+      "headline": "Kimberly-Clark's $48.7B Kenvue Deal Reshapes Consumer Health",
+      "deck": "Kimberly-Clark's acquisition of Kenvue ($48.7B enterprise value) creates a consumer health powerhouse. New CIO/GBS officer appointed from Kraft Heinz/P&G background. Innovation drove 75%+ of 2025 volume-plus-mix growth. Dividend increased for 54th consecutive year.",
+      "execSummary": "Kimberly-Clark is executing a transformative play. The $48.7B Kenvue acquisition — overwhelmingly approved by both sets of shareholders — will create the largest pure-play consumer health company when it closes in H2 2026. The appointment of Francesco Tinto (ex-Kraft Heinz, P&G) as CIO signals digital transformation is central to the integration thesis. Innovation drove 75%+ of volume-plus-mix growth in 2025, and the company gained share in two-thirds of country/category combinations.",
       "mgmtSignals": [
-        "The separation is complete. We are now a pure-play consumer company with unprecedented focus and clarity.",
-        "Huggies innovation pipeline is the strongest it has been in a decade.",
-        "Emerging markets represent 40% of our revenue and growing. That is our primary growth engine."
+        "Innovation drove over 75% of 2025 volume-plus-mix growth (CAGNY presentation)",
+        "Market share gains in two-thirds of country/category combos",
+        "Kenvue acquisition expected to close H2 2026"
       ],
       "risks": [
+        "Stock down 24.6% over past year — market skeptical on Kenvue integration execution",
+        "CTO Zackery Hicks departing March 31 — leadership gap during critical integration period",
         "Private label competition intensifying in tissue and diaper categories",
         "Commodity pulp and polymer cost inflation",
         "Birth rate decline in developed markets reducing diaper addressable market",
         "Transition costs from professional business separation"
       ],
       "opps": [
+        {
+          "title": "Kenvue Integration",
+          "detail": "$48.7B deal creates consumer health powerhouse. Synergy realization and portfolio optimization will be the 2026-2027 story."
+        },
+        {
+          "title": "New CIO from P&G/Kraft Heinz",
+          "detail": "Francesco Tinto brings 30 years of tech leadership. Signals digital transformation is core to post-acquisition integration strategy."
+        },
         {
           "title": "Premiumize Huggies with smart diaper technology",
           "detail": "Connected diaper sensor technology can command 40% premium and create a recurring subscription revenue model."
@@ -801,22 +829,22 @@
       },
       "news": [
         {
-          "h": "Kimberly-Clark Professional Business Separation Creates K-C Pro as Standalone Entity",
-          "s": "BusinessWire",
-          "d": "Mar 13",
-          "url": "https://www.investor.kimberly-clark.com/news-releases/news-release-details/kimberly-clark-reports-strong-finish-second-year-transformation"
+          "h": "Kimberly-Clark Appoints Francesco Tinto as CIO/GBS Officer",
+          "s": "PRNewswire",
+          "d": "Mar 9",
+          "url": ""
         },
         {
-          "h": "Huggies Special Delivery Expands with Organic Cotton Innovation Line",
-          "s": "RetailDive",
-          "d": "Mar 10",
-          "url": "https://www.retaildive.com/news/huggies-special-delivery-organic-cotton/"
-        },
-        {
-          "h": "Kimberly-Clark Raises FY2026 Guidance on Emerging Market Volume Momentum",
-          "s": "Reuters",
+          "h": "KMB CTO Zackery Hicks to Depart March 31",
+          "s": "SEC Filing",
           "d": "Mar 7",
-          "url": "https://investor.kimberly-clark.com/news-releases"
+          "url": ""
+        },
+        {
+          "h": "KMB Raises Dividend for 54th Consecutive Year",
+          "s": "KMB IR",
+          "d": "Mar 6",
+          "url": ""
         }
       ],
       "vc": {
@@ -868,7 +896,8 @@
           ],
           "outlook": "SAP deployment completion in 2025 will unlock AI analytics capabilities across supply chain and demand planning."
         }
-      }
+      },
+      "lastUpdated": "Mar 15, 2026"
     },
     "CL": {
       "name": "Colgate-Palmolive",
@@ -1002,21 +1031,31 @@
       "iv": 78,
       "dm": 77,
       "earnings": false,
-      "headline": "Mondelez's Premium Snacking Bet vs. GLP-1 Headwinds",
-      "deck": "Mondelez is navigating the most significant structural headwind in its history: the rise of GLP-1 weight loss drugs threatening its core indulgent snacking portfolio of Oreo, Cadbury, and Milka.",
-      "execSummary": "Mondelez International is navigating a structural headwind: the rise of GLP-1 weight loss drugs threatening its core indulgent snacking portfolio. The company is responding with better-for-you reformulations of iconic brands and acquisitions of functional snack brands, betting that Oreo, Cadbury, and Milka will retain emotional loyalty even as consumption patterns shift.",
+      "headline": "Mondelez Opens CHF 65M Toblerone Center as Premium Pivot Accelerates",
+      "deck": "Mondelez inaugurated a CHF 65M production line at its Toblerone plant in Bern — the largest chocolate investment in a decade. Swiss President Guy Parmelin attended. But analysts are split: Morgan Stanley says Overweight, TD Cowen cuts target to $62. Cocoa inflation remains the elephant in the room.",
+      "execSummary": "Mondelez is making its premium chocolate bet explicit. The CHF 65M Toblerone Center of Excellence in Bern — inaugurated by the Swiss President — is the company's largest chocolate production investment in a decade. The play is clear: premiumize the portfolio to offset cocoa inflation headwinds. But 2026 guidance of flat-to-2% organic revenue growth underwhelms, and FY25 adjusted EPS fell 14.6% on a constant-currency basis. New COO/CFO Luca Zaramella will need to prove the margin story works.",
       "mgmtSignals": [
-        "GLP-1 is a real trend. We are planning for a world where consumers eat less but better quality.",
-        "Our iconic brands create emotional bonds that survive dietary changes. People moderate, they do not eliminate.",
-        "We are acquiring into better-for-you snacking while protecting and investing in our core business."
+        "Morgan Stanley reiterated Overweight — positions MDLZ as preferred name over GIS and Conagra",
+        "TD Cowen cut target to $62 from $68 — 'challenging 2026 consumer staples outlook'",
+        "Luca Zaramella named EVP, COO and CFO"
       ],
       "risks": [
+        "Cocoa inflation pressuring margins — recipe adjustments underway",
+        "FY25 Diluted EPS down 44.7% to $1.89",
+        "2026 guidance of flat-to-2% organic revenue growth is weak",
         "GLP-1 drug adoption reducing indulgent snack occasion frequency",
         "Private label biscuit and chocolate competition in Europe",
-        "Cocoa price inflation affecting Cadbury and Milka margins",
-        "Consumer perception of Oreo as ultra-processed food growing"
+        "Cocoa price inflation affecting Cadbury and Milka margins"
       ],
       "opps": [
+        {
+          "title": "Premium Chocolate Pivot",
+          "detail": "CHF 65M Toblerone Center of Excellence. Bern produces 90% of global Toblerone. Largest chocolate production investment in a decade."
+        },
+        {
+          "title": "New COO/CFO",
+          "detail": "Luca Zaramella combining COO and CFO roles. Signals operational efficiency is now the top priority."
+        },
         {
           "title": "Launch Oreo Zero Sugar across international markets",
           "detail": "Zero sugar Oreo has 40% lower calorie profile, directly addressing GLP-1 user moderation behavior."
@@ -1047,22 +1086,22 @@
       },
       "news": [
         {
-          "h": "Mondelez Acquires Clif Bar Distribution Rights as Better-For-You Strategy Advances",
-          "s": "Reuters",
-          "d": "Mar 12",
-          "url": "https://www.reuters.com/business/retail-consumer/mondelez-clif-bar-distribution-rights/"
+          "h": "Mondelez Inaugurates CHF 65M Toblerone Line in Bern",
+          "s": "Mondelez IR",
+          "d": "Mar 11",
+          "url": ""
         },
         {
-          "h": "Oreo Zero Sugar Global Rollout Targets GLP-1 Consumers Seeking Moderation Options",
-          "s": "FoodBev",
-          "d": "Mar 8",
-          "url": "https://www.fooddive.com/news/mondelez-launches-sugar-free-oreos-snacking/806067/"
-        },
-        {
-          "h": "Cocoa Futures Hit 50-Year High, Threatening Cadbury and Milka Profit Margins",
-          "s": "FT",
+          "h": "Morgan Stanley Reiterates Overweight on MDLZ Post-CAGNY",
+          "s": "Yahoo Finance",
           "d": "Mar 5",
-          "url": "https://www.fooddive.com/news/mondelez-hershey-pressured-by-prolonged-spike-in-cocoa-prices/739464/"
+          "url": ""
+        },
+        {
+          "h": "TD Cowen Cuts Mondelez Target to $62",
+          "s": "Zacks",
+          "d": "Mar 3",
+          "url": ""
         }
       ],
       "vc": {
@@ -1114,7 +1153,8 @@
           ],
           "outlook": "Supply chain AI investment will close performance gap vs. peer group by 2026; marketing AI investment leading."
         }
-      }
+      },
+      "lastUpdated": "Mar 15, 2026"
     },
     "NSRGY": {
       "name": "Nestlé",
@@ -1125,21 +1165,31 @@
       "iv": 70,
       "dm": 78,
       "earnings": false,
-      "headline": "New Nestlé CEO Faces Portfolio Reset: Selling KitKat to Fund Nutrition Focus?",
-      "deck": "New CEO Laurent Freixe inherits a sprawling 2,000+ brand portfolio under activist investor pressure to divest confectionery and accelerate into medical nutrition and plant-based food.",
-      "execSummary": "New CEO Philipp Navratil — appointed in late 2025 following Laurent Freixe's departure — faces pressure to accelerate portfolio transformation across KitKat, Nespresso, and infant nutrition. Activist investor pressure is intensifying calls to divest confectionery and accelerate into medical nutrition and plant-based food, where Nestlé has legitimate science-based differentiation. The market is watching for a decisive portfolio reset announcement.",
+      "headline": "Nestlé Cuts 16,000 Jobs to Save CHF 1B While Betting Big on KitKat F1",
+      "deck": "Nestlé executes a dual-track strategy: slashing 16,000 jobs for CHF 1B in annual savings while launching KitKat as an official F1 partner. Targeting 3-4% organic growth in 2026. Analysts consensus: Hold. FY25 organic sales grew 4%.",
+      "execSummary": "Nestlé is running the biggest cost restructuring in its history alongside its boldest brand amplification play. 16,000 job cuts for CHF 1B annual savings paired with KitKat's Formula 1 partnership represent the tension in CEO Laurent Freixe's strategy: cut deep internally, spend big externally. FY25 organic sales growth of 4% with volume/mix easing to 1.3% shows the top line needs help. The H2 2026 margin improvement promise is the real test.",
       "mgmtSignals": [
-        "We are committed to accelerating the portfolio transformation that shareholders have been asking for. Divestiture decisions will be announced in H1 2026.",
-        "Nestlé Health Science represents our highest-conviction growth vector — the intersection of nutrition and medicine is where this company will compete.",
-        "Nespresso and premium coffee broadly remain a core pillar. We are investing to defend and extend our position in this high-margin category."
+        "Targeting 3-4% organic growth in 2026",
+        "Jefferies reissued Hold rating (Feb 23)",
+        "Morgan Stanley reiterated Underweight (Feb 12)"
       ],
       "risks": [
+        "16,000 job cuts carry significant execution and morale risk",
+        "Volume/mix easing to 1.3% — organic growth dependent on pricing which is fading",
+        "Analyst consensus is Hold with $91 target vs. $102 current — implies downside",
         "Activist investor pressure for faster portfolio transformation",
         "Confectionery margin erosion from cocoa and sugar inflation",
-        "Infant formula reputation risk following regulatory scrutiny",
-        "Nespresso DTC disruption from private label pod competition"
+        "Infant formula reputation risk following regulatory scrutiny"
       ],
       "opps": [
+        {
+          "title": "CHF 1B Cost Savings",
+          "detail": "Largest cost program in Nestlé history. Annual savings of CHF 1B should improve operating margins if execution is clean."
+        },
+        {
+          "title": "KitKat F1 Partnership",
+          "detail": "Official F1 partner status gives KitKat global brand amplification at scale. Tests whether brand investment can offset volume weakness."
+        },
         {
           "title": "Divest KitKat and confectionery to Ferrero or Mars",
           "detail": "Confectionery divestiture would release €15-20B to fund medical nutrition and plant-based acquisitions."
@@ -1170,22 +1220,16 @@
       },
       "news": [
         {
-          "h": "New Nestlé CEO Navratil Accelerates Portfolio Review in First 100 Days",
-          "s": "FT",
-          "d": "Mar 12",
-          "url": "https://www.just-food.com/features/we-need-to-raise-our-game-new-nestle-ceo-laurent-freixe-sets-out-stall/"
+          "h": "Nestlé Cutting 16,000 Jobs for CHF 1B Savings",
+          "s": "Ad-Hoc News",
+          "d": "Mar 10",
+          "url": ""
         },
         {
-          "h": "Third Point Activist Fund Increases Nestlé Stake, Pushes for Confectionery Divestiture",
-          "s": "WSJ",
-          "d": "Mar 11",
-          "url": "https://www.wsj.com/articles/third-point-nestle-stake-confectionery-divestiture"
-        },
-        {
-          "h": "Nestlé Health Science Launches Peptamen AI Clinical Trial Management Platform",
-          "s": "PharmaTech",
-          "d": "Mar 7",
-          "url": "https://www.nestle.com/media/pressreleases/allpressreleases"
+          "h": "FY25 Results: 4% Organic Growth, Shares +3%",
+          "s": "Nestlé IR",
+          "d": "Feb 19",
+          "url": ""
         }
       ],
       "vc": {
@@ -1237,7 +1281,8 @@
           ],
           "outlook": "AI investment acceleration will close gap vs. Coca-Cola by end of 2026; consumer digital still a 3-year journey."
         }
-      }
+      },
+      "lastUpdated": "Mar 15, 2026"
     }
   },
   "playbooks": [
@@ -1727,5 +1772,131 @@
         "NSRGY"
       ]
     }
-  ]
+  ],
+  "reported": [
+    {
+      "ticker": "MNST",
+      "name": "Monster Beverage",
+      "date": "Feb 26, 2026",
+      "result": "Beat",
+      "rev": "$2.13B",
+      "revSurp": "+4.27%",
+      "eps": "$0.51",
+      "epsSurp": "+10.42%",
+      "guidance": "No formal guidance. January 2026 sales +20.5% YoY. Expects modest cost inflation from tariffs/aluminum in H1 2026.",
+      "quote": "Management described tariff impact as 'modest' and pointed to record January sales as evidence of continuing momentum."
+    }
+  ],
+  "upcoming": [
+    {
+      "ticker": "GIS",
+      "name": "General Mills",
+      "date": "Mar 18, 2026",
+      "time": "BMO",
+      "watch": [
+        "Q3 EPS expected $0.73-0.75 vs $1.40 year-ago — divestiture overhang",
+        "Volume recovery trajectory after Q2 beat",
+        "Trade expense timing — CFO flagged Q3 reversal of Q2 favorability"
+      ]
+    },
+    {
+      "ticker": "KMB",
+      "name": "Kimberly-Clark",
+      "date": "Mar 25, 2026",
+      "time": "BMO",
+      "watch": [
+        "Kenvue acquisition integration planning update",
+        "Innovation contribution to volume growth",
+        "Impact of CTO departure on digital transformation timeline"
+      ]
+    },
+    {
+      "ticker": "KO",
+      "name": "Coca-Cola",
+      "date": "Apr 1, 2026",
+      "time": "BMO",
+      "watch": [
+        "First quarter under new CEO Henrique Braun",
+        "AI marketing ROI metrics — will they share click-through data?",
+        "Volume vs. price mix in developed markets"
+      ]
+    },
+    {
+      "ticker": "PEP",
+      "name": "PepsiCo",
+      "date": "Apr 8, 2026",
+      "time": "BMO",
+      "watch": [
+        "First post-Elliott restructuring quarter",
+        "North America food volume trajectory",
+        "SKU reduction progress and early margin impact"
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "h": "PepsiCo Formalizes Elliott Restructuring: 20% SKU Cuts, Plant Closures, Price Reductions",
+      "s": "Fox Business",
+      "d": "Mar 10",
+      "ticker": "PEP",
+      "tags": [
+        "Strategy",
+        "PE"
+      ]
+    },
+    {
+      "h": "Kimberly-Clark's $48.7B Kenvue Acquisition Approved by Shareholders",
+      "s": "PRNewswire",
+      "d": "Mar 9",
+      "ticker": "KMB",
+      "tags": [
+        "Strategy",
+        "PE"
+      ]
+    },
+    {
+      "h": "Coca-Cola Creates Chief Digital Officer Role, CEO Transition March 31",
+      "s": "Yahoo Finance",
+      "d": "Mar 8",
+      "ticker": "KO",
+      "tags": [
+        "Innovation",
+        "CMO"
+      ]
+    },
+    {
+      "h": "Mondelez Opens CHF 65M Toblerone Center of Excellence in Bern",
+      "s": "Mondelez IR",
+      "d": "Mar 11",
+      "ticker": "MDLZ",
+      "tags": [
+        "Brand",
+        "Innovation"
+      ]
+    },
+    {
+      "h": "Nestlé Cutting 16,000 Jobs for CHF 1B Annual Savings",
+      "s": "Ad-Hoc News",
+      "d": "Mar 10",
+      "ticker": "NSRGY",
+      "tags": [
+        "Strategy",
+        "PE"
+      ]
+    },
+    {
+      "h": "Unilever Stock Down 13% in March After Berenberg Downgrade",
+      "s": "AAII",
+      "d": "Mar 14",
+      "ticker": "UL",
+      "tags": [
+        "Strategy",
+        "PE"
+      ]
+    }
+  ],
+  "thisWeekPick": {
+    "ticker": "PEP",
+    "reason": "PepsiCo's formalized Elliott restructuring is the most consequential strategic move this week. A $4B activist stake driving 20% SKU cuts, plant closures, and price reductions on flagship brands represents a fundamental reset of the North America business model. This is the biggest operational overhaul in PepsiCo's recent history and will reshape competitive dynamics across snacks and beverages for years."
+  }
 }
