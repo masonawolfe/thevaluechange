@@ -10,9 +10,12 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thevaluechange.com">
 <meta name="description" content="CPG strategy intelligence platform — earnings analysis, tactical playbooks, and management signals for consumer goods professionals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://logo.clearbit.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Syne:wght@400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -1912,6 +1915,17 @@ function renderCoDetail(){
       </div></div>
     </div>
 
+    <!-- Live SEC Filings -->
+    <div class="co-section ${isOpen('filings',false)?'open':''}" data-section="filings">
+      <div class="co-section-header" onclick="toggleCoSection(this,'${co.ticker}','filings')">
+        <div class="section-label" style="display:flex;align-items:center;gap:8px">SEC FILINGS <span style="font-family:var(--mono);font-size:8px;color:var(--accent);letter-spacing:.08em;background:var(--accent-soft);padding:1px 6px;border-radius:3px;border:1px solid var(--accent-border)">LIVE</span></div>
+        <span class="co-section-toggle">⌄</span>
+      </div>
+      <div class="co-section-body"><div class="co-section-inner">
+        <div id="filings-${co.ticker}" style="font-size:12px;color:var(--text3)">Loading filings...</div>
+      </div></div>
+    </div>
+
     <!-- Value Chain Analysis — collapsed by default -->
     <div class="co-section ${isOpen('vc',false)?'open':''}" data-section="vc">
       <div class="co-section-header" onclick="toggleCoSection(this,'${co.ticker}','vc')">
@@ -1976,6 +1990,29 @@ function renderCoDetail(){
 
   // Draw radar
   setTimeout(()=>drawRadar(co),50);
+  // Fetch live SEC filings
+  fetchLiveFilings(co.ticker);
+}
+
+async function fetchLiveFilings(ticker){
+  const el=document.getElementById('filings-'+ticker);
+  if(!el) return;
+  try{
+    const res=await fetch('/.netlify/functions/live-data?type=filings&ticker='+ticker);
+    if(!res.ok){el.innerHTML='<div style="color:var(--text3);font-size:11px">SEC filings unavailable</div>';return;}
+    const data=await res.json();
+    if(!data.filings||!data.filings.length){el.innerHTML='<div style="color:var(--text3);font-size:11px">No EDGAR filings for this company</div>';return;}
+    el.innerHTML=data.filings.map(f=>`
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--border)">
+        <div>
+          <span style="font-family:var(--mono);font-size:11px;font-weight:700;color:var(--accent);margin-right:8px">${f.form}</span>
+          <span style="font-size:12px;color:var(--text)">${f.description||f.form}</span>
+        </div>
+        <span style="font-family:var(--mono);font-size:10px;color:var(--text3)">${f.date}</span>
+      </div>`).join('');
+  }catch(e){
+    el.innerHTML='<div style="color:var(--text3);font-size:11px">Could not load filings</div>';
+  }
 }
 
 function setLens(lens){
@@ -2728,11 +2765,39 @@ function generateIntakeSummary(data,eng){
 function renderAdminPage(){
   const intakes=JSON.parse(localStorage.getItem('tvc-intakes')||'[]').sort((a,b)=>b.id-a.id);
   const pending=intakes.filter(i=>i.status==='new').length;
+  const trends=getSearchTrends(14);
+  const flags=getFlags();
+  const flaggedProfiles=Object.entries(flags).filter(([,f])=>(f.stale?.length||0)+(f.inaccurate?.length||0)+(f.missing?.length||0)>0);
   const el=document.getElementById('page-admin');
   el.innerHTML=`
-    <div class="page-title">Consulting Intake Review</div>
+    <div class="page-title">Admin Dashboard</div>
+
+    <!-- SEARCH INTELLIGENCE -->
+    <div style="margin-bottom:32px">
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--text3);margin-bottom:8px">SEARCH INTELLIGENCE (14 DAYS)</div>
+      ${trends.length?`<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-bottom:12px">
+        ${trends.map(t=>`<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 12px">
+          <div style="font-family:var(--mono);font-size:11px;font-weight:700;color:var(--accent)">${t.ticker||t.query.toUpperCase()}</div>
+          <div style="font-size:12px;color:var(--text)">${t.name}</div>
+          <div style="font-family:var(--mono);font-size:10px;color:var(--text3)">${t.count} searches${t.spike?' · SPIKE':''}  </div>
+        </div>`).join('')}
+      </div>`:'<div style="font-size:12px;color:var(--text3);margin-bottom:12px">No search data yet.</div>'}
+      <button class="admin-export-btn" onclick="exportSearchTrends()">Export Search Trends as JSON</button>
+    </div>
+
+    <!-- COMMUNITY FLAGS -->
+    ${flaggedProfiles.length?`<div style="margin-bottom:32px">
+      <div style="font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--text3);margin-bottom:8px">FLAGGED PROFILES</div>
+      ${flaggedProfiles.map(([ticker,f])=>`<div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center">
+        <span style="font-family:var(--mono);font-size:12px;font-weight:700">${ticker}</span>
+        <span style="font-size:11px;color:var(--text2)">${f.stale?.length||0} stale · ${f.inaccurate?.length||0} inaccurate · ${f.missing?.length||0} missing</span>
+      </div>`).join('')}
+    </div>`:''}
+
+    <!-- CONSULTING INTAKES -->
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--text3);margin-bottom:8px">CONSULTING INTAKES</div>
     <div class="page-subtitle">${intakes.length} total inquir${intakes.length===1?'y':'ies'} · ${pending} pending</div>
-    <button class="admin-export-btn" onclick="exportIntakes()">Copy All as JSON</button>
+    <button class="admin-export-btn" onclick="exportIntakes()">Copy Intakes as JSON</button>
     ${intakes.length===0?'<div style="color:var(--text3);font-size:13px;margin-top:20px">No intakes yet. The consulting CTA appears after users view 3+ playbooks.</div>':''}
     ${intakes.map(i=>`
     <div class="intake-card" id="intake-${i.id}">
@@ -2785,6 +2850,18 @@ function deleteIntake(id){
 function exportIntakes(){
   const intakes=localStorage.getItem('tvc-intakes')||'[]';
   navigator.clipboard.writeText(intakes).then(()=>showToast('Intakes copied to clipboard'));
+}
+function exportSearchTrends(){
+  const trends=getSearchTrends(14);
+  const flags=getFlags();
+  const exportData={
+    exportedAt:new Date().toISOString(),
+    period:'14 days',
+    trends:trends.map(t=>({query:t.query,ticker:t.ticker,name:t.name,searches:t.count,spike:t.spike})),
+    flaggedProfiles:Object.entries(flags).filter(([,f])=>(f.stale?.length||0)+(f.inaccurate?.length||0)+(f.missing?.length||0)>0)
+      .map(([ticker,f])=>({ticker,stale:f.stale?.length||0,inaccurate:f.inaccurate?.length||0,missing:f.missing?.length||0}))
+  };
+  navigator.clipboard.writeText(JSON.stringify(exportData,null,2)).then(()=>showToast('Search trends copied to clipboard'));
 }
 
 // ── AI PROFILE CACHE ────────────────────────────────────────────────────
