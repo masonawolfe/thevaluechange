@@ -54,9 +54,10 @@ exports.handler = async (event) => {
     return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
   }
 
-  const apiKey = process.env.CLAUDE_API_KEY;
+  const apiKey = process.env.CLAUDE_API_KEY || process.env.Anthropic_API_Key || process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return { statusCode: 500, body: JSON.stringify({ error: 'API key not configured' }) };
+    console.error('No API key found. Checked: CLAUDE_API_KEY, Anthropic_API_Key, ANTHROPIC_API_KEY');
+    return { statusCode: 500, body: JSON.stringify({ error: 'API key not configured. Set CLAUDE_API_KEY in Netlify env vars.' }) };
   }
 
   let query;
@@ -87,7 +88,7 @@ exports.handler = async (event) => {
         'anthropic-version': '2023-06-01'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-6-20250131',
         max_tokens: 4096,
         system: `You are a CPG (consumer packaged goods) strategy analyst generating company intelligence profiles. You write with authority — like a seasoned analyst at a top consulting firm writing for smart CPG professionals.
 
@@ -115,9 +116,15 @@ Rules:
     if (!response.ok) {
       const errText = await response.text();
       console.error('Claude API error:', response.status, errText);
+      let errMsg = 'AI service error';
+      if (response.status === 429) errMsg = 'Rate limited — try again in a minute';
+      else if (response.status === 401) errMsg = 'Invalid API key — check Netlify env vars';
+      else if (response.status === 400) errMsg = 'Bad request to AI API';
+      else if (response.status === 404) errMsg = 'Model not found — may need update';
       return {
         statusCode: response.status === 429 ? 429 : 502,
-        body: JSON.stringify({ error: response.status === 429 ? 'Rate limited — try again in a minute' : 'AI service error' })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ error: errMsg, status: response.status })
       };
     }
 
@@ -147,7 +154,7 @@ Rules:
     profile._meta = {
       generated: true,
       generatedAt: new Date().toISOString(),
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6-20250131',
       query: sanitized
     };
 
