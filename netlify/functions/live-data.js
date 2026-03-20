@@ -32,8 +32,14 @@ exports.handler = async (event) => {
       return await getPrice(t);
     } else if (type === 'earnings') {
       return await getEarnings(t);
+    } else if (type === 'news') {
+      return await getNews(t);
+    } else if (type === 'fundamentals') {
+      return await getFundamentals(t);
+    } else if (type === 'transcripts') {
+      return await getTranscriptQuotes(event.queryStringParameters);
     } else {
-      return { statusCode: 400, headers: HEADERS, body: JSON.stringify({ error: 'Unknown type. Use: filings, price, earnings' }) };
+      return { statusCode: 400, headers: HEADERS, body: JSON.stringify({ error: 'Unknown type. Use: filings, price, earnings, news, fundamentals, transcripts' }) };
     }
   } catch (err) {
     console.error('live-data error:', err);
@@ -129,5 +135,126 @@ async function getEarnings(ticker) {
     statusCode: 200,
     headers: HEADERS,
     body: JSON.stringify({ ticker, earnings })
+  };
+}
+
+// Company news via Finnhub (free tier, 60/min)
+async function getNews(ticker) {
+  const apiKey = process.env.FINNHUB_API_KEY;
+  if (!apiKey) {
+    return { statusCode: 200, headers: HEADERS, body: JSON.stringify({ ticker, news: [], note: 'FINNHUB_API_KEY not configured' }) };
+  }
+
+  const to = new Date().toISOString().slice(0, 10);
+  const from = new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10);
+  const res = await fetch(`https://finnhub.io/api/v1/company-news?symbol=${ticker}&from=${from}&to=${to}&token=${apiKey}`);
+  const data = await res.json();
+
+  const news = (data || []).slice(0, 10).map(n => ({
+    title: n.headline,
+    source: n.source,
+    date: new Date(n.datetime * 1000).toISOString().slice(0, 10),
+    url: n.url,
+    summary: n.summary?.slice(0, 200),
+    category: n.category
+  }));
+
+  return {
+    statusCode: 200,
+    headers: HEADERS,
+    body: JSON.stringify({ ticker, news, period: `${from} to ${to}` })
+  };
+}
+
+// Company fundamentals via FMP (free tier, 250/day)
+async function getFundamentals(ticker) {
+  const apiKey = process.env.FMP_API_KEY;
+  if (!apiKey) {
+    return { statusCode: 200, headers: HEADERS, body: JSON.stringify({ ticker, fundamentals: null, note: 'FMP_API_KEY not configured' }) };
+  }
+
+  // Fetch profile + key metrics in parallel
+  const [profileRes, metricsRes] = await Promise.all([
+    fetch(`https://financialmodelingprep.com/api/v3/profile/${ticker}?apikey=${apiKey}`),
+    fetch(`https://financialmodelingprep.com/api/v3/key-metrics-ttm/${ticker}?apikey=${apiKey}`)
+  ]);
+
+  const profile = (await profileRes.json())?.[0] || {};
+  const metrics = (await metricsRes.json())?.[0] || {};
+
+  return {
+    statusCode: 200,
+    headers: HEADERS,
+    body: JSON.stringify({
+      ticker,
+      fundamentals: {
+        marketCap: profile.mktCap,
+        price: profile.price,
+        beta: profile.beta,
+        sector: profile.sector,
+        industry: profile.industry,
+        employees: profile.fullTimeEmployees,
+        peRatio: metrics.peRatioTTM,
+        evToEbitda: metrics.enterpriseValueOverEBITDATTM,
+        revenuePerShare: metrics.revenuePerShareTTM,
+        netIncomePerShare: metrics.netIncomePerShareTTM,
+        dividendYield: metrics.dividendYieldTTM,
+        roeTTM: metrics.roeTTM,
+        debtToEquity: metrics.debtToEquityTTM
+      }
+    })
+  };
+}
+
+// Cross-company transcript query (reads from data.json transcriptQuotes)
+// GET /.netlify/functions/live-data?type=transcripts&topic=pricing&ticker=ALL
+async function getTranscriptQuotes(params) {
+  const { topic, ticker: filterTicker } = params;
+
+  // Read data.json from the deploy bundle
+  const fs = require('fs');
+  const path = require('path');
+  let dataJson;
+  try {
+    const dataPath = path.join(__dirname, '..', '..', 'data.json');
+    dataJson = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  } catch (e) {
+    return { statusCode: 200, headers: HEADERS, body: JSON.stringify({ quotes: [], note: 'No transcript data available yet' }) };
+  }
+
+  let quotes = dataJson.transcriptQuotes || [];
+
+  // Filter by topic
+  if (topic && topic !== 'ALL') {
+    quotes = quotes.filter(q => q.topics && q.topics.includes(topic.toLowerCase()));
+  }
+
+  // Filter by ticker
+  if (filterTicker && filterTicker !== 'ALL') {
+    quotes = quotes.filter(q => q.ticker === filterTicker.toUpperCase());
+  }
+
+  // Group by topic for summary
+  const topicCounts = {};
+  quotes.forEach(q => {
+    (q.topics || []).forEach(t => { topicCounts[t] = (topicCounts[t] || 0) + 1; });
+  });
+
+  // Group by ticker for cross-company view
+  const byTicker = {};
+  quotes.forEach(q => {
+    if (!byTicker[q.ticker]) byTicker[q.ticker] = [];
+    byTicker[q.ticker].push(q);
+  });
+
+  return {
+    statusCode: 200,
+    headers: HEADERS,
+    body: JSON.stringify({
+      total: quotes.length,
+      topicCounts,
+      byTicker: Object.fromEntries(Object.entries(byTicker).map(([k, v]) => [k, v.length])),
+      quotes: quotes.slice(0, 50) // Limit response size
+    })
   };
 }

@@ -68,6 +68,8 @@ Dual-purpose: powers TVC content engine AND sharpens your Accenture client advis
 - [ ] Offline/slow connection handling (service worker or loading states)
 
 ## Backlog
+- [ ] **DISABLE AI chat on company pages** — Claude Code shipped `netlify/functions/chat.js` (Claude Haiku) with live API calls. Mason has NOT reviewed the outputs and it costs money per query. KEEP the code but hide the chat UI from visitors until Mason has tested it, reviewed response quality, and approved. Re-enable in Phase 3 after voice/quality review.
+- [ ] **Dark mode redesign** — Synthetic feedback report completed (TVC-Dark-Mode-Feedback-Report.docx). 9/10 personas agreed: green (#4ade80) is too bright, overused, and reads "SaaS" not "editorial." Fix: change accent to warm sage #5ABD66, limit green to interactive elements only, add secondary teal #4A9D83 for sparklines, soften text to #F0F0F0, increase card elevation (#13182b surface + subtle border + shadow), fix logo white box on dark nav. See report for full Tier 1-3 prioritized changes and revised CSS palette.
 - [ ] Full live external data feeds (news APIs, real-time earnings — need paid API keys)
 - [ ] Performance: code splitting if file size becomes an issue (currently ~260KB)
 
