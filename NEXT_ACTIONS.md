@@ -27,6 +27,40 @@ The product is built. Nothing below is blocked by engineering. These are all Mas
 - [ ] Feed search trend data back into weekly refresh agent (editorial intelligence loop)
 - [ ] Export search trends for Monday brief content
 
+## PHASE 4: Proprietary CPG Intelligence Layer (AlphaSense-Inspired)
+Build your own data pipeline from free public sources so you never depend on a $10K/year vendor.
+Dual-purpose: powers TVC content engine AND sharpens your Accenture client advisory work.
+
+### Step 1: Earnings Transcript Pipeline (free, no new infrastructure)
+- [ ] Add earnings transcript extraction to weekly refresh agent (SEC EDGAR 8-K exhibits contain full transcripts)
+- [ ] Agent extracts key quotes by topic: pricing, volume, innovation, M&A, private label, digital/AI
+- [ ] Store extracted quotes in structured JSON (by company, topic, quarter) — builds over time
+- [ ] After 2-3 quarters: can query "what did every CPG CEO say about pricing this year"
+
+### Step 2: Structured News & Fundamentals (free API tiers)
+- [ ] Finnhub news API (free) — replace web search in daily brief agent with structured company news feed
+- [ ] Finnhub or Alpha Vantage fundamentals (free tier) — auto-populate KPIs on company profiles
+- [ ] Financial Modeling Prep earnings calendar (free tier) — keep earnings dates current automatically
+- [ ] Store historical data locally — each week's pull adds to your proprietary dataset
+
+### Step 3: Cross-Company Intelligence (the moat)
+- [ ] Build topic-based query layer: "show me all management commentary on GLP-1 across CPG"
+- [ ] Sentiment tracking over time: is management tone on pricing shifting from confident to cautious?
+- [ ] Competitive cross-reference: when PEP mentions private label pressure, does KO say the same thing?
+- [ ] Surface insights the daily brief agent can use: "3 of 10 covered CEOs mentioned tariff risk this quarter — that's a trend worth writing about"
+
+### What this becomes:
+- Your briefs get richer because they draw from accumulated data, not single API calls
+- Your Accenture advisory work gets sharper — you have proprietary cross-company intelligence at your fingertips
+- The "What CPG Professionals Are Watching" section gets smarter (search trends + earnings language shifts)
+- Long-term: this dataset IS the product. Nobody else has a structured, topic-indexed CPG earnings knowledge base updated weekly for free
+
+### What you CAN'T replicate (and don't need to):
+- AlphaSense's 260K expert call transcripts (proprietary Tegus interviews) — you don't need private interviews to write editorial briefs
+- Wall Street equity research from 1,500 brokers — your editorial voice IS the value, not aggregating Goldman's take
+- Their finance-specific LLM trained on 450M documents — Claude handles your use case fine
+- 10+ years of historical transcripts — you start accumulating now and build forward
+
 ## QA Polish (Claude Code — Low Priority)
 - [ ] Verify color contrast ratios meet WCAG AA in both light and dark modes
 - [ ] Run full Lighthouse audit and fix any remaining issues

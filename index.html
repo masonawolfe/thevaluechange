@@ -27,11 +27,11 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
 --bg:#FAFAF8;--surface:#FFFFFF;--surface2:#F5F3F0;--surface3:#EDEBE7;
---accent:#B8732D;--accent2:#3D3D3D;--warn:#C17A2F;--danger:#C0392B;
---text:#1A1A1A;--text2:#4A4A4A;--text3:#8A8A8A;--border:#DDD9D2;
+--accent:#9D5E21;--accent2:#3D3D3D;--warn:#C17A2F;--danger:#C0392B;
+--text:#1A1A1A;--text2:#4A4A4A;--text3:#767676;--border:#DDD9D2;
 --serif:'Fraunces',serif;--sans:'Syne',sans-serif;--mono:'DM Mono',monospace;
---accent-soft:rgba(184,115,45,.08);--accent-soft2:rgba(184,115,45,.15);
---accent-border:rgba(184,115,45,.25);
+--accent-soft:rgba(157,94,33,.08);--accent-soft2:rgba(157,94,33,.15);
+--accent-border:rgba(157,94,33,.25);
 --accent2-soft:rgba(61,61,61,.08);--accent2-border:rgba(61,61,61,.2);
 --danger-soft:rgba(192,57,43,.12);--danger-border:rgba(192,57,43,.25);
 --warn-soft:rgba(193,122,47,.1);--warn-border:rgba(193,122,47,.25);
@@ -41,7 +41,7 @@
 [data-theme="dark"]{
 --bg:#0a0e1a;--surface:#111827;--surface2:#1a2234;--surface3:#1e2d40;
 --accent:#4ade80;--accent2:#60a5fa;--warn:#f59e0b;--danger:#ef4444;
---text:#f1f5f9;--text2:#94a3b8;--text3:#475569;--border:#1e293b;
+--text:#f1f5f9;--text2:#97a6bb;--text3:#5d6d82;--border:#1e293b;
 --accent-soft:rgba(74,222,128,.08);--accent-soft2:rgba(74,222,128,.15);
 --accent-border:rgba(74,222,128,.25);
 --accent2-soft:rgba(96,165,250,.1);--accent2-border:rgba(96,165,250,.2);
@@ -337,6 +337,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 [data-theme="dark"] .bottom-line{background:var(--surface)}
 [data-theme="dark"] .pb-cta-btn{background:rgba(74,222,128,.1)}
 [data-theme="dark"] .newsletter-inner{background:var(--surface)}
+[data-theme="dark"] .skip-link,[data-theme="dark"] .nav-tab .badge,[data-theme="dark"] .play-num,[data-theme="dark"] .pb-play-num,[data-theme="dark"] .ai-chat-input button{color:#0a0e1a}
 /* DATA FRESHNESS (Sprint 17D partial) */
 .freshness{font-family:var(--mono);font-size:9px;color:var(--text3);letter-spacing:.06em;text-align:center;padding:16px 0;margin-top:20px;border-top:1px solid var(--border)}
 /* WATCHLIST DIGEST (Sprint 16A) */
@@ -1660,7 +1661,7 @@ function clearThemeFilter(){
 function renderSinglePbCard(pb){
   return `
     <div class="pb-card" id="pb-${pb.id}">
-      <div class="pb-card-header" onclick="togglePb(${pb.id})">
+      <div class="pb-card-header" role="button" tabindex="0" aria-expanded="false" aria-label="${pb.title} — ${pb.co}" onclick="togglePb(${pb.id})" onkeydown="if(event.key==='Enter')togglePb(${pb.id})">
         <div class="pb-co-badge">${pb.co}</div>
         <div style="flex:1">
           <div class="pb-card-cat">${pb.cat}</div>
@@ -1728,7 +1729,7 @@ function renderCoList(){
     const arrow=delta>0?'↑':delta<0?'↓':'→';
     const deltaColor=delta>0?'var(--accent)':delta<0?'var(--danger)':'var(--text3)';
     return `
-    <div class="co-list-item ${c.ticker===activeCompany?'active':''}" onclick="setActiveCompany('${c.ticker}')">
+    <div class="co-list-item ${c.ticker===activeCompany?'active':''}" role="button" tabindex="0" aria-label="${c.name} — VCI ${c.vci}" onclick="setActiveCompany('${c.ticker}')" onkeydown="if(event.key==='Enter')setActiveCompany('${c.ticker}')">
       ${coLogoImg(c.ticker,32)}
       <div style="min-width:0;flex:1">
         <div class="co-list-name">${c.name}${c._meta&&c._meta.generated?'<span class="ai-badge">AI</span>':''}</div>
@@ -2036,7 +2037,7 @@ function setLens(lens){
 function toggleCoSection(headerEl, ticker, key){
   const section=headerEl.parentElement;
   section.classList.toggle('open');
-  // Persist state
+  headerEl.setAttribute('aria-expanded',section.classList.contains('open')?'true':'false');
   const state=JSON.parse(localStorage.getItem('tvc-sections-'+ticker)||'{}');
   state[key]=section.classList.contains('open');
   localStorage.setItem('tvc-sections-'+ticker,JSON.stringify(state));
@@ -2416,7 +2417,7 @@ function renderPbGrid(){
   if(roleFilter!=='ALL') list=list.filter(p=>p.roles.some(r=>r.toLowerCase().includes(roleFilter.toLowerCase())));
   document.getElementById('pb-grid').innerHTML=list.map(pb=>`
     <div class="pb-card" id="pb-${pb.id}">
-      <div class="pb-card-header" onclick="togglePb(${pb.id})">
+      <div class="pb-card-header" role="button" tabindex="0" aria-expanded="false" aria-label="${pb.title} — ${pb.co}" onclick="togglePb(${pb.id})" onkeydown="if(event.key==='Enter')togglePb(${pb.id})">
         <div class="pb-co-badge">${pb.co}</div>
         <div style="flex:1">
           <div class="pb-card-cat">${pb.cat}</div>
@@ -2461,7 +2462,10 @@ function renderPbGrid(){
 function togglePb(id){
   const el=document.getElementById('pb-'+id);
   el.classList.toggle('open');
-  if(el.classList.contains('open')) trackEngagement('pb',id);
+  const isOpen=el.classList.contains('open');
+  const header=el.querySelector('.pb-card-header');
+  if(header) header.setAttribute('aria-expanded',isOpen?'true':'false');
+  if(isOpen) trackEngagement('pb',id);
 }
 function togglePbWatchlist(pbId, co, title){
   const existing=watchlist.findIndex(w=>w.type==='playbook'&&w.pbId===pbId);
@@ -3122,8 +3126,40 @@ async function loadExternalData(){
   const hashPages={companies:'companies',playbooks:'playbooks',earnings:'earnings',watchlist:'watchlist'};
   if(hashPages[initHash]) showPage(hashPages[initHash]);
 })();
-// ── AI CHAT (Sprint 18D) ─────────────────────────────────────────────────
-function askAI(ticker){
+// ── OFFLINE/CONNECTION HANDLING ──────────────────────────────────────────
+function showOfflineBanner(show){
+  let b=document.getElementById('offline-banner');
+  if(show&&!b){
+    b=document.createElement('div');
+    b.id='offline-banner';
+    b.setAttribute('role','alert');
+    b.style.cssText='position:fixed;bottom:0;left:0;right:0;background:var(--warn);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-align:center;padding:8px 16px;z-index:9999';
+    b.textContent='You are offline — some features may be unavailable';
+    document.body.appendChild(b);
+  }else if(!show&&b){b.remove();}
+}
+window.addEventListener('offline',()=>showOfflineBanner(true));
+window.addEventListener('online',()=>{showOfflineBanner(false);showToast('Back online');});
+if(!navigator.onLine) showOfflineBanner(true);
+
+// ── AI CHAT (Sprint 18D — upgraded to real Claude API) ──────────────────
+function buildChatContext(co){
+  const coPbs=playbooks.filter(p=>p.co===co.ticker);
+  const reported=earningsData.reported.find(e=>e.ticker===co.ticker);
+  const upcoming=earningsData.upcoming.find(e=>e.ticker===co.ticker);
+  let ctx=`Company: ${co.name} (${co.ticker})\nSector: ${co.sector||'CPG'}\nVCI Score: ${co.vci}/100 (Strategic Clarity: ${co.sc}, Innovation Velocity: ${co.iv}, Digital Maturity: ${co.dm})\n`;
+  if(co.execSummary) ctx+=`\nExecutive Summary: ${co.execSummary}\n`;
+  if(co.ourRead) ctx+=`\nAnalyst Take: ${co.ourRead}\n`;
+  if(co.bottomLine) ctx+=`Bottom Line: ${co.bottomLine}\n`;
+  if(co.risks?.length) ctx+=`\nRisks:\n${co.risks.map((r,i)=>`${i+1}. ${r}`).join('\n')}\n`;
+  if(co.opps?.length) ctx+=`\nOpportunities:\n${co.opps.map((o,i)=>`${i+1}. ${o.title} — ${o.detail}`).join('\n')}\n`;
+  if(co.mgmtSignals?.length) ctx+=`\nManagement Signals:\n${co.mgmtSignals.map(s=>`"${s.q}" — ${s.speaker}, ${s.source}`).join('\n')}\n`;
+  if(reported) ctx+=`\nLatest Earnings: ${reported.result} — Rev ${reported.rev} (${reported.revSurp}), EPS ${reported.eps} (${reported.epsSurp}). ${reported.guidance}\n`;
+  if(upcoming) ctx+=`\nUpcoming Earnings: ${upcoming.date} (${upcoming.time}). Watch: ${upcoming.watch.join('; ')}\n`;
+  if(coPbs.length) ctx+=`\nActive Playbooks:\n${coPbs.map(p=>`- ${p.title} (${p.cat}): ${p.challenge}. Impact: ${p.impact}`).join('\n')}\n`;
+  return ctx;
+}
+async function askAI(ticker){
   const input=document.getElementById('ai-input');
   const q=input.value.trim();
   if(!q)return;
@@ -3132,14 +3168,25 @@ function askAI(ticker){
   msgs.innerHTML+=`<div class="ai-msg user">${q}</div>`;
   msgs.innerHTML+=`<div class="ai-msg assistant" id="ai-typing"><div class="ai-typing"><span></span><span></span><span></span></div></div>`;
   msgs.scrollTop=msgs.scrollHeight;
-
-  setTimeout(()=>{
-    const co=companies[ticker];
+  const co=companies[ticker];
+  try{
+    const res=await fetch('/.netlify/functions/chat',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({question:q,ticker:co.ticker,context:buildChatContext(co)})
+    });
+    if(!res.ok) throw new Error('API error');
+    const data=await res.json();
+    const html=data.answer.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>');
+    const typing=document.getElementById('ai-typing');
+    if(typing) typing.outerHTML=`<div class="ai-msg assistant">${html}</div>`;
+  }catch(e){
+    // Fallback to local keyword matching
     const response=generateAIResponse(q,co);
     const typing=document.getElementById('ai-typing');
     if(typing) typing.outerHTML=`<div class="ai-msg assistant">${response}</div>`;
-    msgs.scrollTop=msgs.scrollHeight;
-  },800+Math.random()*1200);
+  }
+  msgs.scrollTop=msgs.scrollHeight;
 }
 function generateAIResponse(q, co){
   const lq=q.toLowerCase();
@@ -3164,7 +3211,6 @@ function generateAIResponse(q, co){
   if(lq.includes('vci')||lq.includes('index')||lq.includes('score')){
     return `<strong>${co.name} Value Change Index: ${co.vci}/100</strong><br><br>Strategic Clarity: ${co.sc} · Innovation Velocity: ${co.iv} · Digital Maturity: ${co.dm}<br><br>${co.vci>=85?'Strong positioning — above-average adaptability across all dimensions.':co.vci>=75?'Moderate positioning with room for improvement in key areas.':'Below-average adaptability — structural challenges to address.'}`;
   }
-  // Default response
   return `<strong>${co.name} (${co.ticker}) — Quick take:</strong><br><br>${co.ourRead||co.execSummary}<br><br>VCI: ${co.vci}/100 · ${coPbs.length} active playbook${coPbs.length!==1?'s':''} · ${co.risks.length} risks tracked<br><br>Ask about risks, opportunities, playbooks, or earnings for deeper analysis.`;
 }
 function dismissOnboarding(){

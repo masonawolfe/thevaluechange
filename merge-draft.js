@@ -76,5 +76,15 @@ if (draft.thisWeekPick) {
   console.log(`Pick: ${draft.thisWeekPick.ticker}`);
 }
 
+// Transcript quotes — accumulate over time (proprietary intelligence layer)
+if (draft.transcriptQuotes?.length) {
+  if (!data.transcriptQuotes) data.transcriptQuotes = [];
+  // Dedupe by quote+ticker+source
+  const existing = new Set(data.transcriptQuotes.map(q => `${q.ticker}|${q.source}|${q.quote?.slice(0,50)}`));
+  const newQuotes = draft.transcriptQuotes.filter(q => !existing.has(`${q.ticker}|${q.source}|${q.quote?.slice(0,50)}`));
+  data.transcriptQuotes.push(...newQuotes);
+  console.log(`Transcript quotes: ${newQuotes.length} new (${data.transcriptQuotes.length} total)`);
+}
+
 fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
 console.log('\nDone. data.json updated.');
