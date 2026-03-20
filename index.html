@@ -10,6 +10,13 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thevaluechange.com">
 <meta name="description" content="CPG strategy intelligence platform — earnings analysis, tactical playbooks, and management signals for consumer goods professionals.">
+<link rel="canonical" href="https://thevaluechange.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"The Value Change","url":"https://thevaluechange.com","description":"Earnings-driven CPG strategy intelligence for consumer goods professionals.","founder":{"@type":"Person","name":"Mason Wolfe"},"sameAs":[]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"The Value Change","url":"https://thevaluechange.com","description":"CPG strategy intelligence — earnings analysis, tactical playbooks, and management signals.","potentialAction":{"@type":"SearchAction","target":"https://thevaluechange.com/#companies?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://logo.clearbit.com">
@@ -44,6 +51,9 @@
 --nav-shadow:none;
 }
 body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;-webkit-font-smoothing:antialiased}
+.skip-link{position:absolute;top:-100px;left:16px;background:var(--accent);color:#fff;padding:8px 16px;z-index:10000;font-family:var(--mono);font-size:12px;border-radius:0 0 6px 6px;transition:top .2s}
+.skip-link:focus{top:0}
+*:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
 /* CROSS-LINK ELEMENTS */
 .cross-link{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:11px;color:var(--accent);cursor:pointer;transition:opacity .2s;letter-spacing:.03em}
 .cross-link:hover{opacity:.75}
@@ -686,6 +696,7 @@ select.intake-input{appearance:none;cursor:pointer}
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <defs>
@@ -711,17 +722,17 @@ select.intake-input{appearance:none;cursor:pointer}
     </svg>
     <span style="font-family:var(--serif);font-size:15px;font-weight:700;letter-spacing:.05em;white-space:nowrap"><span style="color:var(--text)">The Value</span><span style="color:var(--accent)"> Change</span></span>
   </div>
-  <div class="nav-tabs">
-    <div class="nav-tab active" onclick="showPage('week',this)">THIS WEEK</div>
-    <div class="nav-tab" onclick="showPage('companies',this)">COMPANIES</div>
-    <div class="nav-tab" onclick="showPage('playbooks',this)">PLAYBOOKS</div>
-    <div class="nav-tab" onclick="showPage('earnings',this)">EARNINGS</div>
-    <div class="nav-tab" onclick="showPage('watchlist',this)">WATCHLIST <span class="badge" id="wl-badge" style="display:none">0</span></div>
-  </div>
+  <nav class="nav-tabs" role="tablist" aria-label="Main navigation">
+    <div class="nav-tab active" role="tab" aria-selected="true" tabindex="0" onclick="showPage('week',this)" onkeydown="navKeyHandler(event,this)">THIS WEEK</div>
+    <div class="nav-tab" role="tab" aria-selected="false" tabindex="-1" onclick="showPage('companies',this)" onkeydown="navKeyHandler(event,this)">COMPANIES</div>
+    <div class="nav-tab" role="tab" aria-selected="false" tabindex="-1" onclick="showPage('playbooks',this)" onkeydown="navKeyHandler(event,this)">PLAYBOOKS</div>
+    <div class="nav-tab" role="tab" aria-selected="false" tabindex="-1" onclick="showPage('earnings',this)" onkeydown="navKeyHandler(event,this)">EARNINGS</div>
+    <div class="nav-tab" role="tab" aria-selected="false" tabindex="-1" onclick="showPage('watchlist',this)" onkeydown="navKeyHandler(event,this)">WATCHLIST <span class="badge" id="wl-badge" style="display:none">0</span></div>
+  </nav>
   <div class="nav-right">
     <div class="search-wrap">
       <span class="search-icon"><svg width="12" height="12"><use href="#icon-search"/></svg></span>
-      <input class="search-input" id="global-search" type="text" placeholder="Search companies, playbooks..." oninput="handleSearch(this.value)" onfocus="if(this.value.length>=2)document.getElementById('search-results').classList.add('open')" />
+      <input class="search-input" id="global-search" type="text" placeholder="Search companies, playbooks..." aria-label="Search companies and playbooks" autocomplete="off" oninput="handleSearch(this.value)" onfocus="if(this.value.length>=2)document.getElementById('search-results').classList.add('open')" />
       <div class="search-results" id="search-results"></div>
     </div>
     <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
@@ -737,6 +748,7 @@ select.intake-input{appearance:none;cursor:pointer}
 <div class="co-dropdown" id="co-dropdown"></div>
 
 <!-- PAGES -->
+<main id="main-content">
 
 <!-- THIS WEEK -->
 <div class="page active" id="page-week">
@@ -843,11 +855,13 @@ select.intake-input{appearance:none;cursor:pointer}
 <div class="modal-overlay" id="tep-modal">
   <div class="modal-box" id="tep-box"></div>
 </div>
-<div class="modal-overlay" id="intake-modal">
+</main>
+
+<div class="modal-overlay" id="intake-modal" role="dialog" aria-modal="true" aria-label="Advisory intake form">
   <div class="modal-box" id="intake-box" style="max-width:560px"></div>
 </div>
 
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
 
@@ -1047,7 +1061,7 @@ function trackSearch(query){
   searches.push({q:query.toLowerCase().trim(),ts:Date.now()});
   // Keep last 500 searches
   if(searches.length>500) searches.splice(0,searches.length-500);
-  localStorage.setItem('tvc-searches',JSON.stringify(searches));
+  safeLSSet('tvc-searches',JSON.stringify(searches));
 }
 function getSearchTrends(days=7){
   const searches=JSON.parse(localStorage.getItem('tvc-searches')||'[]');
@@ -2599,16 +2613,89 @@ function updateWlBadge(){
 }
 
 // ── NAV ─────────────────────────────────────────────────────────────────
+const PAGE_META={
+  week:{title:'The Value Change — CPG Strategy Intelligence',desc:'Earnings-driven strategy intelligence for consumer goods. Weekly analysis, company profiles, and tactical playbooks.',hash:''},
+  companies:{title:'Companies — The Value Change',desc:'CPG company profiles with strategic analysis, management signals, value chain breakdowns, and competitive radar charts.',hash:'#companies'},
+  playbooks:{title:'Playbooks — The Value Change',desc:'Tactical playbooks for consumer goods professionals. Actionable strategies triggered by earnings events and market signals.',hash:'#playbooks'},
+  earnings:{title:'Earnings — The Value Change',desc:'CPG earnings calendar with results analysis, watch items, and strategic implications for consumer goods companies.',hash:'#earnings'},
+  watchlist:{title:'Watchlist — The Value Change',desc:'Your personalized CPG watchlist. Track companies and earnings that matter to your business.',hash:'#watchlist'}
+};
 function showPage(id, tabEl){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false');t.setAttribute('tabindex','-1');});
   document.getElementById('page-'+id).classList.add('active');
-  if(tabEl) tabEl.classList.add('active');
+  if(tabEl){tabEl.classList.add('active');tabEl.setAttribute('aria-selected','true');tabEl.setAttribute('tabindex','0');}
+  else{
+    const tabs=document.querySelectorAll('.nav-tab');
+    const idx={week:0,companies:1,playbooks:2,earnings:3,watchlist:4}[id];
+    if(idx!==undefined&&tabs[idx]){tabs[idx].classList.add('active');tabs[idx].setAttribute('aria-selected','true');tabs[idx].setAttribute('tabindex','0');}
+  }
+  // Update URL hash, title, meta description
+  const meta=PAGE_META[id];
+  if(meta){
+    if(meta.hash!==undefined) history.replaceState(null,'',meta.hash||window.location.pathname+window.location.search);
+    document.title=meta.title;
+    const descTag=document.querySelector('meta[name="description"]');
+    if(descTag) descTag.setAttribute('content',meta.desc);
+    const ogTitle=document.querySelector('meta[property="og:title"]');
+    if(ogTitle) ogTitle.setAttribute('content',meta.title);
+    const ogDesc=document.querySelector('meta[property="og:description"]');
+    if(ogDesc) ogDesc.setAttribute('content',meta.desc);
+    const canon=document.querySelector('link[rel="canonical"]');
+    if(canon) canon.setAttribute('href','https://thevaluechange.com/'+(meta.hash||''));
+    const ogUrl=document.querySelector('meta[property="og:url"]');
+    if(ogUrl) ogUrl.setAttribute('content','https://thevaluechange.com/'+(meta.hash||''));
+  }
   if(id==='companies'){ renderSectorFilter(); renderCoList(); renderCoDetail(); }
   if(id==='playbooks'){ renderPbFilter(); renderPbGrid(); }
   if(id==='earnings') renderEarnings();
   if(id==='watchlist') renderWatchlist();
   if(id==='admin') renderAdminPage();
+}
+// Hash-based routing
+window.addEventListener('hashchange',function(){
+  const hash=window.location.hash.replace('#','');
+  const pageMap={companies:'companies',playbooks:'playbooks',earnings:'earnings',watchlist:'watchlist'};
+  if(pageMap[hash]) showPage(pageMap[hash]);
+  else if(!hash) showPage('week');
+});
+
+// ── KEYBOARD NAV ────────────────────────────────────────────────────────
+function navKeyHandler(e,el){
+  const tabs=[...el.parentElement.children].filter(c=>c.classList.contains('nav-tab'));
+  const idx=tabs.indexOf(el);
+  let target=null;
+  if(e.key==='ArrowRight'||e.key==='ArrowDown') target=tabs[(idx+1)%tabs.length];
+  else if(e.key==='ArrowLeft'||e.key==='ArrowUp') target=tabs[(idx-1+tabs.length)%tabs.length];
+  else if(e.key==='Home') target=tabs[0];
+  else if(e.key==='End') target=tabs[tabs.length-1];
+  else if(e.key==='Enter'||e.key===' '){e.preventDefault();el.click();return;}
+  else return;
+  e.preventDefault();
+  target.focus();
+  target.click();
+}
+// Update ARIA on tab switch
+const _origShowPage=showPage;
+// Escape key closes modals
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){
+    const intake=document.getElementById('intake-modal');
+    if(intake&&intake.classList.contains('active')){intake.classList.remove('active');return;}
+    const searchBox=document.getElementById('search-results');
+    if(searchBox&&searchBox.classList.contains('open')){searchBox.classList.remove('open');document.getElementById('global-search').blur();return;}
+  }
+});
+
+// ── SAFE LOCALSTORAGE ───────────────────────────────────────────────────
+function safeLSSet(key,val){
+  try{localStorage.setItem(key,val);}
+  catch(e){
+    if(e.name==='QuotaExceededError'||e.code===22){
+      try{localStorage.removeItem('tvc-searches');localStorage.setItem(key,val);}
+      catch(e2){console.warn('[TVC] localStorage full, could not save',key);}
+    }
+  }
 }
 
 // ── TOAST ────────────────────────────────────────────────────────────────
@@ -2625,7 +2712,7 @@ function getEngagement(){
 }
 function saveEngagement(eng){
   eng.score=getEngagementScore(eng);
-  localStorage.setItem('tvc-engagement',JSON.stringify(eng));
+  safeLSSet('tvc-engagement',JSON.stringify(eng));
 }
 function trackEngagement(type,id){
   const eng=getEngagement();
@@ -2896,8 +2983,16 @@ function isAICacheStale(ticker){
 }
 
 let aiGenerating=false;
+let aiGenCount=0;
+let aiGenWindowStart=Date.now();
+const AI_RATE_LIMIT=5; // max 5 per 10 min window
+const AI_RATE_WINDOW=10*60*1000;
 async function generateAIProfile(query){
   if(aiGenerating){showToast('Already generating a profile — please wait');return;}
+  // Rate limiting
+  if(Date.now()-aiGenWindowStart>AI_RATE_WINDOW){aiGenCount=0;aiGenWindowStart=Date.now();}
+  if(aiGenCount>=AI_RATE_LIMIT){showToast('Rate limit reached — try again in a few minutes');return;}
+  aiGenCount++;
   aiGenerating=true;
   // Show loading skeleton
   showPage('companies',document.querySelectorAll('.nav-tab')[1]);
@@ -2973,29 +3068,23 @@ async function refreshAIProfile(ticker){
 async function loadExternalData(){
   try{
     const res=await fetch('data.json');
-    if(!res.ok) return;
+    if(!res.ok){console.warn('[TVC] data.json returned',res.status,'— using inline data');return;}
     const data=await res.json();
-    // Merge external company data into inline companies object
     if(data.companies){
       Object.keys(data.companies).forEach(k=>{
         if(companies[k]) Object.assign(companies[k],data.companies[k]);
         else companies[k]=data.companies[k];
       });
     }
-    // Override playbooks if provided
     if(data.playbooks) playbooks.length=0,playbooks.push(...data.playbooks);
-    // Override earnings if provided
     if(data.reported){ earningsData.reported=data.reported; }
     if(data.upcoming){ earningsData.upcoming=data.upcoming; }
-    // This week's editorial pick
     if(data.thisWeekPick){ thisWeekPick=data.thisWeekPick; }
-    // Override trends if provided
     if(data.trends) trends.length=0,trends.push(...data.trends);
-    // VCI history overrides
     if(data.vciHistory) Object.assign(vciHistory,data.vciHistory);
     console.log('[TVC] External data loaded successfully');
   }catch(e){
-    console.log('[TVC] No external data.json found, using inline data');
+    console.warn('[TVC] data.json fetch failed — using inline data.',e.message);
   }
 }
 
@@ -3028,6 +3117,10 @@ async function loadExternalData(){
   renderWeekTrends();
   renderWatchingSection();
   updateWlBadge();
+  // Route to page based on URL hash
+  const initHash=window.location.hash.replace('#','');
+  const hashPages={companies:'companies',playbooks:'playbooks',earnings:'earnings',watchlist:'watchlist'};
+  if(hashPages[initHash]) showPage(hashPages[initHash]);
 })();
 // ── AI CHAT (Sprint 18D) ─────────────────────────────────────────────────
 function askAI(ticker){
