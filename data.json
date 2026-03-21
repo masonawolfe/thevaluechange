@@ -6644,6 +6644,3737 @@
         "private": true,
         "noTicker": true
       }
+    },
+    "HRL": {
+      "name": "Hormel Foods",
+      "ticker": "HRL",
+      "website": "hormelfoods.com",
+      "sector": "Packaged Foods",
+      "vci": 68,
+      "sc": 70,
+      "iv": 62,
+      "dm": 55,
+      "earnings": false,
+      "headline": "Planters integration stumbles as SPAM and Skippy defend core protein portfolio",
+      "deck": "Diversified protein-focused food company with SPAM, Skippy, Planters, Applegate, Jennie-O, and Columbus craft meats. The $3.35B Planters acquisition has underperformed as nut category softens.",
+      "execSummary": "Diversified protein-focused food company with SPAM, Skippy, Planters, Applegate, Jennie-O, and Columbus craft meats. The $3.35B Planters acquisition has underperformed as nut category softens.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 70,
+        "Innovation Velocity": 62,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 55,
+        "Digital & AI": 55,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 68
+      },
+      "news": [
+        {
+          "h": "Planters integration stumbles as SPAM and Skippy defend core protein portfolio",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "TSN": {
+      "name": "Tyson Foods",
+      "ticker": "TSN",
+      "website": "tysonfoods.com",
+      "sector": "Packaged Foods",
+      "vci": 62,
+      "sc": 58,
+      "iv": 55,
+      "dm": 50,
+      "earnings": false,
+      "headline": "America's largest meat processor restructures under new CEO amid $53B revenue base",
+      "deck": "The largest U.S. meat processor spanning chicken, beef, pork, and prepared foods with Tyson, Jimmy Dean, Hillshire Farm, and Ball Park. New CEO Donnie King's successor navigates margin recovery and automation.",
+      "execSummary": "The largest U.S. meat processor spanning chicken, beef, pork, and prepared foods with Tyson, Jimmy Dean, Hillshire Farm, and Ball Park. New CEO Donnie King's successor navigates margin recovery and automation.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 58,
+        "Innovation Velocity": 55,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 50,
+        "Digital & AI": 50,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 62
+      },
+      "news": [
+        {
+          "h": "America's largest meat processor restructures under new CEO amid $53B revenue base",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "FLO": {
+      "name": "Flowers Foods",
+      "ticker": "FLO",
+      "website": "flowersfoods.com",
+      "sector": "Packaged Foods",
+      "vci": 70,
+      "sc": 72,
+      "iv": 68,
+      "dm": 52,
+      "earnings": false,
+      "headline": "Dave's Killer Bread and Nature's Own power America's #2 bakery company",
+      "deck": "Second-largest U.S. bakery company with Nature's Own, Dave's Killer Bread, Wonder, and Canyon Bakehouse. DKB is the fastest-growing bread brand in America, driving premiumization across the bread aisle.",
+      "execSummary": "Second-largest U.S. bakery company with Nature's Own, Dave's Killer Bread, Wonder, and Canyon Bakehouse. DKB is the fastest-growing bread brand in America, driving premiumization across the bread aisle.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 72,
+        "Innovation Velocity": 68,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 52,
+        "Digital & AI": 52,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 70
+      },
+      "news": [
+        {
+          "h": "Dave's Killer Bread and Nature's Own power America's #2 bakery company",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "LANC": {
+      "name": "Lancaster Colony",
+      "ticker": "LANC",
+      "website": "lancastercolony.com",
+      "sector": "Packaged Foods",
+      "vci": 75,
+      "sc": 78,
+      "iv": 65,
+      "dm": 55,
+      "earnings": false,
+      "headline": "Marzetti and licensed Olive Garden dressings deliver best-in-class margins in specialty food",
+      "deck": "Specialty food company with Marzetti, New York Bakery, Sister Schubert's, and licensed restaurant dressings (Olive Garden, Chick-fil-A). Consistently delivers 15%+ EBITDA margins via a unique licensing model.",
+      "execSummary": "Specialty food company with Marzetti, New York Bakery, Sister Schubert's, and licensed restaurant dressings (Olive Garden, Chick-fil-A). Consistently delivers 15%+ EBITDA margins via a unique licensing model.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 78,
+        "Innovation Velocity": 65,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 55,
+        "Digital & AI": 55,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 75
+      },
+      "news": [
+        {
+          "h": "Marzetti and licensed Olive Garden dressings deliver best-in-class margins in specialty food",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "UTZ": {
+      "name": "Utz Brands",
+      "ticker": "UTZ",
+      "website": "utzsnacks.com",
+      "sector": "Snack Foods",
+      "vci": 60,
+      "sc": 58,
+      "iv": 62,
+      "dm": 48,
+      "earnings": false,
+      "headline": "Regional salty snack champion rolls up On The Border, Zapp's, and Boulder Canyon",
+      "deck": "Fourth-largest salty snack company in the U.S. with Utz, Zapp's, Boulder Canyon, On The Border, and Golden Flake. Executing a roll-up strategy in fragmented regional salty snacks.",
+      "execSummary": "Fourth-largest salty snack company in the U.S. with Utz, Zapp's, Boulder Canyon, On The Border, and Golden Flake. Executing a roll-up strategy in fragmented regional salty snacks.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 58,
+        "Innovation Velocity": 62,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 48,
+        "Digital & AI": 48,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 60
+      },
+      "news": [
+        {
+          "h": "Regional salty snack champion rolls up On The Border, Zapp's, and Boulder Canyon",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "VITL": {
+      "name": "Vital Farms",
+      "ticker": "VITL",
+      "website": "vitalfarms.com",
+      "sector": "Packaged Foods",
+      "vci": 72,
+      "sc": 68,
+      "iv": 78,
+      "dm": 55,
+      "earnings": false,
+      "headline": "Pasture-raised egg pioneer benefits from cage-free mandates and ethical sourcing trend",
+      "deck": "Ethical food company and leading U.S. pasture-raised egg brand with 300+ family farms. Revenue up 30%+ as state cage-free mandates and consumer premiumization drive adoption.",
+      "execSummary": "Ethical food company and leading U.S. pasture-raised egg brand with 300+ family farms. Revenue up 30%+ as state cage-free mandates and consumer premiumization drive adoption.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 68,
+        "Innovation Velocity": 78,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 55,
+        "Digital & AI": 55,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 72
+      },
+      "news": [
+        {
+          "h": "Pasture-raised egg pioneer benefits from cage-free mandates and ethical sourcing trend",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "CALM": {
+      "name": "Cal-Maine Foods",
+      "ticker": "CALM",
+      "website": "calmainefoods.com",
+      "sector": "Packaged Foods",
+      "vci": 55,
+      "sc": 52,
+      "iv": 45,
+      "dm": 40,
+      "earnings": false,
+      "headline": "America's largest egg producer posts record profits on avian flu-driven supply shortages",
+      "deck": "The largest U.S. shell egg producer and distributor with 20%+ market share. Record earnings driven by avian flu supply disruptions, but volatile commodity pricing creates boom-bust cycles.",
+      "execSummary": "The largest U.S. shell egg producer and distributor with 20%+ market share. Record earnings driven by avian flu supply disruptions, but volatile commodity pricing creates boom-bust cycles.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 52,
+        "Innovation Velocity": 45,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 40,
+        "Digital & AI": 40,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 55
+      },
+      "news": [
+        {
+          "h": "America's largest egg producer posts record profits on avian flu-driven supply shortages",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "JBSS": {
+      "name": "John B. Sanfilippo & Son",
+      "ticker": "JBSS",
+      "website": "jbssinc.com",
+      "sector": "Snack Foods",
+      "vci": 55,
+      "sc": 52,
+      "iv": 50,
+      "dm": 42,
+      "earnings": false,
+      "headline": "Fisher and Orchard Valley Harvest nut brands navigate commodity volatility and private-label pressure",
+      "deck": "Processor and distributor of nuts and dried fruits under Fisher, Orchard Valley Harvest, and Sunshine Country brands plus significant private-label volume. Navigating volatile tree nut commodity prices.",
+      "execSummary": "Processor and distributor of nuts and dried fruits under Fisher, Orchard Valley Harvest, and Sunshine Country brands plus significant private-label volume. Navigating volatile tree nut commodity prices.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 52,
+        "Innovation Velocity": 50,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 42,
+        "Digital & AI": 42,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 55
+      },
+      "news": [
+        {
+          "h": "Fisher and Orchard Valley Harvest nut brands navigate commodity volatility and private-label pressure",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "NOMD": {
+      "name": "Nomad Foods",
+      "ticker": "NOMD",
+      "website": "nomadfoods.com",
+      "sector": "Packaged Foods",
+      "vci": 70,
+      "sc": 68,
+      "iv": 62,
+      "dm": 55,
+      "earnings": false,
+      "headline": "Europe's largest frozen food company with Birds Eye, Findus, and iglo brands",
+      "deck": "The largest frozen food company in Europe with Birds Eye, Findus, iglo, and Aunt Bessie's across 20+ countries. PE-backed consolidator delivering margin expansion through premiumization and operational efficiency.",
+      "execSummary": "The largest frozen food company in Europe with Birds Eye, Findus, iglo, and Aunt Bessie's across 20+ countries. PE-backed consolidator delivering margin expansion through premiumization and operational efficiency.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 68,
+        "Innovation Velocity": 62,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 55,
+        "Digital & AI": 55,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 70
+      },
+      "news": [
+        {
+          "h": "Europe's largest frozen food company with Birds Eye, Findus, and iglo brands",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "SFM.CPG": {
+      "name": "TreeTop Inc.",
+      "ticker": "SFM.CPG",
+      "website": "treetop.com",
+      "sector": "Beverages",
+      "vci": 55,
+      "sc": 52,
+      "iv": 48,
+      "dm": 40,
+      "earnings": false,
+      "headline": "Apple grower cooperative dominates juice and fruit ingredient supply to CPG brands",
+      "deck": "Farmer-owned cooperative and one of the largest apple processors in the world, supplying juice concentrate and fruit ingredients to major CPG companies. B2B backbone of the juice industry.",
+      "execSummary": "Farmer-owned cooperative and one of the largest apple processors in the world, supplying juice concentrate and fruit ingredients to major CPG companies. B2B backbone of the juice industry.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 52,
+        "Innovation Velocity": 48,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 40,
+        "Digital & AI": 40,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 55
+      },
+      "news": [
+        {
+          "h": "Apple grower cooperative dominates juice and fruit ingredient supply to CPG brands",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21",
+        "private": true
+      }
+    },
+    "COCO": {
+      "name": "Vita Coco (All Market Inc.)",
+      "ticker": "COCO",
+      "website": "vitacoco.com",
+      "sector": "Beverages",
+      "vci": 65,
+      "sc": 62,
+      "iv": 70,
+      "dm": 58,
+      "earnings": false,
+      "headline": "Coconut water category creator expands into coconut oil, cream, and functional hydration",
+      "deck": "The world's leading coconut water brand with ~50% U.S. market share. Expanding beyond coconut water into coconut-based cooking products and functional hydration.",
+      "execSummary": "The world's leading coconut water brand with ~50% U.S. market share. Expanding beyond coconut water into coconut-based cooking products and functional hydration.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 62,
+        "Innovation Velocity": 70,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 58,
+        "Digital & AI": 58,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 65
+      },
+      "news": [
+        {
+          "h": "Coconut water category creator expands into coconut oil, cream, and functional hydration",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "LQDD": {
+      "name": "Liquid Death",
+      "ticker": "LQDD",
+      "website": "liquiddeath.com",
+      "sector": "Beverages",
+      "vci": 78,
+      "sc": 72,
+      "iv": 92,
+      "dm": 88,
+      "earnings": false,
+      "headline": "Canned water punk brand hits $700M+ revenue and $1.4B valuation on pure marketing genius",
+      "deck": "Canned water and iced tea brand that became the fastest-growing non-alcoholic beverage in the U.S. through irreverent marketing and youth culture positioning. Valued at $1.4B with Amazon as its largest channel.",
+      "execSummary": "Canned water and iced tea brand that became the fastest-growing non-alcoholic beverage in the U.S. through irreverent marketing and youth culture positioning. Valued at $1.4B with Amazon as its largest channel.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 72,
+        "Innovation Velocity": 92,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 88,
+        "Digital & AI": 88,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 78
+      },
+      "news": [
+        {
+          "h": "Canned water punk brand hits $700M+ revenue and $1.4B valuation on pure marketing genius",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21",
+        "private": true
+      }
+    },
+    "OTLY": {
+      "name": "Oatly Group",
+      "ticker": "OTLY",
+      "website": "oatly.com",
+      "sector": "Beverages",
+      "vci": 50,
+      "sc": 48,
+      "iv": 65,
+      "dm": 55,
+      "earnings": false,
+      "headline": "Oat milk pioneer fights for profitability as plant-based dairy category matures",
+      "deck": "Swedish oat milk company that created the premium plant-based dairy category. Struggling to reach profitability as category growth decelerates and private-label oat milk erodes pricing power.",
+      "execSummary": "Swedish oat milk company that created the premium plant-based dairy category. Struggling to reach profitability as category growth decelerates and private-label oat milk erodes pricing power.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 48,
+        "Innovation Velocity": 65,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 55,
+        "Digital & AI": 55,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 50
+      },
+      "news": [
+        {
+          "h": "Oat milk pioneer fights for profitability as plant-based dairy category matures",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "BRCC": {
+      "name": "Black Rifle Coffee",
+      "ticker": "BRCC",
+      "website": "blackriflecoffee.com",
+      "sector": "Beverages",
+      "vci": 62,
+      "sc": 58,
+      "iv": 72,
+      "dm": 65,
+      "earnings": false,
+      "headline": "Veteran-founded coffee brand scales RTD and outpost retail model on cultural identity positioning",
+      "deck": "Conservative-aligned coffee company with whole bean, RTD cans, and branded retail outposts. One of the strongest cultural-identity consumer brands in America with 90%+ customer retention.",
+      "execSummary": "Conservative-aligned coffee company with whole bean, RTD cans, and branded retail outposts. One of the strongest cultural-identity consumer brands in America with 90%+ customer retention.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 58,
+        "Innovation Velocity": 72,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 65,
+        "Digital & AI": 65,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 62
+      },
+      "news": [
+        {
+          "h": "Veteran-founded coffee brand scales RTD and outpost retail model on cultural identity positioning",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "STKL": {
+      "name": "SunOpta Inc.",
+      "ticker": "STKL",
+      "website": "sunopta.com",
+      "sector": "Beverages",
+      "vci": 60,
+      "sc": 58,
+      "iv": 55,
+      "dm": 48,
+      "earnings": false,
+      "headline": "Plant-based beverage contract manufacturer powers the private-label alt-milk boom",
+      "deck": "Leading North American manufacturer of plant-based beverages and fruit snacks, co-packing for major retailers and brands. As Oatly and Silk struggle, SunOpta profits from the shift to private-label alt-milk.",
+      "execSummary": "Leading North American manufacturer of plant-based beverages and fruit snacks, co-packing for major retailers and brands. As Oatly and Silk struggle, SunOpta profits from the shift to private-label alt-milk.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 58,
+        "Innovation Velocity": 55,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 48,
+        "Digital & AI": 48,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 60
+      },
+      "news": [
+        {
+          "h": "Plant-based beverage contract manufacturer powers the private-label alt-milk boom",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "ATHB": {
+      "name": "Athletic Brewing",
+      "ticker": "ATHB",
+      "website": "athleticbrewing.com",
+      "sector": "Alcohol",
+      "vci": 75,
+      "sc": 70,
+      "iv": 85,
+      "dm": 72,
+      "earnings": false,
+      "headline": "Non-alcoholic craft beer leader captures 20%+ of the NA beer market",
+      "deck": "The largest non-alcoholic craft brewery in the U.S. with Run Wild IPA and Free Wave. Raised $170M+ in funding and commands 20%+ share of the fast-growing NA beer category.",
+      "execSummary": "The largest non-alcoholic craft brewery in the U.S. with Run Wild IPA and Free Wave. Raised $170M+ in funding and commands 20%+ share of the fast-growing NA beer category.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 70,
+        "Innovation Velocity": 85,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 72,
+        "Digital & AI": 72,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 75
+      },
+      "news": [
+        {
+          "h": "Non-alcoholic craft beer leader captures 20%+ of the NA beer market",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21",
+        "private": true
+      }
+    },
+    "OLIPOP": {
+      "name": "Olipop PBC",
+      "ticker": "OLIPOP",
+      "website": "drinkolipop.com",
+      "sector": "Beverages",
+      "vci": 72,
+      "sc": 68,
+      "iv": 85,
+      "dm": 75,
+      "earnings": false,
+      "headline": "Prebiotic soda challenger races Poppi with $400M+ revenue and gut health positioning",
+      "deck": "Functional prebiotic soda brand positioned as a healthy Coca-Cola alternative. Grew from $20M to $400M+ revenue in three years. Competes directly with Poppi (now PepsiCo) in the functional soda category.",
+      "execSummary": "Functional prebiotic soda brand positioned as a healthy Coca-Cola alternative. Grew from $20M to $400M+ revenue in three years. Competes directly with Poppi (now PepsiCo) in the functional soda category.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 68,
+        "Innovation Velocity": 85,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 75,
+        "Digital & AI": 75,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 72
+      },
+      "news": [
+        {
+          "h": "Prebiotic soda challenger races Poppi with $400M+ revenue and gut health positioning",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21",
+        "private": true
+      }
+    },
+    "BDRFY": {
+      "name": "Beiersdorf AG",
+      "ticker": "BDRFY",
+      "website": "beiersdorf.com",
+      "sector": "Beauty & Cosmetics",
+      "vci": 82,
+      "sc": 80,
+      "iv": 75,
+      "dm": 68,
+      "earnings": false,
+      "headline": "NIVEA parent delivers 10%+ organic growth as La Prairie ultra-luxury brand scales in Asia",
+      "deck": "German skincare company with NIVEA (world's largest skincare brand), Eucerin, La Prairie, and Hansaplast. La Prairie's $1,000+ creams drive outsized margin contribution. 140+ year heritage.",
+      "execSummary": "German skincare company with NIVEA (world's largest skincare brand), Eucerin, La Prairie, and Hansaplast. La Prairie's $1,000+ creams drive outsized margin contribution. 140+ year heritage.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 80,
+        "Innovation Velocity": 75,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 68,
+        "Digital & AI": 68,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 82
+      },
+      "news": [
+        {
+          "h": "NIVEA parent delivers 10%+ organic growth as La Prairie ultra-luxury brand scales in Asia",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "SSDOY": {
+      "name": "Shiseido Company",
+      "ticker": "SSDOY",
+      "website": "shiseido.com",
+      "sector": "Beauty & Cosmetics",
+      "vci": 75,
+      "sc": 72,
+      "iv": 78,
+      "dm": 68,
+      "earnings": false,
+      "headline": "Japanese beauty house restructures around prestige brands after divesting mass consumer lines",
+      "deck": "Japan's largest cosmetics company with Shiseido, NARS, bareMinerals, Drunk Elephant, and Cl\u00e9 de Peau Beaut\u00e9. Divested affordable brands to focus on prestige and dermatology. China recovery is key catalyst.",
+      "execSummary": "Japan's largest cosmetics company with Shiseido, NARS, bareMinerals, Drunk Elephant, and Cl\u00e9 de Peau Beaut\u00e9. Divested affordable brands to focus on prestige and dermatology. China recovery is key catalyst.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 72,
+        "Innovation Velocity": 78,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 68,
+        "Digital & AI": 68,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 75
+      },
+      "news": [
+        {
+          "h": "Japanese beauty house restructures around prestige brands after divesting mass consumer lines",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "AMGPF": {
+      "name": "Amorepacific Group",
+      "ticker": "AMGPF",
+      "website": "amorepacific.com",
+      "sector": "Beauty & Cosmetics",
+      "vci": 72,
+      "sc": 68,
+      "iv": 82,
+      "dm": 72,
+      "earnings": false,
+      "headline": "Korean beauty giant's Sulwhasoo and Laneige lead the K-beauty wave into Western markets",
+      "deck": "South Korea's largest beauty company with Sulwhasoo, Laneige, Innisfree, and Etude. Benefiting from the global K-beauty wave with Laneige Lip Sleeping Mask becoming a viral sensation.",
+      "execSummary": "South Korea's largest beauty company with Sulwhasoo, Laneige, Innisfree, and Etude. Benefiting from the global K-beauty wave with Laneige Lip Sleeping Mask becoming a viral sensation.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 68,
+        "Innovation Velocity": 82,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 72,
+        "Digital & AI": 72,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 72
+      },
+      "news": [
+        {
+          "h": "Korean beauty giant's Sulwhasoo and Laneige lead the K-beauty wave into Western markets",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "KAOCF": {
+      "name": "Kao Corporation",
+      "ticker": "KAOCF",
+      "website": "kao.com",
+      "sector": "Personal Care",
+      "vci": 72,
+      "sc": 70,
+      "iv": 68,
+      "dm": 62,
+      "earnings": false,
+      "headline": "Japanese chemical-to-consumer giant owns Bior\u00e9, Jergens, John Frieda, and Goldwell",
+      "deck": "Japanese consumer and chemical company with Bior\u00e9, Jergens, Cur\u00e9l, John Frieda, Goldwell, and Merries diapers. Unique hybrid model spanning consumer products and industrial chemicals.",
+      "execSummary": "Japanese consumer and chemical company with Bior\u00e9, Jergens, Cur\u00e9l, John Frieda, Goldwell, and Merries diapers. Unique hybrid model spanning consumer products and industrial chemicals.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 70,
+        "Innovation Velocity": 68,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 62,
+        "Digital & AI": 62,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 72
+      },
+      "news": [
+        {
+          "h": "Japanese chemical-to-consumer giant owns Bior\u00e9, Jergens, John Frieda, and Goldwell",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "HIMS": {
+      "name": "Hims & Hers Health",
+      "ticker": "HIMS",
+      "website": "forhims.com",
+      "sector": "Health & Wellness",
+      "vci": 78,
+      "sc": 72,
+      "iv": 88,
+      "dm": 85,
+      "earnings": false,
+      "headline": "Telehealth-to-CPG brand disrupts personal care with GLP-1 compounding and $2B revenue",
+      "deck": "Digital health and wellness platform that has evolved from telehealth into a CPG brand for hair loss, skincare, sexual health, and weight management. GLP-1 compounding business driving explosive growth to $2B+ revenue.",
+      "execSummary": "Digital health and wellness platform that has evolved from telehealth into a CPG brand for hair loss, skincare, sexual health, and weight management. GLP-1 compounding business driving explosive growth to $2B+ revenue.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 72,
+        "Innovation Velocity": 88,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 85,
+        "Digital & AI": 85,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 78
+      },
+      "news": [
+        {
+          "h": "Telehealth-to-CPG brand disrupts personal care with GLP-1 compounding and $2B revenue",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "PRNDY": {
+      "name": "Pernod Ricard",
+      "ticker": "PRNDY",
+      "website": "pernod-ricard.com",
+      "sector": "Alcohol",
+      "vci": 75,
+      "sc": 72,
+      "iv": 68,
+      "dm": 62,
+      "earnings": false,
+      "headline": "World's #2 spirits company bets on Indian whisky and Absolut premiumization",
+      "deck": "French spirits giant with Absolut, Jameson, Chivas Regal, Martell, and The Glenlivet. #2 globally behind Diageo, investing heavily in India (world's largest whisky market) and premiumization.",
+      "execSummary": "French spirits giant with Absolut, Jameson, Chivas Regal, Martell, and The Glenlivet. #2 globally behind Diageo, investing heavily in India (world's largest whisky market) and premiumization.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 72,
+        "Innovation Velocity": 68,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 62,
+        "Digital & AI": 62,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 75
+      },
+      "news": [
+        {
+          "h": "World's #2 spirits company bets on Indian whisky and Absolut premiumization",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "CPRNY": {
+      "name": "Davide Campari-Milano",
+      "ticker": "CPRNY",
+      "website": "camparigroup.com",
+      "sector": "Alcohol",
+      "vci": 72,
+      "sc": 70,
+      "iv": 75,
+      "dm": 60,
+      "earnings": false,
+      "headline": "Aperol-fueled Italian spirits house acquires Courvoisier to build global scale",
+      "deck": "Italian spirits company built on Aperol Spritz's global cultural moment, plus Campari, SKYY Vodka, Wild Turkey, Grand Marnier, and the newly acquired Courvoisier cognac.",
+      "execSummary": "Italian spirits company built on Aperol Spritz's global cultural moment, plus Campari, SKYY Vodka, Wild Turkey, Grand Marnier, and the newly acquired Courvoisier cognac.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 70,
+        "Innovation Velocity": 75,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 60,
+        "Digital & AI": 60,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 72
+      },
+      "news": [
+        {
+          "h": "Aperol-fueled Italian spirits house acquires Courvoisier to build global scale",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "LISN.SW": {
+      "name": "Lindt & Spr\u00fcngli",
+      "ticker": "LISN.SW",
+      "website": "lindt-spruengli.com",
+      "sector": "Snack Foods",
+      "vci": 82,
+      "sc": 85,
+      "iv": 75,
+      "dm": 60,
+      "earnings": false,
+      "headline": "Swiss premium chocolate maker expands Lindor and Ghirardelli while cocoa prices retreat",
+      "deck": "The world's leading premium chocolate company with Lindt, Lindor, Ghirardelli, Russell Stover, and Caffarel. Pricing power and premiumization insulate against cocoa volatility better than mass competitors.",
+      "execSummary": "The world's leading premium chocolate company with Lindt, Lindor, Ghirardelli, Russell Stover, and Caffarel. Pricing power and premiumization insulate against cocoa volatility better than mass competitors.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 85,
+        "Innovation Velocity": 75,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 60,
+        "Digital & AI": 60,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 82
+      },
+      "news": [
+        {
+          "h": "Swiss premium chocolate maker expands Lindor and Ghirardelli while cocoa prices retreat",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "AJINY": {
+      "name": "Ajinomoto Co.",
+      "ticker": "AJINY",
+      "website": "ajinomoto.com",
+      "sector": "Packaged Foods",
+      "vci": 78,
+      "sc": 75,
+      "iv": 80,
+      "dm": 68,
+      "earnings": false,
+      "headline": "MSG inventor pivots to amino acid science powering semiconductors, pharma, and food",
+      "deck": "Japanese food and amino acid company that invented MSG, now a diversified amino acid science company. Food segment (Knorr in Asia, frozen meals) plus the world's leading semiconductor insulation film (ABF).",
+      "execSummary": "Japanese food and amino acid company that invented MSG, now a diversified amino acid science company. Food segment (Knorr in Asia, frozen meals) plus the world's leading semiconductor insulation film (ABF).",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 75,
+        "Innovation Velocity": 80,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 68,
+        "Digital & AI": 68,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 78
+      },
+      "news": [
+        {
+          "h": "MSG inventor pivots to amino acid science powering semiconductors, pharma, and food",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "YAKKY": {
+      "name": "Yakult Honsha",
+      "ticker": "YAKKY",
+      "website": "yakult.co.jp",
+      "sector": "Beverages",
+      "vci": 75,
+      "sc": 78,
+      "iv": 65,
+      "dm": 52,
+      "earnings": false,
+      "headline": "Probiotic pioneer's 100M daily bottles make it the most-consumed functional beverage on earth",
+      "deck": "Japanese probiotic company selling 100 million bottles of Yakult daily across 40 countries. The original functional beverage, now benefiting from the global gut health mega-trend.",
+      "execSummary": "Japanese probiotic company selling 100 million bottles of Yakult daily across 40 countries. The original functional beverage, now benefiting from the global gut health mega-trend.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 78,
+        "Innovation Velocity": 65,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 52,
+        "Digital & AI": 52,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 75
+      },
+      "news": [
+        {
+          "h": "Probiotic pioneer's 100M daily bottles make it the most-consumed functional beverage on earth",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "CALBEE": {
+      "name": "Calbee Inc.",
+      "ticker": "CALBEE",
+      "website": "calbee.com",
+      "sector": "Snack Foods",
+      "vci": 70,
+      "sc": 68,
+      "iv": 72,
+      "dm": 58,
+      "earnings": false,
+      "headline": "Japan's #1 snack maker scales Harvest Snaps and shrimp chips across North America and Asia",
+      "deck": "Japan's largest snack company with Calbee potato chips, Harvest Snaps, shrimp chips, and Jagarico. PepsiCo holds a 25% stake. Expanding globally with better-for-you vegetable snacks.",
+      "execSummary": "Japan's largest snack company with Calbee potato chips, Harvest Snaps, shrimp chips, and Jagarico. PepsiCo holds a 25% stake. Expanding globally with better-for-you vegetable snacks.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 68,
+        "Innovation Velocity": 72,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 58,
+        "Digital & AI": 58,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 70
+      },
+      "news": [
+        {
+          "h": "Japan's #1 snack maker scales Harvest Snaps and shrimp chips across North America and Asia",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "MEJHY": {
+      "name": "Meiji Holdings",
+      "ticker": "MEJHY",
+      "website": "meiji.com",
+      "sector": "Packaged Foods",
+      "vci": 70,
+      "sc": 68,
+      "iv": 65,
+      "dm": 58,
+      "earnings": false,
+      "headline": "Japanese dairy and pharma conglomerate's chocolate and yogurt brands expand across Asia",
+      "deck": "Japanese food and pharmaceutical company with Meiji chocolate, Bulgaria yogurt, and infant formula. Unique CPG-pharma hybrid model with nutritional science capabilities.",
+      "execSummary": "Japanese food and pharmaceutical company with Meiji chocolate, Bulgaria yogurt, and infant formula. Unique CPG-pharma hybrid model with nutritional science capabilities.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 68,
+        "Innovation Velocity": 65,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 58,
+        "Digital & AI": 58,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 70
+      },
+      "news": [
+        {
+          "h": "Japanese dairy and pharma conglomerate's chocolate and yogurt brands expand across Asia",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "ASAHY": {
+      "name": "Asahi Group Holdings",
+      "ticker": "ASAHY",
+      "website": "asahigroup-holdings.com",
+      "sector": "Alcohol",
+      "vci": 72,
+      "sc": 70,
+      "iv": 65,
+      "dm": 58,
+      "earnings": false,
+      "headline": "Japanese brewer turned global premium beer acquirer with Peroni, Pilsner Urquell, and Grolsch",
+      "deck": "Japanese beverage giant that acquired Peroni, Pilsner Urquell, Grolsch, and Fuller's to become a global premium beer player. Also owns Asahi Super Dry, Schweppes (Australia), and Calpis.",
+      "execSummary": "Japanese beverage giant that acquired Peroni, Pilsner Urquell, Grolsch, and Fuller's to become a global premium beer player. Also owns Asahi Super Dry, Schweppes (Australia), and Calpis.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 70,
+        "Innovation Velocity": 65,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 58,
+        "Digital & AI": 58,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 72
+      },
+      "news": [
+        {
+          "h": "Japanese brewer turned global premium beer acquirer with Peroni, Pilsner Urquell, and Grolsch",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "KIRIN": {
+      "name": "Kirin Holdings",
+      "ticker": "KIRIN",
+      "website": "kirinholdings.com",
+      "sector": "Beverages",
+      "vci": 65,
+      "sc": 62,
+      "iv": 68,
+      "dm": 55,
+      "earnings": false,
+      "headline": "Japanese beer-to-biopharma conglomerate owns Lion (Australia), San Miguel stakes, and Fancl supplements",
+      "deck": "Japanese beverage and biopharma company with Kirin beer, Lion Nathan (Australia), Fancl supplements, and stakes in San Miguel. Diversifying from beer into health sciences and functional beverages.",
+      "execSummary": "Japanese beverage and biopharma company with Kirin beer, Lion Nathan (Australia), Fancl supplements, and stakes in San Miguel. Diversifying from beer into health sciences and functional beverages.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 62,
+        "Innovation Velocity": 68,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 55,
+        "Digital & AI": 55,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 65
+      },
+      "news": [
+        {
+          "h": "Japanese beer-to-biopharma conglomerate owns Lion (Australia), San Miguel stakes, and Fancl supplements",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "GODREJ": {
+      "name": "Godrej Consumer Products",
+      "ticker": "GODREJ",
+      "website": "godrejcp.com",
+      "sector": "Personal Care",
+      "vci": 72,
+      "sc": 68,
+      "iv": 65,
+      "dm": 55,
+      "earnings": false,
+      "headline": "Indian FMCG giant dominates hair color, insecticides, and soap across Asia and Africa",
+      "deck": "India's leading personal care and household products company with Cinthol, Good Knight, HIT, and Godrej Expert hair color. Dominant in Indonesia, sub-Saharan Africa, and India's mass market.",
+      "execSummary": "India's leading personal care and household products company with Cinthol, Good Knight, HIT, and Godrej Expert hair color. Dominant in Indonesia, sub-Saharan Africa, and India's mass market.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 68,
+        "Innovation Velocity": 65,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 55,
+        "Digital & AI": 55,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 72
+      },
+      "news": [
+        {
+          "h": "Indian FMCG giant dominates hair color, insecticides, and soap across Asia and Africa",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "MARICO": {
+      "name": "Marico Limited",
+      "ticker": "MARICO",
+      "website": "marico.com",
+      "sector": "Personal Care",
+      "vci": 70,
+      "sc": 68,
+      "iv": 72,
+      "dm": 62,
+      "earnings": false,
+      "headline": "Parachute coconut oil and Saffola cooking oil power India's $1.5B FMCG champion",
+      "deck": "Indian consumer goods company with dominant positions in coconut oil (Parachute, 60%+ share), healthy cooking oils (Saffola), and male grooming (Set Wet, Beardo). Expanding digital-first brands.",
+      "execSummary": "Indian consumer goods company with dominant positions in coconut oil (Parachute, 60%+ share), healthy cooking oils (Saffola), and male grooming (Set Wet, Beardo). Expanding digital-first brands.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 68,
+        "Innovation Velocity": 72,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 62,
+        "Digital & AI": 62,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 70
+      },
+      "news": [
+        {
+          "h": "Parachute coconut oil and Saffola cooking oil power India's $1.5B FMCG champion",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "ITC.IN": {
+      "name": "ITC Limited",
+      "ticker": "ITC.IN",
+      "website": "itcportal.com",
+      "sector": "Packaged Foods",
+      "vci": 75,
+      "sc": 72,
+      "iv": 68,
+      "dm": 60,
+      "earnings": false,
+      "headline": "Indian tobacco-to-FMCG conglomerate's Aashirvaad, Sunfeast, and Bingo challenge multinationals",
+      "deck": "Indian conglomerate with cigarettes (75% of profits), plus fast-growing FMCG brands Aashirvaad (flour), Sunfeast (biscuits), Bingo (snacks), Classmate (stationery), and Savlon. FMCG division growing 15%+ annually.",
+      "execSummary": "Indian conglomerate with cigarettes (75% of profits), plus fast-growing FMCG brands Aashirvaad (flour), Sunfeast (biscuits), Bingo (snacks), Classmate (stationery), and Savlon. FMCG division growing 15%+ annually.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 72,
+        "Innovation Velocity": 68,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 60,
+        "Digital & AI": 60,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 75
+      },
+      "news": [
+        {
+          "h": "Indian tobacco-to-FMCG conglomerate's Aashirvaad, Sunfeast, and Bingo challenge multinationals",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "HINDUNILEVER": {
+      "name": "Hindustan Unilever",
+      "ticker": "HINDUNILEVER",
+      "website": "hul.co.in",
+      "sector": "Personal Care",
+      "vci": 88,
+      "sc": 85,
+      "iv": 80,
+      "dm": 72,
+      "earnings": false,
+      "headline": "Unilever's $7B Indian subsidiary is the benchmark FMCG company in the world's largest consumer market",
+      "deck": "Unilever's 52%-owned Indian subsidiary and the country's largest FMCG company with Surf, Dove, Lux, Lifebuoy, Knorr, and Lakme across 9 million retail outlets. The ultimate emerging-market CPG bellwether.",
+      "execSummary": "Unilever's 52%-owned Indian subsidiary and the country's largest FMCG company with Surf, Dove, Lux, Lifebuoy, Knorr, and Lakme across 9 million retail outlets. The ultimate emerging-market CPG bellwether.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 85,
+        "Innovation Velocity": 80,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 72,
+        "Digital & AI": 72,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 88
+      },
+      "news": [
+        {
+          "h": "Unilever's $7B Indian subsidiary is the benchmark FMCG company in the world's largest consumer market",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "WANTCHN": {
+      "name": "Want Want China",
+      "ticker": "WANTCHN",
+      "website": "want-want.com",
+      "sector": "Snack Foods",
+      "vci": 70,
+      "sc": 68,
+      "iv": 60,
+      "dm": 50,
+      "earnings": false,
+      "headline": "Taiwanese snack and dairy giant dominates China's $4B rice cracker and flavored milk market",
+      "deck": "Taiwan-based snack and dairy company with dominant share in China's rice crackers (Hot Kid), flavored milk, and confections. $3.5B+ revenue with 60%+ market share in Chinese rice snack category.",
+      "execSummary": "Taiwan-based snack and dairy company with dominant share in China's rice crackers (Hot Kid), flavored milk, and confections. $3.5B+ revenue with 60%+ market share in Chinese rice snack category.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 68,
+        "Innovation Velocity": 60,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 50,
+        "Digital & AI": 50,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 70
+      },
+      "news": [
+        {
+          "h": "Taiwanese snack and dairy giant dominates China's $4B rice cracker and flavored milk market",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "ORKLA": {
+      "name": "Orkla ASA",
+      "ticker": "ORKLA",
+      "website": "orkla.com",
+      "sector": "Packaged Foods",
+      "vci": 65,
+      "sc": 62,
+      "iv": 58,
+      "dm": 52,
+      "earnings": false,
+      "headline": "Nordic consumer goods champion with 100+ local brands across Scandinavia and Baltics",
+      "deck": "Norwegian consumer goods company with 100+ brands across food, confectionery, snacks, and home care in the Nordics and Baltics. Includes Grandiosa (Norway's #1 frozen pizza), Jordan (oral care), and Pierre Robert.",
+      "execSummary": "Norwegian consumer goods company with 100+ brands across food, confectionery, snacks, and home care in the Nordics and Baltics. Includes Grandiosa (Norway's #1 frozen pizza), Jordan (oral care), and Pierre Robert.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 62,
+        "Innovation Velocity": 58,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 52,
+        "Digital & AI": 52,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 65
+      },
+      "news": [
+        {
+          "h": "Nordic consumer goods champion with 100+ local brands across Scandinavia and Baltics",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "ESSITY": {
+      "name": "Essity AB",
+      "ticker": "ESSITY",
+      "website": "essity.com",
+      "sector": "Personal Care",
+      "vci": 72,
+      "sc": 70,
+      "iv": 65,
+      "dm": 58,
+      "earnings": false,
+      "headline": "Global hygiene leader with TENA incontinence, Tork professional, and Libero diapers",
+      "deck": "Swedish hygiene and health company spun off from SCA, with TENA (world's #1 incontinence brand), Tork (professional hygiene), Libero (diapers), and Libresse/Bodyform. Aging demographics are a structural tailwind.",
+      "execSummary": "Swedish hygiene and health company spun off from SCA, with TENA (world's #1 incontinence brand), Tork (professional hygiene), Libero (diapers), and Libresse/Bodyform. Aging demographics are a structural tailwind.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 70,
+        "Innovation Velocity": 65,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 58,
+        "Digital & AI": 58,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 72
+      },
+      "news": [
+        {
+          "h": "Global hygiene leader with TENA incontinence, Tork professional, and Libero diapers",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "HLF": {
+      "name": "Herbalife Ltd.",
+      "ticker": "HLF",
+      "website": "herbalife.com",
+      "sector": "Health & Wellness",
+      "vci": 48,
+      "sc": 45,
+      "iv": 52,
+      "dm": 50,
+      "earnings": false,
+      "headline": "Direct-selling nutrition company restructures after post-Ackman era amid MLM regulatory pressure",
+      "deck": "Global nutrition company selling protein shakes, supplements, and weight management products through 2M+ independent distributors. Navigating regulatory scrutiny of MLM model and activist-driven governance changes.",
+      "execSummary": "Global nutrition company selling protein shakes, supplements, and weight management products through 2M+ independent distributors. Navigating regulatory scrutiny of MLM model and activist-driven governance changes.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 45,
+        "Innovation Velocity": 52,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 50,
+        "Digital & AI": 50,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 48
+      },
+      "news": [
+        {
+          "h": "Direct-selling nutrition company restructures after post-Ackman era amid MLM regulatory pressure",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "USNA": {
+      "name": "USANA Health Sciences",
+      "ticker": "USNA",
+      "website": "usana.com",
+      "sector": "Health & Wellness",
+      "vci": 55,
+      "sc": 52,
+      "iv": 58,
+      "dm": 48,
+      "earnings": false,
+      "headline": "Premium supplement maker with 90% Asia-Pacific revenue pivots to social commerce model",
+      "deck": "Direct-selling supplement company with premium vitamins, minerals, and personal care products. 90% of revenue from Asia-Pacific, transitioning from traditional MLM to social commerce and affiliate marketing.",
+      "execSummary": "Direct-selling supplement company with premium vitamins, minerals, and personal care products. 90% of revenue from Asia-Pacific, transitioning from traditional MLM to social commerce and affiliate marketing.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 52,
+        "Innovation Velocity": 58,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 48,
+        "Digital & AI": 48,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 55
+      },
+      "news": [
+        {
+          "h": "Premium supplement maker with 90% Asia-Pacific revenue pivots to social commerce model",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "GROCO": {
+      "name": "Grove Collaborative",
+      "ticker": "GROCO",
+      "website": "grove.co",
+      "sector": "Household Products",
+      "vci": 45,
+      "sc": 42,
+      "iv": 58,
+      "dm": 55,
+      "earnings": false,
+      "headline": "DTC cleaning products brand achieves profitability milestone after near-death SPAC experience",
+      "deck": "Digital-first home essentials company selling plant-based cleaning products, paper goods, and personal care via subscription. Achieved adjusted EBITDA profitability in 2025 after restructuring.",
+      "execSummary": "Digital-first home essentials company selling plant-based cleaning products, paper goods, and personal care via subscription. Achieved adjusted EBITDA profitability in 2025 after restructuring.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 42,
+        "Innovation Velocity": 58,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 55,
+        "Digital & AI": 55,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 45
+      },
+      "news": [
+        {
+          "h": "DTC cleaning products brand achieves profitability milestone after near-death SPAC experience",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "SCOTTS": {
+      "name": "Scotts Miracle-Gro",
+      "ticker": "SCOTTS",
+      "website": "scotts.com",
+      "sector": "Household Products",
+      "vci": 58,
+      "sc": 60,
+      "iv": 55,
+      "dm": 48,
+      "earnings": false,
+      "headline": "Lawn and garden giant pivots from cannabis bet back to core Miracle-Gro and Ortho brands",
+      "deck": "The largest lawn and garden company in North America with Scotts, Miracle-Gro, Ortho, Roundup (consumer), and Tomcat. Recovering from a disastrous cannabis venture (Hawthorne) write-down.",
+      "execSummary": "The largest lawn and garden company in North America with Scotts, Miracle-Gro, Ortho, Roundup (consumer), and Tomcat. Recovering from a disastrous cannabis venture (Hawthorne) write-down.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 60,
+        "Innovation Velocity": 55,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 48,
+        "Digital & AI": 48,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 58
+      },
+      "news": [
+        {
+          "h": "Lawn and garden giant pivots from cannabis bet back to core Miracle-Gro and Ortho brands",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "TILLAMOOK": {
+      "name": "Tillamook County Creamery",
+      "ticker": "TILLAMOOK",
+      "website": "tillamook.com",
+      "sector": "Packaged Foods",
+      "vci": 68,
+      "sc": 65,
+      "iv": 72,
+      "dm": 52,
+      "earnings": false,
+      "headline": "Farmer-owned dairy cooperative scales ice cream and cheese beyond Pacific Northwest roots",
+      "deck": "Oregon-based farmer-owned cooperative producing premium cheese, ice cream, yogurt, and butter. Growing from regional Pacific Northwest brand to national premium dairy player via Costco and Target.",
+      "execSummary": "Oregon-based farmer-owned cooperative producing premium cheese, ice cream, yogurt, and butter. Growing from regional Pacific Northwest brand to national premium dairy player via Costco and Target.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 65,
+        "Innovation Velocity": 72,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 52,
+        "Digital & AI": 52,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 68
+      },
+      "news": [
+        {
+          "h": "Farmer-owned dairy cooperative scales ice cream and cheese beyond Pacific Northwest roots",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21",
+        "private": true
+      }
+    },
+    "FARMERDOG": {
+      "name": "The Farmer's Dog",
+      "ticker": "FARMERDOG",
+      "website": "thefarmersdog.com",
+      "sector": "Pet Food",
+      "vci": 65,
+      "sc": 58,
+      "iv": 82,
+      "dm": 75,
+      "earnings": false,
+      "headline": "DTC fresh dog food startup reaches $1B+ valuation on subscription model and Super Bowl fame",
+      "deck": "Venture-backed fresh dog food company delivering human-grade, personalized dog meals via subscription. Super Bowl ad drove massive awareness. The DTC disruptor in a $130B global pet food market.",
+      "execSummary": "Venture-backed fresh dog food company delivering human-grade, personalized dog meals via subscription. Super Bowl ad drove massive awareness. The DTC disruptor in a $130B global pet food market.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 58,
+        "Innovation Velocity": 82,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 75,
+        "Digital & AI": 75,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 65
+      },
+      "news": [
+        {
+          "h": "DTC fresh dog food startup reaches $1B+ valuation on subscription model and Super Bowl fame",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21",
+        "private": true
+      }
+    },
+    "BLUELAND": {
+      "name": "Blueland Inc.",
+      "ticker": "BLUELAND",
+      "website": "blueland.com",
+      "sector": "Household Products",
+      "vci": 55,
+      "sc": 50,
+      "iv": 72,
+      "dm": 65,
+      "earnings": false,
+      "headline": "Refillable cleaning tablet startup challenges single-use plastic packaging model",
+      "deck": "Sustainable cleaning company selling dissolvable tablets with reusable bottles, eliminating single-use plastic. Shark Tank alumni scaling through Target, Walmart, and Amazon. Part of the refill revolution.",
+      "execSummary": "Sustainable cleaning company selling dissolvable tablets with reusable bottles, eliminating single-use plastic. Shark Tank alumni scaling through Target, Walmart, and Amazon. Part of the refill revolution.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 50,
+        "Innovation Velocity": 72,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 65,
+        "Digital & AI": 65,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 55
+      },
+      "news": [
+        {
+          "h": "Refillable cleaning tablet startup challenges single-use plastic packaging model",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21",
+        "private": true
+      }
+    },
+    "METHOD": {
+      "name": "Method Products (People Against Dirty)",
+      "ticker": "METHOD",
+      "website": "methodhome.com",
+      "sector": "Household Products",
+      "vci": 60,
+      "sc": 58,
+      "iv": 68,
+      "dm": 55,
+      "earnings": false,
+      "headline": "Design-led cleaning brand operates independently within SC Johnson's portfolio",
+      "deck": "Design-forward cleaning brand known for non-toxic formulas and distinctive packaging. Acquired by SC Johnson in 2017 along with Ecover, operating as a premium sustainability-first brand within SCJ.",
+      "execSummary": "Design-forward cleaning brand known for non-toxic formulas and distinctive packaging. Acquired by SC Johnson in 2017 along with Ecover, operating as a premium sustainability-first brand within SCJ.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 58,
+        "Innovation Velocity": 68,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 55,
+        "Digital & AI": 55,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 60
+      },
+      "news": [
+        {
+          "h": "Design-led cleaning brand operates independently within SC Johnson's portfolio",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21",
+        "private": true
+      }
+    },
+    "LVMUY": {
+      "name": "LVMH Wines & Spirits + Perfumes",
+      "ticker": "LVMUY",
+      "website": "lvmh.com",
+      "sector": "Alcohol",
+      "vci": 92,
+      "sc": 90,
+      "iv": 85,
+      "dm": 82,
+      "earnings": false,
+      "headline": "World's largest luxury group's Hennessy, Mo\u00ebt, Sephora, and Dior perfumes are CPG powerhouses",
+      "deck": "LVMH's Wines & Spirits (Hennessy, Mo\u00ebt, Dom P\u00e9rignon, Veuve Clicquot) and Perfumes & Cosmetics (Dior, Givenchy, Guerlain, Benefit) divisions collectively generate $20B+ in CPG-relevant revenue.",
+      "execSummary": "LVMH's Wines & Spirits (Hennessy, Mo\u00ebt, Dom P\u00e9rignon, Veuve Clicquot) and Perfumes & Cosmetics (Dior, Givenchy, Guerlain, Benefit) divisions collectively generate $20B+ in CPG-relevant revenue.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 90,
+        "Innovation Velocity": 85,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 82,
+        "Digital & AI": 82,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 92
+      },
+      "news": [
+        {
+          "h": "World's largest luxury group's Hennessy, Mo\u00ebt, Sephora, and Dior perfumes are CPG powerhouses",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "BARRY": {
+      "name": "Barry Callebaut",
+      "ticker": "BARRY",
+      "website": "barry-callebaut.com",
+      "sector": "Packaged Foods",
+      "vci": 78,
+      "sc": 75,
+      "iv": 70,
+      "dm": 60,
+      "earnings": false,
+      "headline": "World's largest chocolate manufacturer supplies 25% of all chocolate consumed globally",
+      "deck": "Swiss B2B chocolate and cocoa company that manufactures roughly 25% of the world's chocolate, supplying Nestl\u00e9, Hershey, Mondelez, Unilever, and thousands of artisan chocolatiers. The invisible backbone of confectionery.",
+      "execSummary": "Swiss B2B chocolate and cocoa company that manufactures roughly 25% of the world's chocolate, supplying Nestl\u00e9, Hershey, Mondelez, Unilever, and thousands of artisan chocolatiers. The invisible backbone of confectionery.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 75,
+        "Innovation Velocity": 70,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 60,
+        "Digital & AI": 60,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 78
+      },
+      "news": [
+        {
+          "h": "World's largest chocolate manufacturer supplies 25% of all chocolate consumed globally",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "GIVN": {
+      "name": "Givaudan",
+      "ticker": "GIVN",
+      "website": "givaudan.com",
+      "sector": "Packaged Foods",
+      "vci": 85,
+      "sc": 82,
+      "iv": 80,
+      "dm": 72,
+      "earnings": false,
+      "headline": "World's largest flavor and fragrance house powers the taste and scent of 50%+ of global CPG products",
+      "deck": "Swiss flavor and fragrance company that creates the taste and scent profiles for an estimated 50%+ of the world's consumer products. Every CPG company is a customer. Acquired 30+ companies in 5 years.",
+      "execSummary": "Swiss flavor and fragrance company that creates the taste and scent profiles for an estimated 50%+ of the world's consumer products. Every CPG company is a customer. Acquired 30+ companies in 5 years.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 82,
+        "Innovation Velocity": 80,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 72,
+        "Digital & AI": 72,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 85
+      },
+      "news": [
+        {
+          "h": "World's largest flavor and fragrance house powers the taste and scent of 50%+ of global CPG products",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "IFF": {
+      "name": "International Flavors & Fragrances",
+      "ticker": "IFF",
+      "website": "iff.com",
+      "sector": "Packaged Foods",
+      "vci": 70,
+      "sc": 68,
+      "iv": 72,
+      "dm": 62,
+      "earnings": false,
+      "headline": "DuPont nutrition merger created a $12B flavor, fragrance, and food ingredient powerhouse",
+      "deck": "One of the world's largest producers of flavors, fragrances, and food ingredients after merging with DuPont's Nutrition & Biosciences division. Supplies taste, texture, and scent to virtually every major CPG brand.",
+      "execSummary": "One of the world's largest producers of flavors, fragrances, and food ingredients after merging with DuPont's Nutrition & Biosciences division. Supplies taste, texture, and scent to virtually every major CPG brand.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 68,
+        "Innovation Velocity": 72,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 62,
+        "Digital & AI": 62,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 70
+      },
+      "news": [
+        {
+          "h": "DuPont nutrition merger created a $12B flavor, fragrance, and food ingredient powerhouse",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
+    },
+    "SYMRISE": {
+      "name": "Symrise AG",
+      "ticker": "SYMRISE",
+      "website": "symrise.com",
+      "sector": "Beauty & Cosmetics",
+      "vci": 72,
+      "sc": 70,
+      "iv": 75,
+      "dm": 62,
+      "earnings": false,
+      "headline": "German flavor, fragrance, and nutrition company's pet food ingredients division is fastest-growing",
+      "deck": "Third-largest flavor and fragrance company globally, with a fast-growing pet food ingredients division (Diana Pet Food) alongside traditional fragrance and flavor businesses serving CPG customers.",
+      "execSummary": "Third-largest flavor and fragrance company globally, with a fast-growing pet food ingredients division (Diana Pet Food) alongside traditional fragrance and flavor businesses serving CPG customers.",
+      "ourRead": "",
+      "bottomLine": "",
+      "lastUpdated": "2026-03-21",
+      "mgmtSignals": [],
+      "risks": [],
+      "opps": [],
+      "radar": {
+        "Strategy Clarity": 70,
+        "Innovation Velocity": 75,
+        "Supply Chain Resilience": 65,
+        "Mfg Efficiency": 65,
+        "Marketing Modernization": 62,
+        "Digital & AI": 62,
+        "Financial Flexibility": 60,
+        "Org Agility": 60,
+        "Competitive Position": 72
+      },
+      "news": [
+        {
+          "h": "German flavor, fragrance, and nutrition company's pet food ingredients division is fastest-growing",
+          "s": "TVC Research",
+          "d": "Mar 21",
+          "url": ""
+        }
+      ],
+      "vc": {
+        "Supply Chain": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Research & Dev": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Marketing & Brand": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        },
+        "Digital & AI": {
+          "summary": "Pending",
+          "str": [],
+          "wk": [],
+          "signals": [],
+          "outlook": ""
+        }
+      },
+      "_meta": {
+        "addedBy": "universe-refresh",
+        "addedAt": "2026-03-21"
+      }
     }
   },
   "playbooks": [
