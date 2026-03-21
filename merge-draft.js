@@ -76,6 +76,20 @@ if (draft.thisWeekPick) {
   console.log(`Pick: ${draft.thisWeekPick.ticker}`);
 }
 
+// New companies — expand the universe
+if (draft.newCompanies) {
+  let added = 0;
+  for (const [ticker, profile] of Object.entries(draft.newCompanies)) {
+    if (!data.companies[ticker]) {
+      data.companies[ticker] = profile;
+      data.companies[ticker]._meta = { generated: false, addedBy: 'weekly-agent', addedAt: new Date().toISOString() };
+      added++;
+      console.log(`  + ${ticker} (${profile.name}) — NEW`);
+    }
+  }
+  if (added) console.log(`${added} new companies added to universe`);
+}
+
 // Transcript quotes — accumulate over time (proprietary intelligence layer)
 if (draft.transcriptQuotes?.length) {
   if (!data.transcriptQuotes) data.transcriptQuotes = [];

@@ -4,6 +4,7 @@
 const COMPANY_SCHEMA_EXAMPLE = `{
   "name": "Company Name",
   "ticker": "TICK",
+  "website": "company.com",
   "sector": "Category",
   "vci": 75,
   "sc": 70,

@@ -1543,21 +1543,61 @@ function renderHero(){
 function renderEarningsStrip(){
   const strip=document.getElementById('earnings-strip');
   strip.innerHTML=`<div class="week-label">EARNINGS</div>`;
-  // Reported
-  earningsData.reported.forEach(e=>{
+  // Filter: only show reported from last 30 days, upcoming in next 60 days
+  const now=Date.now();
+  const recentReported=earningsData.reported.filter(e=>{
+    const d=new Date(e.date);return !isNaN(d)&&(now-d.getTime())<30*86400000;
+  });
+  const upcomingFuture=earningsData.upcoming.filter(e=>{
+    const d=new Date(e.date);return !isNaN(d)&&d.getTime()>now-86400000&&(d.getTime()-now)<60*86400000;
+  }).sort((a,b)=>new Date(a.date)-new Date(b.date));
+  recentReported.forEach(e=>{
     strip.innerHTML+=`<div class="earnings-pill beat" onclick="showPage('earnings',document.querySelectorAll('.nav-tab')[3])">
       <span class="pill-ticker" style="display:inline-flex;align-items:center;gap:4px">${coLogoImg(e.ticker,16)} ${e.ticker}</span>
-      <span class="pill-badge beat">BEAT</span>
+      <span class="pill-badge beat">${e.result||'BEAT'}</span>
       <span class="pill-date">${e.date}</span>
     </div>`;
   });
-  earningsData.upcoming.forEach(e=>{
+  upcomingFuture.forEach(e=>{
     strip.innerHTML+=`<div class="earnings-pill" onclick="showPage('earnings',document.querySelectorAll('.nav-tab')[3])">
       <span class="pill-ticker" style="display:inline-flex;align-items:center;gap:4px">${coLogoImg(e.ticker,16)} ${e.ticker}</span>
       <span class="pill-badge upcoming">UPCOMING</span>
       <span class="pill-date">${e.date}</span>
     </div>`;
   });
+  if(!recentReported.length&&!upcomingFuture.length){
+    strip.innerHTML+=`<div style="font-family:var(--mono);font-size:10px;color:var(--text3);padding:6px 12px">No upcoming earnings in the next 60 days</div>`;
+  }
+}
+// Fetch live earnings from FMP if API key is configured
+async function fetchLiveEarnings(){
+  try{
+    const tickers=Object.keys(companies).filter(t=>!companies[t]._meta?.generated);
+    const res=await fetch('/.netlify/functions/live-data?type=earnings&ticker='+tickers[0]);
+    if(!res.ok)return;
+    const data=await res.json();
+    if(data.note)return; // API key not configured
+    // Fetch for all covered tickers
+    const results=await Promise.all(tickers.map(t=>
+      fetch('/.netlify/functions/live-data?type=earnings&ticker='+t).then(r=>r.json()).catch(()=>null)
+    ));
+    const upcoming=[];
+    results.forEach((r,i)=>{
+      if(!r||!r.earnings)return;
+      r.earnings.forEach(e=>{
+        if(!e.epsActual&&e.date&&new Date(e.date)>new Date()){
+          upcoming.push({ticker:tickers[i],name:companies[tickers[i]].name,date:new Date(e.date).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}),time:e.time||'TBD',watch:companies[tickers[i]].news?.slice(0,3).map(n=>n.h)||[]});
+        }
+      });
+    });
+    if(upcoming.length){
+      earningsData.upcoming=upcoming.sort((a,b)=>new Date(a.date)-new Date(b.date));
+      renderEarningsStrip();
+      console.log('[TVC] Live earnings calendar loaded:',upcoming.length,'upcoming');
+    }
+  }catch(e){
+    console.log('[TVC] Live earnings fetch skipped:',e.message);
+  }
 }
 
 // ── RENDER: WEEK SIGNALS ─────────────────────────────────────────────────
@@ -1726,23 +1766,31 @@ function renderSectorFilter(){
   `).join('');
 }
 function setSectorFilter(s){sectorFilter=s;renderSectorFilter();renderCoList();}
+function renderCoListItem(c){
+  const hist=vciHistory[c.ticker];
+  const delta=hist?(hist[hist.length-1]-hist[0]):0;
+  const arrow=delta>0?'↑':delta<0?'↓':'→';
+  const deltaColor=delta>0?'var(--accent)':delta<0?'var(--danger)':'var(--text3)';
+  return `
+  <div class="co-list-item ${c.ticker===activeCompany?'active':''}" role="button" tabindex="0" aria-label="${c.name} — VCI ${c.vci||'—'}" onclick="setActiveCompany('${c.ticker}')" onkeydown="if(event.key==='Enter')setActiveCompany('${c.ticker}')">
+    ${coLogoImg(c.ticker,32)}
+    <div style="min-width:0;flex:1">
+      <div class="co-list-name">${c.name}${c._meta&&c._meta.generated?'<span class="ai-badge">AI</span>':''}</div>
+      <div class="co-list-meta"><span>${c.ticker}</span>${c.vci?`<span class="vci">${c.vci}</span><span style="color:${deltaColor};font-size:10px;margin-left:2px">${arrow}${Math.abs(delta)}</span>`:''}</div>
+    </div>
+    <div style="flex-shrink:0">${hist?sparklineSVG(hist):''}</div>
+  </div>`;
+}
 function renderCoList(){
-  const filtered=Object.values(companies).filter(c=>sectorFilter==='ALL'||c.sector===sectorFilter);
-  document.getElementById('co-list').innerHTML=filtered.map(c=>{
-    const hist=vciHistory[c.ticker];
-    const delta=hist?(hist[hist.length-1]-hist[0]):0;
-    const arrow=delta>0?'↑':delta<0?'↓':'→';
-    const deltaColor=delta>0?'var(--accent)':delta<0?'var(--danger)':'var(--text3)';
-    return `
-    <div class="co-list-item ${c.ticker===activeCompany?'active':''}" role="button" tabindex="0" aria-label="${c.name} — VCI ${c.vci}" onclick="setActiveCompany('${c.ticker}')" onkeydown="if(event.key==='Enter')setActiveCompany('${c.ticker}')">
-      ${coLogoImg(c.ticker,32)}
-      <div style="min-width:0;flex:1">
-        <div class="co-list-name">${c.name}${c._meta&&c._meta.generated?'<span class="ai-badge">AI</span>':''}</div>
-        <div class="co-list-meta"><span>${c.ticker}</span><span class="vci">${c.vci}</span><span style="color:${deltaColor};font-size:10px;margin-left:2px">${arrow}${Math.abs(delta)}</span></div>
-      </div>
-      <div style="flex-shrink:0">${hist?sparklineSVG(hist):''}</div>
-    </div>`;
-  }).join('');
+  const all=Object.values(companies);
+  const curated=all.filter(c=>!c._meta?.generated&&(sectorFilter==='ALL'||c.sector===sectorFilter));
+  const aiGenerated=all.filter(c=>c._meta?.generated&&(sectorFilter==='ALL'||c.sector===sectorFilter));
+  let html=curated.map(c=>renderCoListItem(c)).join('');
+  if(aiGenerated.length){
+    html+=`<div style="font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--text3);padding:12px 14px 4px;border-top:1px solid var(--border);margin-top:4px">SEARCHED COMPANIES</div>`;
+    html+=aiGenerated.map(c=>renderCoListItem(c)).join('');
+  }
+  document.getElementById('co-list').innerHTML=html;
 }
 
 // ── RENDER: COMPANY DETAIL ───────────────────────────────────────────────
@@ -3023,6 +3071,11 @@ function loadCachedAIProfiles(){
   Object.entries(cache).forEach(([ticker,entry])=>{
     if(!companies[ticker]){
       companies[ticker]=entry.data;
+      // Register logo domain for cached AI profiles
+      if(entry.data.website){
+        const domain=entry.data.website.replace(/^https?:\/\//,'').replace(/\/.*$/,'');
+        coLogoDomains[ticker]=domain;
+      }
     }
   });
 }
@@ -3091,11 +3144,17 @@ async function generateAIProfile(query){
     const cache=getAICache();
     cache[profile.ticker]={data:profile,cachedAt:new Date().toISOString(),query};
     saveAICache(cache);
-    // Render
+    // Render — add to universe
     activeCompany=profile.ticker;
+    // Add logo domain if the profile includes a website
+    if(profile.website){
+      const domain=profile.website.replace(/^https?:\/\//,'').replace(/\/.*$/,'');
+      coLogoDomains[profile.ticker]=domain;
+    }
     renderCoDetail();
     renderCoList();
     renderSectorFilter();
+    buildCoDropdown();
     showToast(`Profile generated for ${profile.name}`);
   }catch(e){
     detail.innerHTML=`<div style="padding:40px;text-align:center">
@@ -3171,6 +3230,8 @@ async function loadExternalData(){
   const initHash=window.location.hash.replace('#','');
   const hashPages={companies:'companies',playbooks:'playbooks',earnings:'earnings',watchlist:'watchlist'};
   if(hashPages[initHash]) showPage(hashPages[initHash]);
+  // Async: try to fetch live earnings data (non-blocking)
+  fetchLiveEarnings();
 })();
 // ── OFFLINE/CONNECTION HANDLING ──────────────────────────────────────────
 function showOfflineBanner(show){
