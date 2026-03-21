@@ -3218,7 +3218,7 @@ async function refreshAIProfile(ticker){
 // Try to load external data.json to override inline data (enables CMS-free content updates)
 async function loadExternalData(){
   try{
-    const res=await fetch('data.json');
+    const res=await fetch('data.json?v='+Date.now());
     if(!res.ok){console.warn('[TVC] data.json returned',res.status,'— using inline data');return;}
     const data=await res.json();
     if(data.companies){
