@@ -2,6 +2,29 @@
 
 _The current task queue. Completed items get checked off or moved to the session log._
 
+## CRITICAL: Site Audit Fixes (Claude Code — Do These First)
+Full audit conducted March 20. These are blocking credibility.
+
+### P0: Content Freshness (the site looks abandoned)
+- [x] **Weekly refresh agent created** (`tvc-weekly-refresh`, Sundays 6 AM CT) — refreshes thisWeekPick, signals, earnings calendar, company updates, trends, transcript quotes. Outputs weekly-draft.json + weekly-refresh-summary.md.
+- [x] **Daily brief agent updated** — now also outputs daily-update.json with fresh hero card + signals alongside the LinkedIn brief. Runs daily 5:30 AM CT.
+- [x] **First weekly refresh triggered** — running now (Mar 20 midnight). Will output fresh data for Mason to review and push.
+- [x] **GitHub Action created** — `.github/workflows/auto-merge-data.yml` auto-merges weekly-draft.json and daily-update.json into data.json on push or manual trigger. Zero CLI steps for Mason.
+- [ ] **MASON ACTION: After weekly refresh completes, review weekly-draft.json, run `node merge-draft.js weekly-draft.json`, then push to GitHub.** This will immediately fix the stale PepsiCo hero, the GIS earnings calendar, and the Mar 15 timestamp.
+- [ ] **MASON ACTION: Each morning, review daily-update.json alongside the brief. Merge and push to keep the site fresh daily.**
+
+### P0: Disable AI Chat
+- [x] **Chat UI hidden** — `display:none` on `.ai-chat` container. Backend code preserved. Re-enable after Mason reviews response quality.
+
+### P1: Dark Mode Redesign
+- [x] **Full redesign shipped** per TVC-Dark-Mode-Feedback-Report.docx. Accent #4ade80 → #5ABD66 (warm sage). Secondary teal #4A9D83 for sparklines. Text softened to #F0F0F0/#C4CBD6/#A0A8B8. Surface darkened to #13182b. Card elevation with shadows. OUR READ top-border. Nav shadow restored.
+
+### P1: Company Logos Not Loading
+- [x] **Fixed.** Clearbit logo CDN is dead (acquired by HubSpot, DNS no longer resolves). Switched to Google Favicon API (`t1.gstatic.com/faviconV2`). All 10 company logos now loading correctly. Updated preconnect hint.
+
+### P1: AI Search Profile Generation Failing
+- [x] **Fixed earlier.** Updated model ID to `claude-sonnet-4-6-20250131`, added multi-env-var fallback (`CLAUDE_API_KEY` / `Anthropic_API_Key` / `ANTHROPIC_API_KEY`), added specific error messages for 401/400/404/422/429.
+
 ## PHASE 1: Launch the Brand (This Week — Mason's Tasks)
 The product is built. Nothing below is blocked by engineering. These are all Mason actions.
 - [ ] Create Substack account for The Value Change (thevaluechange.substack.com)
@@ -23,7 +46,7 @@ The product is built. Nothing below is blocked by engineering. These are all Mas
 ## PHASE 3: Refine & Grow (Month 2+)
 - [ ] Rewrite app content in Mason's voice (replace AI-generated exec summaries, playbooks)
 - [ ] Real AI backend for chat (replace demo mode keyword matching with Claude API)
-- [ ] Add `ALPHA_VANTAGE_KEY` and `FMP_API_KEY` to Netlify for live stock/earnings data
+- [ ] Add `ALPHA_VANTAGE_KEY`, `FMP_API_KEY`, and `FINNHUB_API_KEY` to Netlify for live data
 - [ ] Feed search trend data back into weekly refresh agent (editorial intelligence loop)
 - [ ] Export search trends for Monday brief content
 
@@ -38,13 +61,14 @@ Dual-purpose: powers TVC content engine AND sharpens your Accenture client advis
 - [ ] After 2-3 quarters: can query "what did every CPG CEO say about pricing this year"
 
 ### Step 2: Structured News & Fundamentals (free API tiers)
-- [ ] Finnhub news API (free) — replace web search in daily brief agent with structured company news feed
-- [ ] Finnhub or Alpha Vantage fundamentals (free tier) — auto-populate KPIs on company profiles
-- [ ] Financial Modeling Prep earnings calendar (free tier) — keep earnings dates current automatically
+- [x] **Finnhub news API endpoint built** — `/.netlify/functions/live-data?type=news&ticker=PG` (needs `FINNHUB_API_KEY` env var)
+- [x] **FMP fundamentals endpoint built** — `/.netlify/functions/live-data?type=fundamentals&ticker=PG` (needs `FMP_API_KEY` env var)
+- [x] **FMP earnings calendar already built** — `/.netlify/functions/live-data?type=earnings&ticker=PG`
+- [ ] Add `FINNHUB_API_KEY` to Netlify (free at finnhub.io — Mason action)
 - [ ] Store historical data locally — each week's pull adds to your proprietary dataset
 
 ### Step 3: Cross-Company Intelligence (the moat)
-- [ ] Build topic-based query layer: "show me all management commentary on GLP-1 across CPG"
+- [x] **Topic-based transcript query layer built** — `/.netlify/functions/live-data?type=transcripts&topic=pricing&ticker=ALL`. Admin dashboard has topic filter buttons. Data accumulates as weekly agent runs.
 - [ ] Sentiment tracking over time: is management tone on pricing shifting from confident to cautious?
 - [ ] Competitive cross-reference: when PEP mentions private label pressure, does KO say the same thing?
 - [ ] Surface insights the daily brief agent can use: "3 of 10 covered CEOs mentioned tariff risk this quarter — that's a trend worth writing about"
@@ -63,15 +87,8 @@ Dual-purpose: powers TVC content engine AND sharpens your Accenture client advis
 
 ## QA Polish (Claude Code — Low Priority)
 - [ ] Verify color contrast ratios meet WCAG AA in both light and dark modes
-- [ ] Run full Lighthouse audit and fix any remaining issues
 - [ ] Screen reader testing on company profiles and playbook cards
 - [ ] Offline/slow connection handling (service worker or loading states)
-
-## Backlog
-- [ ] **DISABLE AI chat on company pages** — Claude Code shipped `netlify/functions/chat.js` (Claude Haiku) with live API calls. Mason has NOT reviewed the outputs and it costs money per query. KEEP the code but hide the chat UI from visitors until Mason has tested it, reviewed response quality, and approved. Re-enable in Phase 3 after voice/quality review.
-- [ ] **Dark mode redesign** — Synthetic feedback report completed (TVC-Dark-Mode-Feedback-Report.docx). 9/10 personas agreed: green (#4ade80) is too bright, overused, and reads "SaaS" not "editorial." Fix: change accent to warm sage #5ABD66, limit green to interactive elements only, add secondary teal #4A9D83 for sparklines, soften text to #F0F0F0, increase card elevation (#13182b surface + subtle border + shadow), fix logo white box on dark nav. See report for full Tier 1-3 prioritized changes and revised CSS palette.
-- [ ] Full live external data feeds (news APIs, real-time earnings — need paid API keys)
-- [ ] Performance: code splitting if file size becomes an issue (currently ~260KB)
 
 ## Completed
 - [x] Sprints 1–18 (full app build through AI generation layer)
@@ -91,12 +108,18 @@ Dual-purpose: powers TVC content engine AND sharpens your Accenture client advis
 - [x] SEO: sitemap.xml + robots.txt
 - [x] SEO: JSON-LD structured data (Organization + WebSite schemas)
 - [x] SEO: Per-page meta descriptions, titles, canonical URLs, OG tags (dynamic in showPage)
-- [x] SEO: Hash-based routing with history.replaceState (Google can index #companies, #playbooks, etc.)
+- [x] SEO: Hash-based routing with history.replaceState
+- [x] SEO: Semantic headings (h1/h2) for Lighthouse
 - [x] Accessibility: ARIA roles on nav tabs (tablist/tab pattern), search input, toast, modal
 - [x] Accessibility: Keyboard navigation (arrow keys on tabs, Escape closes modals/search)
 - [x] Accessibility: Skip-to-content link + focus-visible outlines
 - [x] Accessibility: Semantic `<main>` and `<nav>` landmarks
-- [x] Error Recovery: Clearbit logo onerror fallback (avatar initials)
 - [x] Error Recovery: localStorage quota handling (safeLSSet with eviction)
 - [x] Error Recovery: data.json fetch failure graceful fallback
 - [x] Error Recovery: AI profile rate limiting (5/10min) + descriptive error messages
+- [x] Dark mode redesign: warm sage accent, muted teal sparklines, softer text, card elevation
+- [x] AI chat UI hidden (display:none) until voice/quality review
+- [x] Company logos fixed: Clearbit dead → Google Favicon API
+- [x] Finnhub news + FMP fundamentals endpoints in live-data.js
+- [x] Cross-company transcript query layer + admin UI
+- [x] GitHub Action for auto-merge of data drafts

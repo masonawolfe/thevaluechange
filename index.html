@@ -19,7 +19,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://logo.clearbit.com">
+<link rel="preconnect" href="https://t1.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Syne:wght@400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -929,7 +929,8 @@ const coLogoDomains={
 function coLogoUrl(ticker,size){
   size=size||64;
   const domain=coLogoDomains[ticker];
-  return domain?`https://logo.clearbit.com/${domain}?size=${size}`:'';
+  // Clearbit logo CDN shut down (acquired by HubSpot). Using Google favicon service instead.
+  return domain?`https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${domain}&size=${size}`:'';
 }
 function coLogoImg(ticker,size,cls){
   size=size||32;
