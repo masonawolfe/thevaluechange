@@ -10865,32 +10865,8 @@
       ]
     }
   ],
-  "reported": [
-    {
-      "ticker": "MNST",
-      "name": "Monster Beverage",
-      "date": "Feb 26, 2026",
-      "result": "Beat",
-      "rev": "$2.13B",
-      "revSurp": "+4.27%",
-      "eps": "$0.51",
-      "epsSurp": "+10.42%",
-      "guidance": "No formal guidance. January 2026 sales +20.5% YoY. Expects modest cost inflation from tariffs/aluminum in H1 2026.",
-      "quote": "Management described tariff impact as 'modest' and pointed to record January sales as evidence of continuing momentum."
-    }
-  ],
+  "reported": [],
   "upcoming": [
-    {
-      "ticker": "GIS",
-      "name": "General Mills",
-      "date": "Mar 18, 2026",
-      "time": "BMO",
-      "watch": [
-        "Q3 EPS expected $0.73-0.75 vs $1.40 year-ago \u2014 divestiture overhang",
-        "Volume recovery trajectory after Q2 beat",
-        "Trade expense timing \u2014 CFO flagged Q3 reversal of Q2 favorability"
-      ]
-    },
     {
       "ticker": "KMB",
       "name": "Kimberly-Clark",
@@ -10986,9 +10962,5 @@
         "PE"
       ]
     }
-  ],
-  "thisWeekPick": {
-    "ticker": "PEP",
-    "reason": "PepsiCo's formalized Elliott restructuring is the most consequential strategic move this week. A $4B activist stake driving 20% SKU cuts, plant closures, and price reductions on flagship brands represents a fundamental reset of the North America business model. This is the biggest operational overhaul in PepsiCo's recent history and will reshape competitive dynamics across snacks and beverages for years."
-  }
+  ]
 }

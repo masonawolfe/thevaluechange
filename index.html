@@ -743,9 +743,9 @@ select.intake-input{appearance:none;cursor:pointer}
     <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
       <span id="theme-icon"><svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-moon"/></svg></span> <span id="theme-label">Dark</span>
     </button>
-    <div class="active-co-pill" onclick="toggleCoDropdown()">
-      <span id="nav-co-ticker" class="ticker">PG</span>
-      <span id="nav-co-name" style="color:var(--text2);font-size:11px">Procter & Gamble</span>
+    <div class="active-co-pill" id="active-co-pill" onclick="toggleCoDropdown()" style="display:none">
+      <span id="nav-co-ticker" class="ticker"></span>
+      <span id="nav-co-name" style="color:var(--text2);font-size:11px"></span>
       <span style="color:var(--text3);margin-left:2px">▾</span>
     </div>
   </div>
@@ -1518,6 +1518,8 @@ function setActiveCompany(ticker){
   activeCompany=ticker;
   trackEngagement('co',ticker);
   const co=companies[ticker];
+  const pill=document.getElementById('active-co-pill');
+  if(pill) pill.style.display='';
   document.getElementById('nav-co-ticker').textContent=ticker;
   document.getElementById('nav-co-name').textContent=co.name;
   document.getElementById('co-dropdown').classList.remove('open');
@@ -1535,48 +1537,35 @@ function renderWeekDate(){
   document.getElementById('week-date-label').textContent=`WEEK OF ${fmt(mon).toUpperCase()}–${fri.getDate()}, ${fri.getFullYear()}`;
 }
 
-// ── RENDER: HERO CARD (dynamic from latest reported earnings) ───────────
-let thisWeekPick=null; // Set by data.json
+// ── RENDER: HERO CARD (rotates daily from top companies) ────────────────
+let thisWeekPick=null; // Can be set by data.json editorial override
 function renderHero(){
   const el=document.getElementById('hero-card');
   el.classList.add('hero-card-enhanced');
 
-  // Priority 1: thisWeekPick from data.json (editorial pick)
+  // Pick hero: editorial pick from data.json, OR rotate daily through top-VCI companies
+  let co;
   if(thisWeekPick && companies[thisWeekPick.ticker]){
-    const co=companies[thisWeekPick.ticker];
-    const heroPb=playbooks.find(p=>p.co===co.ticker&&p.triggeredBy);
-    el.innerHTML=`
-      <div class="hero-eyebrow">
-        <span><svg width="14" height="14" style="vertical-align:-2px;color:var(--accent)"><use href="#icon-bolt"/></svg> THIS WEEK'S LEAD</span>
-        <span class="co-tag" style="display:inline-flex;align-items:center;gap:5px">${coLogoImg(co.ticker,18)} ${co.ticker}</span>
-        <span style="color:var(--text3)">${co.name}</span>
-      </div>
-      <div class="hero-headline">${co.headline}</div>
-      <div class="hero-deck">${co.deck}</div>
-      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-        <button class="pb-cta-btn" style="font-size:11px;padding:10px 20px" onclick="setActiveCompany('${co.ticker}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">READ FULL ANALYSIS →</button>
-        ${heroPb?`<span class="cross-link" onclick="showPage('playbooks',document.querySelectorAll('.nav-tab')[2]);setTimeout(()=>togglePb(${heroPb.id}),150)"><svg width="12" height="12" style="vertical-align:-1px"><use href="#icon-bolt"/></svg> Related Playbook →</span>`:''}
-      </div>`;
-    return;
+    co=companies[thisWeekPick.ticker];
+  } else {
+    // Rotate daily through top 10 companies by VCI
+    const topCos=Object.values(companies).filter(c=>c.vci>0).sort((a,b)=>b.vci-a.vci).slice(0,10);
+    const dayOfYear=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/86400000);
+    co=topCos[dayOfYear%topCos.length];
   }
+  if(!co){el.innerHTML='<div style="padding:20px;color:var(--text3)">Loading intelligence...</div>';return;}
 
-  // Priority 2: Latest earnings beat
-  const rep=earningsData.reported[0];
-  if(!rep){el.innerHTML='<div style="padding:20px;color:var(--text3)">No stories this week.</div>';return;}
-  const co=companies[rep.ticker];
-  const rr=(rep.result||'').toUpperCase();
-  const resultLabel=rr==='BEAT'?'<svg width="14" height="14" style="vertical-align:-2px;color:var(--accent)"><use href="#icon-bolt"/></svg> EARNINGS BEAT':rr==='MISS'?'<svg width="14" height="14" style="vertical-align:-2px;color:var(--danger)"><use href="#icon-chart"/></svg> EARNINGS MISS':'<svg width="14" height="14" style="vertical-align:-2px"><use href="#icon-chart"/></svg> EARNINGS REPORTED';
-  const heroPb=playbooks.find(p=>p.co===rep.ticker&&p.triggeredBy);
+  const heroPb=playbooks.find(p=>p.co===co.ticker&&p.triggeredBy);
   el.innerHTML=`
     <div class="hero-eyebrow">
-      <span>${resultLabel}</span>
-      <span class="co-tag" style="display:inline-flex;align-items:center;gap:5px">${coLogoImg(rep.ticker,18)} ${rep.ticker}</span>
-      <span style="color:var(--text3)">${rep.name}</span>
+      <span><svg width="14" height="14" style="vertical-align:-2px;color:var(--accent)"><use href="#icon-bolt"/></svg> THIS WEEK'S LEAD</span>
+      <span class="co-tag" style="display:inline-flex;align-items:center;gap:5px">${coLogoImg(co.ticker,18)} ${co.ticker}</span>
+      <span style="color:var(--text3)">${co.name}</span>
     </div>
-    <div class="hero-headline">${rep.name} ${rep.date.split(',')[0]}: Revenue ${rr==='BEAT'?'Beats':'Misses'} at ${rep.rev}${rep.revSurp?' ('+rep.revSurp+')':''}</div>
-    <div class="hero-deck">${co?co.deck:rep.guidance}</div>
+    <div class="hero-headline">${co.headline}</div>
+    <div class="hero-deck">${co.deck}</div>
     <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-      <button class="pb-cta-btn" style="font-size:11px;padding:10px 20px" onclick="setActiveCompany('${rep.ticker}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">READ FULL ANALYSIS →</button>
+      <button class="pb-cta-btn" style="font-size:11px;padding:10px 20px" onclick="setActiveCompany('${co.ticker}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">READ FULL ANALYSIS →</button>
       ${heroPb?`<span class="cross-link" onclick="showPage('playbooks',document.querySelectorAll('.nav-tab')[2]);setTimeout(()=>togglePb(${heroPb.id}),150)"><svg width="12" height="12" style="vertical-align:-1px"><use href="#icon-bolt"/></svg> Related Playbook →</span>`:''}
     </div>`;
 }
@@ -1585,30 +1574,41 @@ function renderHero(){
 function renderEarningsStrip(){
   const strip=document.getElementById('earnings-strip');
   strip.innerHTML=`<div class="week-label">EARNINGS</div>`;
-  // Filter: only show reported from last 30 days, upcoming in next 60 days
   const now=Date.now();
+  // Filter stale data — only show reported from last 30 days, upcoming within 60 days
   const recentReported=earningsData.reported.filter(e=>{
     const d=new Date(e.date);return !isNaN(d)&&(now-d.getTime())<30*86400000;
   });
   const upcomingFuture=earningsData.upcoming.filter(e=>{
     const d=new Date(e.date);return !isNaN(d)&&d.getTime()>now-86400000&&(d.getTime()-now)<60*86400000;
   }).sort((a,b)=>new Date(a.date)-new Date(b.date));
-  recentReported.forEach(e=>{
-    strip.innerHTML+=`<div class="earnings-pill beat" onclick="showPage('earnings',document.querySelectorAll('.nav-tab')[3])">
-      <span class="pill-ticker" style="display:inline-flex;align-items:center;gap:4px">${coLogoImg(e.ticker,16)} ${e.ticker}</span>
-      <span class="pill-badge beat">${e.result||'BEAT'}</span>
-      <span class="pill-date">${e.date}</span>
-    </div>`;
-  });
-  upcomingFuture.forEach(e=>{
-    strip.innerHTML+=`<div class="earnings-pill" onclick="showPage('earnings',document.querySelectorAll('.nav-tab')[3])">
-      <span class="pill-ticker" style="display:inline-flex;align-items:center;gap:4px">${coLogoImg(e.ticker,16)} ${e.ticker}</span>
-      <span class="pill-badge upcoming">UPCOMING</span>
-      <span class="pill-date">${e.date}</span>
-    </div>`;
-  });
-  if(!recentReported.length&&!upcomingFuture.length){
-    strip.innerHTML+=`<div style="font-family:var(--mono);font-size:10px;color:var(--text3);padding:6px 12px">No upcoming earnings in the next 60 days</div>`;
+
+  // If we have live data, show it
+  if(recentReported.length||upcomingFuture.length){
+    recentReported.forEach(e=>{
+      strip.innerHTML+=`<div class="earnings-pill beat" onclick="showPage('earnings',document.querySelectorAll('.nav-tab')[3])">
+        <span class="pill-ticker" style="display:inline-flex;align-items:center;gap:4px">${coLogoImg(e.ticker,16)} ${e.ticker}</span>
+        <span class="pill-badge beat">${e.result||'BEAT'}</span>
+        <span class="pill-date">${e.date}</span>
+      </div>`;
+    });
+    upcomingFuture.forEach(e=>{
+      strip.innerHTML+=`<div class="earnings-pill" onclick="showPage('earnings',document.querySelectorAll('.nav-tab')[3])">
+        <span class="pill-ticker" style="display:inline-flex;align-items:center;gap:4px">${coLogoImg(e.ticker,16)} ${e.ticker}</span>
+        <span class="pill-badge upcoming">UPCOMING</span>
+        <span class="pill-date">${e.date}</span>
+      </div>`;
+    });
+  } else {
+    // No live earnings — show top movers from universe instead of stale dates
+    const topCos=Object.values(companies).filter(c=>c.vci>0&&!c._meta?.private).sort((a,b)=>b.vci-a.vci).slice(0,5);
+    topCos.forEach(c=>{
+      strip.innerHTML+=`<div class="earnings-pill" onclick="setActiveCompany('${c.ticker}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">
+        <span class="pill-ticker" style="display:inline-flex;align-items:center;gap:4px">${coLogoImg(c.ticker,16)} ${c.ticker}</span>
+        <span class="pill-badge" style="background:var(--accent-soft);color:var(--accent)">VCI ${c.vci}</span>
+        <span class="pill-date">${c.sector}</span>
+      </div>`;
+    });
   }
 }
 // Fetch live earnings from FMP if API key is configured
@@ -1645,9 +1645,24 @@ async function fetchLiveEarnings(){
 // ── RENDER: WEEK SIGNALS ─────────────────────────────────────────────────
 function renderWeekSignals(){
   const all=[];
-  Object.values(companies).forEach(c=>c.news.slice(0,1).forEach(n=>all.push({...n,co:c.ticker,coName:c.name})));
+  Object.values(companies).forEach(c=>{
+    if(!c.news||!c.news.length) return;
+    // Only take first news item per company, skip placeholder news
+    const n=c.news[0];
+    if(!n.h||n.h===c.headline||n.s==='TVC Research') return; // Skip auto-generated placeholder news
+    all.push({...n,co:c.ticker,coName:c.name,sector:c.sector});
+  });
+  // Sort by date (most recent first) — parse "Mar 13" style dates
+  const monthMap={Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+  all.sort((a,b)=>{
+    const pa=a.d?.match(/([A-Z][a-z]+)\s+(\d+)/);
+    const pb=b.d?.match(/([A-Z][a-z]+)\s+(\d+)/);
+    if(!pa||!pb) return 0;
+    const da=new Date(2026,monthMap[pa[1]]||0,parseInt(pa[2]));
+    const db=new Date(2026,monthMap[pb[1]]||0,parseInt(pb[2]));
+    return db-da;
+  });
   const el=document.getElementById('week-signals');
-  const roleTags={PG:['Strategy','Brand'],UL:['Strategy','PE'],MNST:['Brand','Innovation'],PEP:['Strategy','PE'],KO:['CMO','Innovation'],GIS:['Brand','PE'],KMB:['Innovation','Strategy'],CL:['Innovation','Brand'],MDLZ:['Strategy','PE'],NSRGY:['Strategy','PE']};
   el.innerHTML=all.slice(0,6).map(n=>`
     <div class="signal-item" onclick="setActiveCompany('${n.co}');showPage('companies',document.querySelectorAll('.nav-tab')[1])">
       <div class="signal-headline">${n.h}</div>
@@ -1655,19 +1670,20 @@ function renderWeekSignals(){
         <span class="signal-source">${n.s}</span>
         <span class="signal-date">${n.d}</span>
         <span class="signal-co">${n.co}</span>
-        ${(roleTags[n.co]||[]).map(r=>`<span class="role-pill">${r}</span>`).join('')}
+        <span class="role-pill">${n.sector||'CPG'}</span>
       </div>
     </div>`).join('');
 }
 
 // ── RENDER: FOCUS GRID ───────────────────────────────────────────────────
 function renderFocusGrid(){
-  // Pick top 3 companies by VCI, excluding the hero company (latest reported earnings)
-  const heroTicker=thisWeekPick?thisWeekPick.ticker:(earningsData.reported.length?earningsData.reported[0].ticker:null);
+  // Pick top 6 companies by VCI, excluding hero and zero-VCI placeholders
+  const heroEl=document.getElementById('hero-card');
+  const heroTicker=heroEl?.querySelector('.co-tag')?.textContent?.trim()?.split(' ')[0]||null;
   const focusCos=Object.values(companies)
-    .filter(c=>c.ticker!==heroTicker)
+    .filter(c=>c.ticker!==heroTicker&&c.vci>0)
     .sort((a,b)=>b.vci-a.vci)
-    .slice(0,3)
+    .slice(0,6)
     .map(c=>c.ticker);
   document.getElementById('focus-grid').innerHTML=focusCos.map(t=>{
     const c=companies[t];
