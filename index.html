@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Value Change</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='6' fill='%23B8732D'/%3E%3Cpath d='M7 8L14 20L21 8' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='10' y1='14' x2='18' y2='14' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="tvc_logo_192x192.png">
+<link rel="apple-touch-icon" href="tvc_logo_180x180.png">
+<meta property="og:image" content="https://thevaluechange.com/tvc_logo_512x512.png">
 <meta property="og:title" content="The Value Change — CPG Strategy Intelligence">
 <meta property="og:description" content="Earnings-driven strategy intelligence for consumer goods. Companies, playbooks, and management signals.">
 <meta property="og:type" content="website">
@@ -20,19 +23,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://t1.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Syne:wght@400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
---bg:#FAFAF8;--surface:#FFFFFF;--surface2:#F5F3F0;--surface3:#EDEBE7;
---accent:#9D5E21;--accent2:#3D3D3D;--warn:#C17A2F;--danger:#C0392B;
+--bg:#FAF8F5;--surface:#FFFFFF;--surface2:#F5F3F0;--surface3:#EDEBE7;
+--accent:#C4913B;--accent2:#1A4B4B;--warn:#C17A2F;--danger:#C0392B;
 --text:#1A1A1A;--text2:#4A4A4A;--text3:#767676;--border:#DDD9D2;
---serif:'Fraunces',serif;--sans:'Syne',sans-serif;--mono:'DM Mono',monospace;
---accent-soft:rgba(157,94,33,.08);--accent-soft2:rgba(157,94,33,.15);
---accent-border:rgba(157,94,33,.25);
---accent2-soft:rgba(61,61,61,.08);--accent2-border:rgba(61,61,61,.2);
+--teal:#1A4B4B;--teal-light:#2A6B6B;--gold-light:#D4A94F;--gold-dark:#A67A2E;--warm-gray:#F5F3F0;
+--serif:'DM Serif Display',serif;--sans:'Inter',sans-serif;--mono:'DM Mono',monospace;
+--accent-soft:rgba(196,145,59,.08);--accent-soft2:rgba(196,145,59,.15);
+--accent-border:rgba(196,145,59,.25);
+--accent2-soft:rgba(26,75,75,.08);--accent2-border:rgba(26,75,75,.2);
 --danger-soft:rgba(192,57,43,.12);--danger-border:rgba(192,57,43,.25);
 --warn-soft:rgba(193,122,47,.1);--warn-border:rgba(193,122,47,.25);
 --overlay:rgba(0,0,0,.5);
@@ -40,11 +44,12 @@
 }
 [data-theme="dark"]{
 --bg:#0a0e1a;--surface:#13182b;--surface2:#1a2234;--surface3:#1e2d40;
---accent:#5ABD66;--accent2:#4A9D83;--warn:#f59e0b;--danger:#ef4444;
+--accent:#5ABD66;--accent2:#2A6B6B;--warn:#f59e0b;--danger:#ef4444;
 --text:#F0F0F0;--text2:#C4CBD6;--text3:#A0A8B8;--border:#1f252f;
+--teal:#2A6B6B;--teal-light:#3A8B8B;--gold-light:#D4A94F;--gold-dark:#A67A2E;--warm-gray:#1a2234;
 --accent-soft:rgba(90,189,102,.08);--accent-soft2:rgba(90,189,102,.12);
 --accent-border:rgba(90,189,102,.25);
---accent2-soft:rgba(74,157,131,.1);--accent2-border:rgba(74,157,131,.2);
+--accent2-soft:rgba(42,107,107,.1);--accent2-border:rgba(42,107,107,.2);
 --danger-soft:rgba(239,68,68,.15);--danger-border:rgba(239,68,68,.3);
 --warn-soft:rgba(245,158,11,.12);--warn-border:rgba(245,158,11,.25);
 --overlay:rgba(0,0,0,.75);
@@ -720,12 +725,8 @@ select.intake-input{appearance:none;cursor:pointer}
 <!-- TOP NAV -->
 <nav class="top-nav">
   <div class="nav-logo" style="display:flex;align-items:center;gap:8px">
-    <svg class="nav-logo-mark" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="28" height="28" rx="6" fill="var(--accent)"/>
-      <path d="M7 8L14 20L21 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <line x1="10" y1="14" x2="18" y2="14" stroke="white" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-    <span style="font-family:var(--serif);font-size:15px;font-weight:700;letter-spacing:.05em;white-space:nowrap"><span style="color:var(--text)">The Value</span><span style="color:var(--accent)"> Change</span></span>
+    <img src="TVC_2x2_Logo.png" alt="TVC" width="28" height="28" style="border-radius:6px">
+    <span style="font-family:var(--serif);font-size:15px;font-weight:700;letter-spacing:.05em;white-space:nowrap"><span style="color:var(--accent2)">The Value</span><span style="color:var(--accent)"> Change</span></span>
   </div>
   <nav class="nav-tabs" role="tablist" aria-label="Main navigation">
     <div class="nav-tab active" role="tab" aria-selected="true" tabindex="0" onclick="showPage('week',this)" onkeydown="navKeyHandler(event,this)">THIS WEEK</div>
