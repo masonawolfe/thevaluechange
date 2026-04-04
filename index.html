@@ -7,18 +7,18 @@
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="192x192" href="tvc_logo_192x192.png">
 <link rel="apple-touch-icon" href="tvc_logo_180x180.png">
-<meta property="og:image" content="https://thevaluechange.com/tvc_logo_512x512.png">
+<meta property="og:image" content="https://dashboard.thevaluechange.com/tvc_logo_512x512.png">
 <meta property="og:title" content="The Value Change — CPG Strategy Intelligence">
 <meta property="og:description" content="Earnings-driven strategy intelligence for consumer goods. Companies, playbooks, and management signals.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://thevaluechange.com">
+<meta property="og:url" content="https://dashboard.thevaluechange.com">
 <meta name="description" content="CPG strategy intelligence platform — earnings analysis, tactical playbooks, and management signals for consumer goods professionals.">
-<link rel="canonical" href="https://thevaluechange.com/">
+<link rel="canonical" href="https://dashboard.thevaluechange.com/">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"The Value Change","url":"https://thevaluechange.com","description":"Earnings-driven CPG strategy intelligence for consumer goods professionals.","founder":{"@type":"Person","name":"Mason Wolfe"},"sameAs":[]}
+{"@context":"https://schema.org","@type":"Organization","name":"The Value Change","url":"https://dashboard.thevaluechange.com","description":"Earnings-driven CPG strategy intelligence for consumer goods professionals.","founder":{"@type":"Person","name":"Mason Wolfe"},"sameAs":[]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"The Value Change","url":"https://thevaluechange.com","description":"CPG strategy intelligence — earnings analysis, tactical playbooks, and management signals.","potentialAction":{"@type":"SearchAction","target":"https://thevaluechange.com/#companies?q={search_term_string}","query-input":"required name=search_term_string"}}
+{"@context":"https://schema.org","@type":"WebSite","name":"The Value Change","url":"https://dashboard.thevaluechange.com","description":"CPG strategy intelligence — earnings analysis, tactical playbooks, and management signals.","potentialAction":{"@type":"SearchAction","target":"https://dashboard.thevaluechange.com/#companies?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2498,7 +2498,7 @@ function realExportTEP(oppIdx, ticker){
   y=doc.internal.pageSize.getHeight()-12;
   doc.setDrawColor(226,232,240);doc.line(m,y-4,w-m,y-4);
   doc.setFont('courier','normal');doc.setFontSize(7);doc.setTextColor(148,163,184);
-  doc.text('thevaluechange.com · Confidential',m,y);
+  doc.text('dashboard.thevaluechange.com · Confidential',m,y);
   doc.text(`Generated ${today} · Professional Use Only`,w-m,y,{align:'right'});
   doc.save(`TEP-${ticker}-${opp.title.replace(/[^a-zA-Z0-9]/g,'-').substring(0,40)}.pdf`);
   showToast('PDF downloaded');
@@ -2758,9 +2758,9 @@ function showPage(id, tabEl){
     const ogDesc=document.querySelector('meta[property="og:description"]');
     if(ogDesc) ogDesc.setAttribute('content',meta.desc);
     const canon=document.querySelector('link[rel="canonical"]');
-    if(canon) canon.setAttribute('href','https://thevaluechange.com/'+(meta.hash||''));
+    if(canon) canon.setAttribute('href','https://dashboard.thevaluechange.com/'+(meta.hash||''));
     const ogUrl=document.querySelector('meta[property="og:url"]');
-    if(ogUrl) ogUrl.setAttribute('content','https://thevaluechange.com/'+(meta.hash||''));
+    if(ogUrl) ogUrl.setAttribute('content','https://dashboard.thevaluechange.com/'+(meta.hash||''));
   }
   if(id==='companies'){ renderSectorFilter(); renderCoList(); renderCoDetail(); }
   if(id==='playbooks'){ renderPbFilter(); renderPbGrid(); }
