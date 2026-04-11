@@ -38,7 +38,14 @@
   [headers.values]
     Cache-Control = "public, max-age=3600"
 
-# Redirects for clean URLs
+# Root domain → Substack (www handles the publication)
+[[redirects]]
+  from = "https://thevaluechange.com/*"
+  to = "https://www.thevaluechange.com/:splat"
+  status = 301
+  force = true
+
+# Redirects for clean URLs (dashboard subdomain)
 [[redirects]]
   from = "/*"
   to = "/index.html"
